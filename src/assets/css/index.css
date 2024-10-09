@@ -1,0 +1,19 @@
+.form-control {
+    background-color: #eeeeee !important;
+    color: black !important;
+}
+
+.form-control::placeholder {
+    color: rgb(129, 129, 129) !important;
+}
+
+html[data-content-skin=modern][data-bs-theme=dark] .form-control {
+    background-color: #4b4b4b !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+html[data-content-skin=modern][data-bs-theme=dark] .form-control::placeholder {
+    color: rgb(180, 180, 180) !important;
+}
+
+
