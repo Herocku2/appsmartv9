@@ -16,6 +16,7 @@ import toast from 'react-hot-toast';
 import { FetchBaseQueryError } from '@reduxjs/toolkit/query';
 import { useDispatch } from 'react-redux';
 import { setIsAuthenticated } from '../../../store/base';
+import { Languages } from '../../../components';
 
 const Login = () => {
 
@@ -58,7 +59,7 @@ const Login = () => {
       const url = new URL(window.location.href);
       const params = new URLSearchParams(url.search);
       const next = params.get("next")
-      toast.success("Sesión iniciada correctamente!")
+      toast.success(t("Login successfull!"))
       dispatch(setIsAuthenticated(true))
       if (next) {
         navigate(next)
@@ -88,6 +89,10 @@ const Login = () => {
       <TitleHelmet title="Login" />
       <AuthLayout>
         <AuthMinmal>
+          <div className='d-flex justify-content-end mb-4'>
+          <Languages />
+          </div>
+         
           <div className="mb-12 ">
             <h4 className="fw-bold mb-3">{t("Login to your account")}</h4>
             <p className="fs-16 lead">{t("Hey, Enter your details to get login to your account.")}</p>

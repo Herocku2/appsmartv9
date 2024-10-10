@@ -21,6 +21,7 @@ const AccountInformation = () => {
     last_name: yup.string().required(t('Last name is required')),
     phone_number: yup.string().matches(/^\d+$/, t('Phone number must be numeric')).required(t('Phone number is required')),
     usdt_wallet: yup.string().required(t('USDT wallet is required')),
+    secret_code: yup.string().required(t('Secret code is required')),
   }).required();
 
   // Infer the form type from the yup schema
@@ -41,7 +42,7 @@ const AccountInformation = () => {
     }
   }, [user])
 
-  const [updateProfile, { isLoading, isSuccess, isError, error }] = useUpdateProfileMutation()
+  const [updateProfile, { isLoading, isSuccess, isError, error, data }] = useUpdateProfileMutation()
 
   const onSubmit = (data: UserForm) => {
     updateProfile(data)
@@ -58,9 +59,12 @@ const AccountInformation = () => {
     }
   }, [isError]);
 
-  useEffect(() =>{
-    if(isSuccess){
-      toast.success(t("Profile updated successfully!"))
+  useEffect(() => {
+    if (isSuccess) {
+      if (data) {
+        toast.success(data.toString(), {duration: 5000})
+      }
+
     }
   }, [isSuccess])
 
@@ -140,6 +144,23 @@ const AccountInformation = () => {
                 type="tel" placeholder="USDT wallet" />
               <Form.Control.Feedback type="invalid">{errors?.usdt_wallet?.message}</Form.Control.Feedback>
             </Form.Group>
+          </Col>
+        </Row>
+        <Row className="g-md-4 mb-4">
+          <Col md={3}>
+            <Form.Label className="fw-medium">{t("Secret code")}</Form.Label>
+          </Col>
+          <Col md={9} xl={8} xxl={6}>
+            <Form.Group>
+              <Form.Control
+                {...register('secret_code')}
+                isInvalid={!!errors?.secret_code}
+                type="tel" placeholder="Secret code" />
+              <Form.Control.Feedback type="invalid">{errors?.secret_code?.message}</Form.Control.Feedback>
+            </Form.Group>
+            <Button variant='info' className='mt-4' onClick={() => updateProfile({ secret_code: "" })}>
+              {t("Send secret code")}
+            </Button>
           </Col>
         </Row>
         <Button type='submit'>

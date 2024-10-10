@@ -7,6 +7,7 @@ export interface MenuItemTypes {
   parentKey?: string
   target?: string
   children?: MenuItemTypes[]
+  isExternal?: boolean
 }
 
 const MENU_ITEMS: MenuItemTypes[] = [

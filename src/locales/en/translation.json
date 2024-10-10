@@ -1,8 +1,6 @@
 {
   "": "",
-  " and then click on verify payment to confirm transaction": {
-    "": ""
-  },
+  "Account": "Account",
   "Account Settings": "Account Settings",
   "Active": "Active",
   "All your investments registry and payment method": {
@@ -11,7 +9,7 @@
   "All your payments and date": {
     "": ""
   },
-  "All your referrals by side": {
+  "All your referrals": {
     "": ""
   },
   "All your withdrawals": {
@@ -68,7 +66,6 @@
   "Hey, Enter your details to get login to your account": {
     "": ""
   },
-  "Hola": "Helllooo",
   "I agree to all the": "I agree to all the",
   "If you forgot your password, well, then we'll email you a verfsication code to reset your password": {
     "": ""
@@ -98,6 +95,7 @@
   "Level": "Level",
   "Link copied!": "Link copied!",
   "Login": "Login",
+  "Login successfull!": "Login successfull!",
   "Login to your account": "Login to your account",
   "Logout": "Logout",
   "Main": "Main",
@@ -112,6 +110,7 @@
   "New investment value": "New investment value",
   "No phone number": "No phone number",
   "OTP is required": "OTP is required",
+  "Paid with balance": "Paid with balance",
   "Pasive Payments": "Pasive Payments",
   "Password": "Password",
   "Password changed successfully": "Password changed successfully",
@@ -123,7 +122,6 @@
   "Passwords dont match": {
     "": ""
   },
-  "Pay with balance": "Pay with balance",
   "Pay with my pasive balance": "Pay with my pasive balance",
   "Payment method": "Payment method",
   "Payments": "Payments",
@@ -149,6 +147,7 @@
   "Secret code is required": {
     "": ""
   },
+  "Security": "Security",
   "Send code": "Send code",
   "Set your pictures, name, bio, and others public-facing information": {
     "": ""
@@ -189,5 +188,8 @@
     "": ""
   },
   "and Fees": "and Fees",
+  "and then click on verify payment to confirm transaction": {
+    "": ""
+  },
   "days": "days"
 }

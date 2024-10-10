@@ -26,6 +26,14 @@ const {t} = useTranslation()
       url: "/dashboard"
     },
     {
+      key: 'marketplace',
+      label: t('Marketplace'),
+      isTitle: false,
+      icon: 'fi fi-rr-shop',
+      url: "https://marketplace.capitalmarket.app/",
+      isExternal: true
+    },
+    {
       key: 'withdrawals',
       label: t('Withdrawals'),
       isTitle: false,
@@ -70,6 +78,7 @@ const {t} = useTranslation()
       icon: 'fi fi-rr-newspaper',
       url: "/investment-history"
     },
+  
 
   ]
   

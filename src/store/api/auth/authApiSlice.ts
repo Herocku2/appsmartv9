@@ -60,7 +60,7 @@ export const authApi = apiSlice.injectEndpoints({
         body: credentials,
       }),
     }),
-    updateProfile: builder.mutation<UserDataResponse, object>({
+    updateProfile: builder.mutation<UserDataResponse | string, object>({
       query: (body) => ({
         url: 'auth/user/',
         method: "PATCH",

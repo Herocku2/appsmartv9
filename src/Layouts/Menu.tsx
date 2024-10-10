@@ -118,7 +118,7 @@ const MenuItem = ({ item, className, linkClassName }: SubMenus) => {
 }
 
 const MenuItemLink = ({ item, className }: SubMenus) => {
-  return (
+  return !item.isExternal ? (
     <Link
       to={item.url!}
       target={item.target}
@@ -128,6 +128,12 @@ const MenuItemLink = ({ item, className }: SubMenus) => {
       {item.icon && <i className={item.icon} />}
       <span> {item.label}</span>
     </Link>
+  ) : (
+    <a className={`nav-link-ref ${className} cursor-pointer`}
+      href={item.url} target='_blank' >
+      {item.icon && <i className={item.icon} />}
+      <span> {item.label}</span>
+    </a>
   )
 }
 

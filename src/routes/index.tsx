@@ -200,6 +200,7 @@ const appsRoutes: RoutesProps = {
       element: <InvestmentHistory />,
       route: PrivateRoute,
     },
+    
   ],
 }
 
