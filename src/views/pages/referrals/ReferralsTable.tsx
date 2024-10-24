@@ -5,6 +5,7 @@ import ButtonWithLink from '../../../components/UiElements/Base/Buttons/ButtonWi
 import { useGetUserQuery } from '../../../store/api/auth/authApiSlice'
 import toast from 'react-hot-toast'
 import { useState } from 'react'
+import { copiarTexto } from '../../dashboards'
 
 export default function ReferralsTable() {
 
@@ -14,8 +15,7 @@ export default function ReferralsTable() {
     const { data: user } = useGetUserQuery()
 
     function copyLink() {
-        navigator.clipboard.writeText(`https://office.capitalmarket.app/auth/register/${user?.ref_code}`)
-        toast.success(t("Link copied!"))
+        copiarTexto(`https://office.capitalmarket.app/auth/register/${user?.ref_code}`, t("Link copied"))
     }
 
     return (

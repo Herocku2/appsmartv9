@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { useGetUserQuery } from '../../../store/api/auth/authApiSlice'
 import DirectPayments from './DirectPayments'
 import PasivePayments from './PasivePayments'
+import { copiarTexto } from '../../dashboards'
 
 export default function PaymentsTable() {
 
@@ -13,8 +14,7 @@ export default function PaymentsTable() {
     const { data: user } = useGetUserQuery()
 
     function copyLink() {
-        navigator.clipboard.writeText(`https://office.capitalmarket.app/auth/register/${user?.ref_code}`)
-        toast.success(t("Link copied!"))
+        copiarTexto(`https://office.capitalmarket.app/auth/register/${user?.ref_code}`, t("Link copied"))
     }
 
     const tabsData = [{title: t("Direct Payments"), content: <DirectPayments />, eventKey: "direct", disabled: false},

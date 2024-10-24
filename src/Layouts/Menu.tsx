@@ -215,12 +215,17 @@ const AppMenu = ({ menuItems }: AppMenuProps) => {
                       activeMenuItems={activeMenuItems}
                       linkClassName="nav-link"
                     />
-                  ) : (
+                  ) : (item.key != "marketplace") ? (
                     <MenuItem
                       item={item}
                       linkClassName="nav-link"
                       className={activeMenuItems.includes(item.key) ? 'active' : ''}
                     />
+                  ) : (
+                    <a  href={`https://capitalmarket.app/wp-json/custom-auth/v1/login?refresh=${localStorage.getItem("refresh")}`} target='_blank' className={`nav-item nav-link nav-link-ref`} >
+                      {item.icon && <i className={item.icon} />}
+                      <span className='ms-2'>Marketplace</span>
+                    </a>
                   )}
                 </>
               )}

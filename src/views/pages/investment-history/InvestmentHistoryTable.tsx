@@ -1,10 +1,10 @@
 import ButtonWithLink from '../../../components/UiElements/Base/Buttons/ButtonWithLink'
 import { Pagination, Table } from 'react-bootstrap'
-import toast from 'react-hot-toast'
 import { useTranslation } from 'react-i18next'
 import { useGetUserQuery } from '../../../store/api/auth/authApiSlice'
 import { useState } from 'react'
 import { useGetInvestmentHistoryQuery } from '../../../store/api/investment_plans/plansApiSlice'
+import { copiarTexto } from '../../dashboards'
 
 export default function InvestmentHistoryTable() {
 
@@ -15,8 +15,7 @@ export default function InvestmentHistoryTable() {
     const {data: history} = useGetInvestmentHistoryQuery({page: page.toString()})
 
     function copyLink() {
-        navigator.clipboard.writeText(`https://office.capitalmarket.app/auth/register/${user?.ref_code}`)
-        toast.success(t("Link copied!"))
+        copiarTexto(`https://office.capitalmarket.app/auth/register/${user?.ref_code}`, t("Link copied"))
     }
 
     return (

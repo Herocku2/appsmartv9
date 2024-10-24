@@ -36,7 +36,8 @@ export default function WithdrawalForm() {
     handleSubmit,
     setValue,
     trigger,
-    control
+    control,
+    reset
   } = useForm({
     resolver: yupResolver(schema),
     mode: "all",
@@ -88,6 +89,7 @@ export default function WithdrawalForm() {
 
   useEffect(() => {
     if (isSuccess) {
+      reset()
       toast.success(t("Withdrawal made successfully!"))
     }
   }, [isSuccess])

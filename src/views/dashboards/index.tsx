@@ -12,7 +12,16 @@ import { useGetDashboardStadisticsQuery } from '../../store/api/dashboard/useDas
 import ButtonWithLink from '../../components/UiElements/Base/Buttons/ButtonWithLink'
 import toast from 'react-hot-toast'
 
-
+export function copiarTexto(texto: string, succesMessage: string) {
+  const textArea = document.createElement('textarea');
+  textArea.value = texto;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textArea);
+  console.log('Texto copiado');
+  toast.success(succesMessage)
+}
 
 const Dashboard = () => {
   const { t } = useTranslation()
@@ -45,7 +54,7 @@ const Dashboard = () => {
     yaxis: {
       labels: {
         formatter: function (e) {
-          return + e.toLocaleString() + ' USD'
+          return parseFloat(e).toLocaleString() + ' USD'
         },
         offsetX: 0,
         offsetY: 0,
@@ -85,7 +94,7 @@ const Dashboard = () => {
       theme: 'dark',
       y: {
         formatter: function (e) {
-          return +e.toLocaleString() + ' USD'
+          return parseFloat(e).toLocaleString() + ' USD'
         },
       },
     },
@@ -116,10 +125,11 @@ const Dashboard = () => {
 
   const [investActive, setInvestActive] = useState(false)
 
+ 
+  
 
   function copyLink() {
-    navigator.clipboard.writeText(`https://office.capitalmarket.app/auth/register/${user?.ref_code}`)
-    toast.success(t("Link copied!"))
+    copiarTexto(`https://office.capitalmarket.app/auth/register/${user?.ref_code}`, t("Link copied"))
   }
 
   return (

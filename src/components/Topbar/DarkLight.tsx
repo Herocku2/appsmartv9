@@ -14,7 +14,14 @@ const DarkLight = () => {
     <div>
       <div className="header-btn">
         <div id="light-dark-mode" onClick={toggleDarkMode}>
-          <i className="dark-light-icon-toggle fi fi-rr-moon fs-20" />
+          {
+            settings.theme === 'dark' ? (
+              <i className="fi fi-rr-sun"></i>
+            ) : (
+              <i className="dark-light-icon-toggle fi fi-rr-moon fs-20" />
+            )
+          }
+         
         </div>
       </div>
     </div>
