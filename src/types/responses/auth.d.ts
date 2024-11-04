@@ -13,4 +13,5 @@ type UserDataResponse  = {
     ref_code: string
     balance: number
     usdt_wallet: string
+    is_fundator: boolean
 }

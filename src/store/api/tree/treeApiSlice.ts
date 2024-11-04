@@ -16,6 +16,13 @@ export const treeApi = apiSlice.injectEndpoints({
       }),
       providesTags: ['Tree']
     }),
+    activateMasterCode: builder.mutation<{message: string}, {id: number}>({
+      query: ({id}) => ({
+        url: `tree/get-referrals/${id}/activate-master-code/`,
+        method: "POST"
+      }),
+      invalidatesTags: ['Tree']
+    }),
   }),
 });
-export const { useGetBinaryTreeQuery, useGetReferralsQuery } = treeApi;
+export const { useGetBinaryTreeQuery, useGetReferralsQuery, useActivateMasterCodeMutation } = treeApi;

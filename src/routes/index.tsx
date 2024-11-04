@@ -177,7 +177,7 @@ const appsRoutes: RoutesProps = {
       route: PrivateRoute,
     },
     {
-      path: '/unilevel-tree',
+      path: '/network-marketing',
       name: 'Binary Tree',
       element: <BinaryTree />,
       route: PrivateRoute,

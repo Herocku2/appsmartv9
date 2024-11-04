@@ -18,6 +18,7 @@ const Languages = () => {
     i18n.changeLanguage(lng)
     toggleDropDown()
     localStorage.setItem("language", lng)
+    location.reload()
   };
 
   return (

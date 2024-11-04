@@ -5,6 +5,7 @@ type DirectPayment = {
     amount: number
     date: string
     investment_amount: number
+    level: number
 }
 
 type PasivePayment = {

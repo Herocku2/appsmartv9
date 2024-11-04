@@ -78,7 +78,7 @@ const PurchasePlanModal: React.FC<PurchasePlanModalProps> = ({ handleCloseModal,
         if (e) {
             // Check if the error is a FetchBaseQueryError
             if ('data' in (e as FetchBaseQueryError)) {
-                toast.error((e as FetchBaseQueryError)?.data?.message as string);
+                toast.error((e as FetchBaseQueryError)?.data as string);
             } else {
                 toast.error('An error occurred');
             }

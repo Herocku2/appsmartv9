@@ -19,6 +19,7 @@ export default function DirectPayments() {
                         <th>{t("Date")}</th>
                         <th className="">{t("User")}</th>
                         <th className="">{t("Investment")}</th>
+                        <th className="">{t("Level")}</th>
                         <th className="text-end">{t("Amount")}</th>
                     </tr>
                 </thead>
@@ -30,6 +31,7 @@ export default function DirectPayments() {
                                     <td><span className='fw-bold'>{new Date(payment.date).toLocaleString()}</span></td>
                                     <td className=''><span className='fw-bold'>{payment.user_username}</span><br /> {payment.user_email}</td>
                                     <td className=''><span className=''>${payment.investment_amount} USD</span></td>
+                                    <td className=''><span className=''>{payment.level}</span></td>
                                     <td className='text-end'><span className='fw-bold'>${payment.amount} USD</span></td>
                                 </tr>
                             )

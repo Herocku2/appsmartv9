@@ -52,10 +52,10 @@ const {t} = useTranslation()
 
     {
       key: 'binarytree',
-      label: t('Unilevel Tree'),
+      label: t('Network Marketing'),
       isTitle: false,
       icon: 'fi fi-tr-sitemap',
-      url: "/unilevel-tree"
+      url: "/network-marketing"
     },
     {
       key: 'referrals',

@@ -106,6 +106,8 @@ export default function WithdrawalForm() {
   return (
     <div className='row'>
       <Form className='col-xl-4 col-md-6 mx-auto border p-4 rounded-2' onSubmit={handleSubmit(handleSubmitWithdrawal)}>
+        <p>{t("Withdrawals are processing since 1 until 72 hours")}</p>
+        <p>{t("Available balance")} <span className='fw-bold'>${user?.balance.toLocaleString()} USD</span></p>
         <Form.Group className='mt-4'>
           <Form.Label>{t("Amount")}</Form.Label>
           <Form.Control
@@ -144,7 +146,9 @@ export default function WithdrawalForm() {
                 {t("Generate secret code")}
               </>
             )}</Button>
+           
         </div>
+        <p className='text-center mt-1'>{t("Verify your email inbox")}</p>
         <Form.Group controlId="eventColor" className='mt-4'>
           <Form.Label>{t("Secret code")}</Form.Label>
           <Form.Control

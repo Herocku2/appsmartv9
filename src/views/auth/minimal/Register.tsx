@@ -24,6 +24,8 @@ import { useForm, useWatch } from 'react-hook-form'
 import HCaptCha from '../../../components/UiElements/Base/Hcapctcha/Hcaptcha'
 import { useRegisterUserMutation } from '../../../store/api/auth/authApiSlice'
 import { FetchBaseQueryError } from '@reduxjs/toolkit/query'
+import { useDispatch } from 'react-redux'
+import { setIsAuthenticated } from '../../../store/base'
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false)
@@ -32,6 +34,7 @@ const Register = () => {
   const navigate = useNavigate()
   const { t } = useTranslation()
   const { ref_code } = useParams()
+  const dispatch = useDispatch()
 
   const schema = yup
     .object({
@@ -50,7 +53,6 @@ const Register = () => {
     handleSubmit,
     setValue,
     control,
-    trigger
   } = useForm({
     resolver: yupResolver(schema),
     mode: "all",
@@ -80,8 +82,8 @@ const Register = () => {
 
   useEffect(() => {
     if (isSuccess) {
-      toast.success(data?.message)
-      navigate("/auth/login")
+      navigate("/dashboard")
+      dispatch(setIsAuthenticated(true))
     }
   }, [isSuccess])
 
@@ -96,7 +98,6 @@ const Register = () => {
     }
   }, [isError, error]);
 
-  console.log(errors);
 
   return (
     <>

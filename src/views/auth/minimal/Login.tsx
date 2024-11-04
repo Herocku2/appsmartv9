@@ -30,7 +30,7 @@ const Login = () => {
 
   let schema = yup
     .object({
-      email: yup.string().email(t("Invalid email")).required(t("Email is required")),
+      email: yup.string().required(t("Email or username is required")),
       password: yup.string().required(t("Password is required")),
     })
     .required();
@@ -101,8 +101,8 @@ const Login = () => {
             <Form.Group className="mb-3">
               <Form.Control
                 {...register("email")}
-                type="email"
-                placeholder="Email"
+                type="text"
+                placeholder={t("Email or username")}
                 isInvalid={!!errors?.email}
                 required
               />

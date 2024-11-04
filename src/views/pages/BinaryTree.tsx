@@ -12,16 +12,14 @@ export default function BinaryTree() {
 
   const { data: treeData, isLoading } = useGetBinaryTreeQuery()
 
-  console.log(treeData);
-
   return (
     <>
       <TitleHelmet title={t("My Unilevel Tree")} />
       <Card className="mb-4">
         <Card.Header className="py-3 pe-3 d-flex align-items-center justify-content-between">
           <div>
-            <h4 className="fw-bold">{t("Unilevel tree")}</h4>
-            <p className="fs-13 text-muted mb-0">{t("Your root tree.")}</p>
+            <h4 className="fw-bold">{t("Network Marketing")}</h4>
+            <p className="fs-13 text-muted mb-0">{t("Your Network Marketing.")}</p>
           </div>
         </Card.Header>
         <Card.Body>

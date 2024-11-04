@@ -3,13 +3,19 @@ import { jsonToFormData } from "../utils";
 
 export const authApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
-    registerUser: builder.mutation<RegisterResponse, { data: RegisterCredentials, ref_code: string | undefined }>({
+    registerUser: builder.mutation<LoginAuthResponse, { data: RegisterCredentials, ref_code: string | undefined }>({
       query: ({ data: user, ref_code }) => ({
         url: `auth/register/${ref_code}/`,
         method: "POST",
         body: user,
       }),
-      
+      transformResponse: (response: LoginAuthResponse) => {
+        const now = new Date().getTime()
+        localStorage.setItem('access', response.access);
+        localStorage.setItem('refresh', response.refresh);
+        localStorage.setItem('timestamp', `${now + 5 * 60 * 1000}`);
+        return response
+      }
     }),
     login: builder.mutation<LoginAuthResponse, LoginAuthRequest>({
       query: (data) => ({

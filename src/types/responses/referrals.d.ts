@@ -13,6 +13,7 @@ type Referral = {
     side: string; // Side (could represent a category or type)
     user: number; // User ID of the person making the referral
     status: boolean
+    is_master_code: boolean
 }
 
 type ReferralResponse = {

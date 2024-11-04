@@ -13,4 +13,5 @@ type DashboardStadisticsResponse = {
         series: Array
     }
     withdrawable_date: string
+    investment_progress: number
 }

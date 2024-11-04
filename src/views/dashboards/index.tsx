@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { useGetUserQuery } from '../../store/api/auth/authApiSlice'
 import { useThemeContext } from '../../common'
 import colors from '../../constants/colors'
+import ProgressBar from 'react-bootstrap/ProgressBar';
 import ReactApexChart from 'react-apexcharts'
 import { useState } from 'react'
 import PurchasePlanModal from '../investmentplans/Modals/PurchasePlan'
@@ -125,8 +126,8 @@ const Dashboard = () => {
 
   const [investActive, setInvestActive] = useState(false)
 
- 
-  
+
+
 
   function copyLink() {
     copiarTexto(`https://office.capitalmarket.app/auth/register/${user?.ref_code}`, t("Link copied"))
@@ -139,7 +140,7 @@ const Dashboard = () => {
         <div className="col-12 col-lg mb-4">
           <h3 className="fw-normal mb-0 text-secondary">{getGreeting()},</h3>
           <h1>
-            {t('Investor')} {user?.username}
+            {t('Associated')} {user?.username}
           </h1>
           <Button onClick={() => setInvestActive(true)}>
             {t("Invest now")}
@@ -178,26 +179,30 @@ const Dashboard = () => {
       <ButtonWithLink label={t("Copy link")} link={`https://office.capitalmarket.app/auth/register/${user?.ref_code}`}
         onClick={() => copyLink()} />
       <div className='row align-items-center '>
-        <div className='col-xl-9 col-12'>
+        <div className='col-xl-6 col-12 mb-4 mb-lg-0'>
           <Card>
             <Card.Header className="d-flex align-items-center py-3">
-              <Card.Title>{t("Investment progress")}</Card.Title>
+              <Card.Title>{t("Progress of your action")}</Card.Title>
             </Card.Header>
-            <Card.Body >
-              <ReactApexChart
+            <Card.Body className='my-5'>
+              {/* <ReactApexChart
                 options={apexOptions}
                 series={[...getChartData()]}
                 type="area"
                 height={360}
-              />
+              /> */}
+              <h6>{t("Progress")} {data?.investment_progress.toLocaleString()}%</h6>
+              <ProgressBar now={data?.investment_progress}
+              label={`${data?.investment_progress}%`} />
+
             </Card.Body>
           </Card>
         </div>
-        <div className="row col-xl-3 col-12 mt-4 mt-xl-0">
-          <div className="col-xxl-12 col-6 col-6">
+        <div className="row col-xl-6 col-12">
+          <div className="col-6 col-6">
             <div className="card">
               <div className="text-center  card-body">
-                <div className="mb-4 ">
+                <div className="mb-2 ">
                   <i className="fi fi-sr-users" style={{ fontSize: 64 }}></i>
 
                 </div>
@@ -208,10 +213,10 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <div className="col-xxl-12  col-6 mt-xl-4 mt-0">
+          <div className="col-6  mt-0">
             <div className="card">
               <div className="text-center  card-body">
-                <div className="mb-4 ">
+                <div className="mb-2 ">
                   <i className="fi fi-sr-users-alt" style={{ fontSize: 64 }}></i>
 
                 </div>
