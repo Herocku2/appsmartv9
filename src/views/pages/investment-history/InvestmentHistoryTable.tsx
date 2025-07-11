@@ -15,12 +15,12 @@ export default function InvestmentHistoryTable() {
     const {data: history} = useGetInvestmentHistoryQuery({page: page.toString()})
 
     function copyLink() {
-        copiarTexto(`https://office.capitalmarket.app/auth/register/${user?.ref_code}`, t("Link copied"))
+        copiarTexto(`https://office.smartsolutions.name/auth/register/${user?.ref_code}`, t("Link copied"))
     }
 
     return (
         <div className="">
-            <ButtonWithLink label={t("Copy link")} link={`https://office.capitalmarket.app/auth/register/${user?.ref_code}`}
+            <ButtonWithLink label={t("Copy link")} link={`https://office.smartsolutions.name/auth/register/${user?.ref_code}`}
                 onClick={() => copyLink()} />
 
 

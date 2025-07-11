@@ -14,4 +14,6 @@ type UserDataResponse  = {
     balance: number
     usdt_wallet: string
     is_fundator: boolean
+    investment_balance: number
+    is_superuser: boolean
 }

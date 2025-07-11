@@ -3,12 +3,15 @@ import { Route, RouteProps } from 'react-router-dom'
 
 // PrivateRoute
 import PrivateRoute from './PrivateRoute'
-import Dashboard from './../views/dashboards'
-import BinaryTree from '../views/pages/BinaryTree'
-import Referrals from '../views/pages/Referrals'
-import Payments from '../views/pages/Payments'
-import Withdrawals from '../views/pages/Withdrawals'
-import InvestmentHistory from '../views/pages/InvestmentHistory'
+const Dashboard = React.lazy(() => import('./../views/dashboards'))
+const BinaryTree = React.lazy(() => import('../views/pages/BinaryTree'))
+const Referrals = React.lazy(() => import('../views/pages/Referrals'))
+const Payments = React.lazy(() => import('../views/pages/Payments'))
+const Withdrawals = React.lazy(() => import('../views/pages/Withdrawals'))
+const InvestmentHistory = React.lazy(() => import('../views/pages/InvestmentHistory'))
+const Deposits = React.lazy(() => import('../views/pages/Deposits'))
+const InvestmentDashboard = React.lazy(() => import('../views/pages/investment_panel'))
+const AdminWithdrawals = React.lazy(() => import('../views/pages/admin_withdrawals'))
 
 
 // Base UI
@@ -171,6 +174,12 @@ const appsRoutes: RoutesProps = {
       route: PrivateRoute,
     },
     {
+      path: '/deposits',
+      name: 'Deposits',
+      element: <Deposits />,
+      route: PrivateRoute,
+    },
+    {
       path: '/withdrawals',
       name: 'Withdrawals',
       element: <Withdrawals />,
@@ -200,7 +209,18 @@ const appsRoutes: RoutesProps = {
       element: <InvestmentHistory />,
       route: PrivateRoute,
     },
-    
+    {
+      path: '/investment-panel',
+      name: 'Investment Panel',
+      element: <InvestmentDashboard />,
+      route: PrivateRoute,
+    },
+    {
+      path: '/admin-withdrawals',
+      name: 'Admin Withdrawals',
+      element: <AdminWithdrawals />,
+      route: PrivateRoute,
+    },
   ],
 }
 

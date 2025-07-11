@@ -2,29 +2,37 @@ import { apiSlice } from "../apiSlice";
 
 export const plansApi = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
-        createPayment: builder.mutation<PaymentPlanResponse, { amount:number, payPasive?: boolean}>({
+        createPayment: builder.mutation<TransactionResponse, { amount: number, payPasive?: boolean }>({
             query: (body) => ({
                 url: `plans/create-investment-payment/`,
                 method: "POST",
                 body: body
             }),
-            invalidatesTags: ['User', 'Dashboard', 'Tree','InvestmentHistory']
+            invalidatesTags: ['User', 'Dashboard', 'Tree', 'InvestmentHistory']
         }),
-        verifyPayment: builder.mutation<string, { txn_id: string}>({
-            query: ({txn_id}) => ({
+        verifyPayment: builder.mutation<string, { id: number }>({
+            query: ({ id }) => ({
                 url: `plans/verify-investment-amount/`,
                 method: "POST",
-                body: {txn_id: txn_id}
+                body: { id: id }
             }),
-            invalidatesTags: ['User', 'Dashboard', 'Tree','InvestmentHistory']
+            invalidatesTags: ['User', 'Dashboard', 'Tree', 'InvestmentHistory']
         }),
-        getInvestmentHistory: builder.query<InvestmentHistoryResponse, {page: string}>({
+        getInvestmentHistory: builder.query<InvestmentHistoryResponse, { page: string }>({
             query: (params) => ({
-              url: "plans/history/?"+ new URLSearchParams(params),
+                url: "plans/history/?" + new URLSearchParams(params),
             }),
             providesTags: ['InvestmentHistory']
-          }),
+        }),
+        getInvestmentPanel: builder.query<InvestmentDashboardData, void>({
+            query: () => ({
+                url: "plans/investment-panel/?",
+            }),
+            providesTags: ['InvestmentHistory']
+        }),
     })
 })
 
-export const {useCreatePaymentMutation, useVerifyPaymentMutation, useGetInvestmentHistoryQuery} = plansApi
+export const { useCreatePaymentMutation, useVerifyPaymentMutation, useGetInvestmentHistoryQuery,
+    useGetInvestmentPanelQuery
+ } = plansApi

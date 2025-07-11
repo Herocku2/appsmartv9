@@ -14,7 +14,7 @@ export default function PaymentsTable() {
     const { data: user } = useGetUserQuery()
 
     function copyLink() {
-        copiarTexto(`https://office.capitalmarket.app/auth/register/${user?.ref_code}`, t("Link copied"))
+        copiarTexto(`https://office.smartsolutions.name/auth/register/${user?.ref_code}`, t("Link copied"))
     }
 
     const tabsData = [{title: t("Direct Payments"), content: <DirectPayments />, eventKey: "direct", disabled: false},
@@ -26,7 +26,7 @@ export default function PaymentsTable() {
 
     return (
         <div className="">
-            <ButtonWithLink label={t("Copy link")} link={`https://office.capitalmarket.app/auth/register/${user?.ref_code}`}
+            <ButtonWithLink label={t("Copy link")} link={`https://office.smartsolutions.name/auth/register/${user?.ref_code}`}
                 onClick={() => copyLink()} />
 
             <Tabs defaultActiveKey="direct" className="my-5">

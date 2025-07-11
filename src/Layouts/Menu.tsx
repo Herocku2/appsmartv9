@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { Collapse } from 'react-bootstrap'
 import { findAllParent, findMenuItem } from '@/common'
 import { MenuItemTypes } from '../constants/menu'
+import { useGetUserQuery } from '../store/api/auth/authApiSlice'
 
 interface SubMenus {
   item: MenuItemTypes
@@ -146,6 +147,8 @@ const AppMenu = ({ menuItems }: AppMenuProps) => {
   const menuRef = useRef(null)
   const [activeMenuItems, setActiveMenuItems] = useState<Array<string>>([])
 
+  const {data: user} = useGetUserQuery()
+
   const toggleMenu = (menuItem: MenuItemTypes, show: boolean) => {
     if (show) {
       setActiveMenuItems([menuItem['key'], ...findAllParent(menuItems, menuItem)])
@@ -215,17 +218,12 @@ const AppMenu = ({ menuItems }: AppMenuProps) => {
                       activeMenuItems={activeMenuItems}
                       linkClassName="nav-link"
                     />
-                  ) : (item.key != "marketplace") ? (
+                  ) : (!item?.onlyAdmin || (item.onlyAdmin && user?.is_superuser)) && (
                     <MenuItem
                       item={item}
                       linkClassName="nav-link"
                       className={activeMenuItems.includes(item.key) ? 'active' : ''}
                     />
-                  ) : (
-                    <a  href={`https://capitalmarket.app/wp-json/custom-auth/v1/login?refresh=${localStorage.getItem("refresh")}`} target='_blank' className={`nav-item nav-link nav-link-ref`} >
-                      {item.icon && <i className={item.icon} />}
-                      <span className='ms-2'>Marketplace</span>
-                    </a>
                   )}
                 </>
               )}

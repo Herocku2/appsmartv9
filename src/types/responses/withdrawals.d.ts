@@ -2,13 +2,16 @@
 type Withdrawal = {
     user: id;  // ISO 8601 date string
     id: number; // Numeric ID
-    amount: number; // Referred user's ID
+    amount: string; // Referred user's ID
     date: string; // Email of the referred user
     type: string
     payed_date: string
     payment_link: string
     status: string
     fee: number
+    verbose_type: string
+    verbose_status: string
+    wallet_address: string
 }
 
 type WithdrawalsResponse = {

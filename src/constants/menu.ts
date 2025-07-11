@@ -8,6 +8,7 @@ export interface MenuItemTypes {
   target?: string
   children?: MenuItemTypes[]
   isExternal?: boolean
+  onlyAdmin?: boolean
 }
 
 const MENU_ITEMS: MenuItemTypes[] = [

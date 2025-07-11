@@ -1,57 +1,27 @@
-import { Button, Card, Pagination, Table } from 'react-bootstrap'
+import { Pagination, Table } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
-import { useActivateMasterCodeMutation, useGetReferralsQuery } from '../../../store/api/tree/treeApiSlice'
+import { useGetReferralsQuery } from '../../../store/api/tree/treeApiSlice'
 import ButtonWithLink from '../../../components/UiElements/Base/Buttons/ButtonWithLink'
 import { useGetUserQuery } from '../../../store/api/auth/authApiSlice'
-import { useEffect, useState } from 'react'
+import {  useState } from 'react'
 import { copiarTexto } from '../../dashboards'
-import Swal from 'sweetalert2'
-import toast from 'react-hot-toast'
-
 export default function ReferralsTable() {
 
     const { t } = useTranslation()
     const [page, setPage] = useState(1)
     const { data: referrals } = useGetReferralsQuery({ page: page.toString() })
-    const [activateMasterCode, { isLoading, isSuccess, isError, error, data }] = useActivateMasterCodeMutation()
     const { data: user } = useGetUserQuery()
 
     function copyLink() {
-        copiarTexto(`https://office.capitalmarket.app/auth/register/${user?.ref_code}`, t("Link copied"))
+        copiarTexto(`https://office.smartsolutions.name/auth/register/${user?.ref_code}`, t("Link copied"))
 
     }
 
-    function handleOpenMasterConfirmation(id: number) {
-        Swal.fire({
-            title: t('Are you sure to convert in master?'),
-            text: t('You will not be able to recover this action!'),
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#d33',
-            cancelButtonColor: '#3E97FF',
-            confirmButtonText: t("Yes, i'm sure!"),
-        }).then((result) => {
-            if (result.isConfirmed) {
-                activateMasterCode({ id: id })
-            }
-        })
-    }
 
-    useEffect(() => {
-        if (isSuccess) {
-            toast.success(data?.message)
-        }
-    }, [isSuccess])
-
-    useEffect(() => {
-        if (isError) {
-            toast.error(error?.message)
-        }
-    }, [isError])
 
     return (
         <div className="">
-            <ButtonWithLink label={t("Copy link")} link={`https://office.capitalmarket.app/auth/register/${user?.ref_code}`}
+            <ButtonWithLink label={t("Copy link")} link={`https://office.smartsolutions.name/auth/register/${user?.ref_code}`}
                 onClick={() => copyLink()} />
             <Table responsive bordered className='mt-4'>
                 <thead>
@@ -60,11 +30,11 @@ export default function ReferralsTable() {
                         <th className="">{t("Phone")}</th>
                         <th className="">{t("Registration date")}</th>
                         <th className="">{t("Status")}</th>
-                        {
+                        {/* {
                             user?.is_fundator && (
                                 <th className="text-end">{t("Actions")}</th>
                             )
-                        }
+                        } */}
 
                     </tr>
                 </thead>
@@ -79,7 +49,7 @@ export default function ReferralsTable() {
                                     <td className="text-dark fw-semibold ">{referral.status ? t("Active") : t("Inactive")}</td>
 
 
-                                    {
+                                    {/* {
                                         (user?.is_fundator) && (
                                             (!referral.is_master_code) ? (
                                                 <td className="text-dark fw-semibold text-end">
@@ -105,7 +75,7 @@ export default function ReferralsTable() {
                                                 </td>
                                             )
                                         )
-                                    }
+                                    } */}
 
                                 </tr>
                             )

@@ -16,7 +16,9 @@ export default function WithdrawalsTable() {
                 <thead>
                     <tr>
                         <th>{t("Date")}</th>
+                        <th className="">{t("Type")}</th>
                         <th className="">{t("Amount")}</th>
+
                         <th className="">{t("Status")}</th>
                         <th className="text-end">{t("Hash")}</th>
                     </tr>
@@ -27,12 +29,13 @@ export default function WithdrawalsTable() {
                             return (
                                 <tr key={indexWithdrawal}>
                                     <td><span className='fw-bold'>{new Date(withdrawal.date).toLocaleString()}</span></td>
+                                    <td>{withdrawal.verbose_type}</td>
                                     <td>${withdrawal.amount.toLocaleString()} USD</td>
                                     <td className=''>{withdrawal.status == "1" ? <Badge bg="warning">{t("Pending")}</Badge> : (withdrawal.status == "2") ? <Badge bg="success">{t("Approved")}</Badge> :
                                         <Badge bg="danger">{t("Refused")}</Badge>}</td>
                                     <td className='text-end'>
                                         {withdrawal.payment_link ? (
-                                            <a href={withdrawal.payment_link} target='_blank' className='text-primary'>{t("View")}</a>
+                                            <a href={"https://bscscan.com/tx/"+withdrawal.payment_link} target='_blank' className='text-primary'>{t("View")}</a>
                                         ) : (
                                             <span>-</span>
                                         )}

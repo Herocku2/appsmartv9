@@ -10,9 +10,16 @@ import { useGetUserQuery } from '../../../store/api/auth/authApiSlice';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm, useWatch } from 'react-hook-form';
 
+
 export default function WithdrawalForm() {
 
   const { t } = useTranslation()
+
+  const withdrawalOptions = [
+    { value: "2", label: t("Balance withdrawal") },
+    { value: "1", label: t("Earnings withdrawal or Investment") }
+  ]
+
 
   const [createCode, { isLoading: isLoadingCode, isSuccess: isSuccessCode, isError: isErrorCode, error: errorCode, data: dataCode }] = useCreateSecretCodeMutation()
 
@@ -26,7 +33,8 @@ export default function WithdrawalForm() {
         .typeError(t("Amount is invalid"))
         .positive(t("Amount must be positive")),
       wallet_address: yup.string().required(t("Wallet address USDT TRC20 is required.")),
-      used_code: yup.string().required(t("Secret code is required."))
+      used_code: yup.string().required(t("Secret code is required.")),
+      type: yup.string().required(t("Withdrawal type is required."))
     })
     .required();
 
@@ -44,12 +52,12 @@ export default function WithdrawalForm() {
   });
 
   const walletOptions = [
-    { value: user?.usdt_wallet, label: "Wallet USDT - " + user?.usdt_wallet },
+    { value: user?.usdt_wallet, label: user?.usdt_wallet },
   ]
 
   type WithdrawalForm = yup.InferType<typeof schema>;
 
-  const [ wallet_address] = useWatch({ control, name: ['wallet_address'] })
+  const [wallet_address, type] = useWatch({ control, name: ['wallet_address', "type"] })
 
   const [createWithdrawal, { isLoading, isSuccess, isError, error }] = useCreateWithdrawalMutation()
 
@@ -94,8 +102,8 @@ export default function WithdrawalForm() {
     }
   }, [isSuccess])
 
-  function changeValue(attr : "amount" | "wallet_address" | "used_code", value: string){
-    if(value == "" && attr == "wallet_address"){
+  function changeValue(attr: "amount" | "wallet_address" | "used_code" | "type", value: string) {
+    if (value == "" && attr == "wallet_address") {
       toast.error(t("Wallet invalid, register USDT wallet on profile section and try again!"))
     }
     setValue(attr, value)
@@ -107,7 +115,30 @@ export default function WithdrawalForm() {
     <div className='row'>
       <Form className='col-xl-4 col-md-6 mx-auto border p-4 rounded-2' onSubmit={handleSubmit(handleSubmitWithdrawal)}>
         <p>{t("Withdrawals are processing since 1 until 72 hours")}</p>
-        <p>{t("Available balance")} <span className='fw-bold'>${user?.balance.toLocaleString()} USD</span></p>
+        <Form.Group controlId="eventColor" className='mt-4'>
+          <Form.Label>{t("Withdrawal Type")}</Form.Label>
+          <Select
+            classNamePrefix="select"
+            className={`select ${errors?.type ? '' : 'is-invalid'}`}
+            options={withdrawalOptions}
+            onChange={(value) => { changeValue("type", value?.value || "") }}
+            value={withdrawalOptions.find(val => val.value == wallet_address)}
+          />
+          <span className='text-danger' >{errors?.wallet_address?.message}</span>
+
+        </Form.Group>
+        <div className='mt-4'></div>
+        {
+          (type == "2") ? (
+            <p>{t("Available balance")} <span className='fw-bold'>${user?.balance.toLocaleString()} USD</span></p>
+
+          ) : (type == "1") ? (
+            <p>{t("Earnings balance")} <span className='fw-bold'>${user?.investment_balance.toLocaleString()} USD</span></p>
+
+          ) : (
+            <p className='mt-4'>{t("Please select a withdrawal type.")}</p>
+          )
+        }
         <Form.Group className='mt-4'>
           <Form.Label>{t("Amount")}</Form.Label>
           <Form.Control
@@ -128,27 +159,34 @@ export default function WithdrawalForm() {
             value={walletOptions.find(val => val.value == wallet_address)}
           />
           <span className='text-danger' >{errors?.wallet_address?.message}</span>
-          
+
         </Form.Group>
         <div className=' mt-4 d-flex justify-content-center'>
-          <Button variant='info' className='mx-auto' onClick={() => createCode()}>
-            {isLoadingCode ? (
-              <>
-                <span
-                  className="spinner-border spinner-border-sm me-2"
-                  role="status"
-                  aria-hidden="true"
-                ></span>
-                Loading...
-              </>
+          {
+            !isSuccessCode ? (
+              <Button variant='info' className='mx-auto' onClick={() => createCode()}>
+                {isLoadingCode ? (
+                  <>
+                    <span
+                      className="spinner-border spinner-border-sm me-2"
+                      role="status"
+                      aria-hidden="true"
+                    ></span>
+                    Loading...
+                  </>
+                ) : (
+                  <>
+                    {t("Generate secret code")}
+                  </>
+                )}</Button>
             ) : (
-              <>
-                {t("Generate secret code")}
-              </>
-            )}</Button>
-           
+              <a href="#" onClick={(e) => createCode()} className='link-opacity-100'>{t("Try again")}</a>
+            )
+          }
+
+
         </div>
-        <p className='text-center mt-1'>{t("Verify your email inbox")}</p>
+        {/* <p className='text-center mt-1'>{t("Verify your email inbox")}</p> */}
         <Form.Group controlId="eventColor" className='mt-4'>
           <Form.Label>{t("Secret code")}</Form.Label>
           <Form.Control

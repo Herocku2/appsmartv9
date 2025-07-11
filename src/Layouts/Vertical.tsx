@@ -1,8 +1,9 @@
-import { Preloader, PreloaderFull } from '@/components/Misc/Preloader'
+
 import React, { Suspense, useEffect } from 'react'
 import { ThemeSettings, useThemeContext } from '../common/context'
 import { useViewport } from '../hooks'
 import { changeHTMLAttribute } from '../utils'
+import { Preloader, PreloaderFull } from '../components/Misc/Preloader'
 
 const Header = React.lazy(() => import('./Header'))
 const Footer = React.lazy(() => import('./Footer'))

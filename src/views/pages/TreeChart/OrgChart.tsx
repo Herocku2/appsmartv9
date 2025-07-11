@@ -15,7 +15,6 @@ export const OrgChartComponent = ({ data }: { data: TreeLeaf[] }) => {
             setTimeout(() =>{
                 const tree_svg_width = document.getElementById("container-chart")?.getBoundingClientRect().width
                 setWidth(tree_svg_width || 0)
-                console.log(tree_svg_width);
                 const chart = new OrgChart()
                     .nodeHeight((d) => 85 + 25)
                     .nodeWidth((d) => 220 + 2)

@@ -27,6 +27,25 @@ type PaymentPlanResponse = {
   };
 };
 
+type TransactionResponse = {
+    amount: string;
+    amount_identifier: number;
+    attemps_to_verify: number;
+    created_date: string; // ISO 8601 string
+    end_block_number: number;
+    from_wallet: string;
+    id: number;
+    information: Record<string, any>; // Use a more specific type if known
+    last_time_stamp_attempt: string;
+    network: string;
+    receiver_wallet: string;
+    start_block_number: number;
+    status: string;
+    token: string;
+    txn_id: string;
+    user: string;
+};
+
 type InvestmentHistory = {
   id: number;
   amount: string;
@@ -38,6 +57,7 @@ type InvestmentHistory = {
   levels_paid: boolean;
   current_investment: number;
   before_investment_value: number
+  withdrawn_from_deposit: number
 };
 
 
@@ -46,4 +66,19 @@ type InvestmentHistoryResponse = {
   links: Links; // Links for pagination
   results: InvestmentHistory[]; // Array of Referral objects
   total_pages: number; // Total number of pages
+}
+
+// Define la estructura para los datos del gráfico
+interface InvestmentChartData {
+  labels: string[]; // Un arreglo de strings, ej: ["Enero", "Febrero", ...]
+  data: number[];   // Un arreglo de números, ej: [50000, 150000, ...]
+}
+
+// Define la estructura completa de la respuesta de la API
+interface InvestmentDashboardData {
+  totalInvestments: number;
+  totalInvestors: number;
+  investmentGoal: number;
+  chartData: InvestmentChartData; // Usa la interfaz definida arriba
+  all_withdrawals_sum: number
 }
