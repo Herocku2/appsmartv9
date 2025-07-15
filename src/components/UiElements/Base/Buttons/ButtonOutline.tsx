@@ -3,7 +3,7 @@ import { buttonOutlineVariants } from './data/buttonData'
 
 const ButtonOutline = () => {
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {buttonOutlineVariants.map(({ variant, text }, index) => (
           <Button key={index} variant={variant}>
@@ -19,7 +19,7 @@ const ButtonOutline = () => {
           </Button>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

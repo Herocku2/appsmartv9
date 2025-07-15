@@ -26,7 +26,7 @@ const renderAvatars = (sources: string[]) => {
 
 const BillingSubscription = () => {
   return (
-    <>
+    <div>
       <Row className="g-4">
         <Col md={3}>
           <h5 className="fw-semibold">Subscription</h5>
@@ -119,7 +119,7 @@ const BillingSubscription = () => {
           </ListGroup>
         </Col>
       </Row>
-    </>
+    </div>
   )
 }
 

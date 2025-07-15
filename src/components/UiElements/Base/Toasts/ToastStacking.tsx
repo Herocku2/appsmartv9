@@ -4,7 +4,7 @@ import bell from '@/assets/images/general/bell.svg'
 
 const ToastStacking = () => {
   return (
-    <>
+    <div>
       <ToastContainer className="position-static">
         <Toast>
           <Toast.Header>
@@ -23,7 +23,7 @@ const ToastStacking = () => {
           <Toast.Body>Heads up, toasts will stack automatically</Toast.Body>
         </Toast>
       </ToastContainer>
-    </>
+    </div>
   )
 }
 

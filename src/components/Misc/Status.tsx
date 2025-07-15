@@ -39,7 +39,7 @@ const Status: React.FC<StatusProps> = ({ status, changeStatus }) => {
   }
 
   return (
-    <>
+    <div>
       <Dropdown>
         <Dropdown.Toggle split variant="" size="sm" className="px-0">
           <span
@@ -61,7 +61,7 @@ const Status: React.FC<StatusProps> = ({ status, changeStatus }) => {
           ))}
         </Dropdown.Menu>
       </Dropdown>
-    </>
+    </div>
   )
 }
 

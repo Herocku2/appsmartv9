@@ -60,7 +60,7 @@ const RechartRadialBar = () => {
   ]
 
   return (
-    <>
+    <div>
       <ResponsiveContainer width="100%" height={400}>
         <RadialBarChart
           cx="50%"
@@ -74,7 +74,7 @@ const RechartRadialBar = () => {
           <Legend iconSize={10} layout="vertical" verticalAlign="middle" wrapperStyle={style} />
         </RadialBarChart>
       </ResponsiveContainer>
-    </>
+    </div>
   )
 }
 

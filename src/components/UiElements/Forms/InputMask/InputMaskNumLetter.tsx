@@ -3,12 +3,12 @@ import { Form } from 'react-bootstrap'
 
 const InputMaskNumLetter = () => {
   return (
-    <>
+    <div>
       <InputMask mask="9999-aaaa" maskChar={null} className="form-control" />
       <Form.Text>
         Phone format: <code>xxsx.aaaa</code>
       </Form.Text>
-    </>
+    </div>
   )
 }
 

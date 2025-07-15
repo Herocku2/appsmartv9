@@ -14,14 +14,14 @@ const DateRange = () => {
   ])
 
   return (
-    <>
+    <div>
       <ReactDateRange
         editableDateInputs={true}
         onChange={(item) => setState([item.selection])}
         moveRangeOnFirstSelection={false}
         ranges={state}
       />
-    </>
+    </div>
   )
 }
 

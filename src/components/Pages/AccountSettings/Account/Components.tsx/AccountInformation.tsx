@@ -70,7 +70,7 @@ const AccountInformation = () => {
 
 
   return (
-    <>
+    <div>
       <div className="mb-6 mb-md-12">
         <h5 className="fw-semibold">{t("Personal Information")}</h5>
         <p>{t("Basic info, like your name and address that will displayed in public")}</p>
@@ -134,7 +134,7 @@ const AccountInformation = () => {
         </Row>
         <Row className="g-md-4 mb-4">
           <Col md={3}>
-            <Form.Label className="fw-medium">{t("Wallet USDT")}</Form.Label>
+            <Form.Label className="fw-medium">{t("Wallet USDT (BEP20)")}</Form.Label>
           </Col>
           <Col md={9} xl={8} xxl={6}>
             <Form.Group>
@@ -165,24 +165,24 @@ const AccountInformation = () => {
         </Row>
         <Button type='submit'>
           {(isLoading) ? (
-            <>
+            <div>
               <span
                 className="spinner-border spinner-border-sm me-2"
                 role="status"
                 aria-hidden="true"
               ></span>
               Loading...
-            </>
+            </div>
           ) : (
-            <>
+            <div>
               {t("Submit")}
-            </>
+            </div>
 
           )}
 
         </Button>
       </Form>
-    </>
+    </div>
   )
 }
 

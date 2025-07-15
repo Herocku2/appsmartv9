@@ -12,7 +12,7 @@ import {
 
 const SweetAlert2 = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="SweetAlert2"
         subName="Extended"
@@ -101,7 +101,7 @@ const SweetAlert2 = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

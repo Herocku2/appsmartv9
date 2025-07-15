@@ -76,7 +76,7 @@ const SweetAlert2Confirmation = () => {
   }
 
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {swalConfigs.map((config, index) => (
           <Button key={index} variant="primary" onClick={config.onClick}>
@@ -84,7 +84,7 @@ const SweetAlert2Confirmation = () => {
           </Button>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

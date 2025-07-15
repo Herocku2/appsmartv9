@@ -84,7 +84,7 @@ const InvoiceContentHeader: React.FC<InvoiceContentHeaderProps> = ({
   }
 
   return (
-    <>
+    <div>
       <Stack
         direction="horizontal"
         className="px-3 border-bottom justify-content-between"
@@ -147,7 +147,7 @@ const InvoiceContentHeader: React.FC<InvoiceContentHeaderProps> = ({
           </Dropdown>
         </Stack>
       </Stack>
-    </>
+    </div>
   )
 }
 

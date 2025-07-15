@@ -133,7 +133,7 @@ const CreateDepositModal: React.FC<PurchasePlanModalProps> = ({ handleCloseModal
                                         {t("This transaction has expired.")}
                                     </div>
                                 ) : (
-                                    <>
+                                    <div>
                                         <QRCode value={data.receiver_wallet} className='mx-auto' />
                                         <div className="mt-4 d-flex flex-wrap align-items-center justify-content-center">
                                             <span className="fw-bold me-2">{data.receiver_wallet}</span>
@@ -146,7 +146,7 @@ const CreateDepositModal: React.FC<PurchasePlanModalProps> = ({ handleCloseModal
                                                 {" "} USDT (BEP20)</span>
                                             <p>{t("and then click on verify payment to confirm transaction.")}</p>
                                         </div>
-                                    </>
+                                    </div>
                                 )}
 
                                 <div className="mt-3">
@@ -168,14 +168,14 @@ const CreateDepositModal: React.FC<PurchasePlanModalProps> = ({ handleCloseModal
                         ) : (
                             <Button className='col-xl-6 col-12' type='submit' onClick={handleVerifyPayment} disabled={isLoadingVerification}>
                                 {isLoadingVerification ? (
-                                    <>
+                                    <div>
                                         <span
                                             className="spinner-border spinner-border-sm me-2"
                                             role="status"
                                             aria-hidden="true"
                                         ></span>
                                         {t("Loading...")}
-                                    </>
+                                    </div>
                                 ) : (
                                     t("Verify payment")
                                 )}

@@ -10,7 +10,7 @@ import {
 
 const NoUiSlider = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="NoUiSlider"
         subName="Forms"
@@ -78,7 +78,7 @@ const NoUiSlider = () => {
         </Col>
         {/* End:: Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

@@ -6,7 +6,7 @@ import { ContactCard, ContactForm, ContactMap } from '@/components/Pages/OtherPa
 
 const ContactUs = () => {
   return (
-    <>
+    <div>
       <TitleHelmet title="Contact Us" />
       <Card>
         <CommonHeader
@@ -21,7 +21,7 @@ const ContactUs = () => {
         <ContactMap />
         <CommonFooter />
       </Card>
-    </>
+    </div>
   )
 }
 

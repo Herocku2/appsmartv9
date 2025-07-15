@@ -10,7 +10,7 @@ const CarouseControlled = () => {
   }
 
   return (
-    <>
+    <div>
       <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
         {carouselItems.map(({ src, alt, caption, text }, itemIndex) => (
           <Carousel.Item key={itemIndex}>
@@ -22,7 +22,7 @@ const CarouseControlled = () => {
           </Carousel.Item>
         ))}
       </Carousel>
-    </>
+    </div>
   )
 }
 

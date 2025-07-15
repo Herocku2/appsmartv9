@@ -194,7 +194,7 @@ const ProjectStatisticChart = () => {
   }
 
   return (
-    <>
+    <div>
       <Card>
         <Card.Header className="d-sm-flex align-items-center py-3">
           <Card.Title>Project Statistic</Card.Title>
@@ -212,7 +212,7 @@ const ProjectStatisticChart = () => {
           <ReactApexChart options={apexOptions} series={[...getChartData()]} height={366} />
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }
 

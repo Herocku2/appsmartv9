@@ -17,7 +17,7 @@ const IconsWeather = () => {
   )
 
   return (
-    <>
+    <div>
       <Card>
         <Card.Header>
           <div className="input-group">
@@ -45,7 +45,7 @@ const IconsWeather = () => {
           </Row>
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }
 

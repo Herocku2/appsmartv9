@@ -18,7 +18,7 @@ const ThemeCustomizerPublic = () => {
   } = useThemeCustomizer()
 
   return (
-    <>
+    <div>
       <div className="p-4">
         <ColorScheme
           handleChangeColorScheme={handleChangeColorScheme}
@@ -50,7 +50,7 @@ const ThemeCustomizerPublic = () => {
           fontConstants={ThemeSettings.font}
         />
       </div>
-    </>
+    </div>
   )
 }
 

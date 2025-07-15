@@ -17,7 +17,7 @@ const IconsLucide = () => {
   )
 
   return (
-    <>
+    <div>
       <Card>
         <Card.Header>
           <div className="input-group">
@@ -45,7 +45,7 @@ const IconsLucide = () => {
           </Row>
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }
 

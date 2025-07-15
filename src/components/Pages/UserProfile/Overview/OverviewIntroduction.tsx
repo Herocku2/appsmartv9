@@ -2,7 +2,7 @@ import { Button, Card, Stack } from 'react-bootstrap'
 
 const OverviewIntroduction = () => {
   return (
-    <>
+    <div>
       <Card.Title className="fw-semibold mb-4">Introduction</Card.Title>
       <dl className="dl-horizontal mb-5">
         <dt>Full Name:</dt>
@@ -62,7 +62,7 @@ const OverviewIntroduction = () => {
           <i className="fi fi-brands-github"></i>
         </Button>
       </Stack>
-    </>
+    </div>
   )
 }
 

@@ -28,7 +28,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
 
   return (
-    <>
+    <div>
       {isLoading ? (
         <PreloaderFull />
       ) : (
@@ -36,6 +36,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           {children}
         </Suspense>
       )}
-    </>
+    </div>
   )
 }

@@ -55,7 +55,7 @@ const ProfileNav = () => {
   ]
 
   return (
-    <>
+    <div>
       <PerfectScrollbar>
         <Nav
           activeKey={activeKey}
@@ -74,7 +74,7 @@ const ProfileNav = () => {
           ))}
         </Nav>
       </PerfectScrollbar>
-    </>
+    </div>
   )
 }
 

@@ -53,7 +53,7 @@ const ContactDetails: React.FC<ContactDetailsProps> = ({ onDelete, selectedConta
   const { name, email, phone, role, joined, location, website, message, about } = selectedContact
 
   return (
-    <>
+    <div>
       <PerfectScrollbar className="px-4 py-4 h-100">
         <Row className="g-2 g-md-6 mb-6">
           <Col sm={2} className="fw-medium text-muted">
@@ -216,7 +216,7 @@ const ContactDetails: React.FC<ContactDetailsProps> = ({ onDelete, selectedConta
           </Col>
         </Row>
       </PerfectScrollbar>
-    </>
+    </div>
   )
 }
 

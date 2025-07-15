@@ -5,7 +5,7 @@ import TitleHelmet from '@/components/Common/TitleHelmet'
 
 const UnderMaintenance = () => {
   return (
-    <>
+    <div>
       <TitleHelmet title="Under Maintenance" />
       <ErrorLayout>
         <Image src={tools} alt="Logo" fluid style={{ widows: '150px', height: '150px' }} />
@@ -35,7 +35,7 @@ const UnderMaintenance = () => {
           </Stack>
         </Stack>
       </ErrorLayout>
-    </>
+    </div>
   )
 }
 

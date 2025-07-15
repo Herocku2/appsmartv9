@@ -17,7 +17,7 @@ const IconsFontAwesome = () => {
   )
 
   return (
-    <>
+    <div>
       <Card>
         <Card.Header>
           <div className="input-group">
@@ -45,7 +45,7 @@ const IconsFontAwesome = () => {
           </Row>
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }
 

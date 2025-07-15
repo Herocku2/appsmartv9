@@ -3,7 +3,7 @@ import 'nouislider/distribute/nouislider.css'
 
 const NoUiSliderPips = () => {
   return (
-    <>
+    <div>
       <Nouislider
         start={[50]}
         pips={{ mode: 'count', values: 5 }}
@@ -13,7 +13,7 @@ const NoUiSliderPips = () => {
           max: 100,
         }}
       />
-    </>
+    </div>
   )
 }
 

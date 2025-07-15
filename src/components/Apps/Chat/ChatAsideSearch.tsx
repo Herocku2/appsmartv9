@@ -15,7 +15,7 @@ const ChatAsideSearch: React.FC<ChatAsideSearchProps> = ({ onSearch }) => {
   }
 
   return (
-    <>
+    <div>
       <Stack
         direction="horizontal"
         gap={3}
@@ -32,7 +32,7 @@ const ChatAsideSearch: React.FC<ChatAsideSearchProps> = ({ onSearch }) => {
           />
         </Form>
       </Stack>
-    </>
+    </div>
   )
 }
 

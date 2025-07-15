@@ -4,7 +4,7 @@ import { avatarImgData, avatarTextData } from './data/avatarData'
 
 const AvatarGroup = () => {
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="avatar-group avatar-group-md">
         {avatarImgData.map(({ src, alt }, index) => (
           <Avatar key={index} type="image" size="md" src={src} alt={alt} />
@@ -16,7 +16,7 @@ const AvatarGroup = () => {
           <Avatar key={index} type="text" text={text} size="md" colorSolid={colorSolid} />
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

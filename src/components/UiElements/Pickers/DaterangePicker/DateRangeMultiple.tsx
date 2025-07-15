@@ -33,7 +33,7 @@ const DateRangeMultiple = () => {
   const ranges: CustomDateRange[] = Object.values(state)
 
   return (
-    <>
+    <div>
       <DateRangePicker
         onChange={(item) =>
           setState({
@@ -43,7 +43,7 @@ const DateRangeMultiple = () => {
         }
         ranges={ranges}
       />
-    </>
+    </div>
   )
 }
 

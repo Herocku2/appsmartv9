@@ -13,7 +13,7 @@ const EditorTyneMCEFull: React.FC<AppProps> = () => {
   }
 
   return (
-    <>
+    <div>
       <Editor
         onInit={handleEditorInit}
         init={{
@@ -39,7 +39,7 @@ const EditorTyneMCEFull: React.FC<AppProps> = () => {
           autosave_retention: '2m',
         }}
       />
-    </>
+    </div>
   )
 }
 

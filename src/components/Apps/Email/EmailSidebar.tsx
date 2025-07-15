@@ -19,7 +19,7 @@ const EmailSidebar: React.FC<{
   }
 
   return (
-    <>
+    <div>
       <Stack
         direction="horizontal"
         gap={3}
@@ -126,7 +126,7 @@ const EmailSidebar: React.FC<{
         onHide={() => setShowComposeModal(false)}
         onCompose={handleCompose}
       />
-    </>
+    </div>
   )
 }
 

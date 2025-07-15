@@ -18,7 +18,7 @@ const ToastPlacement = () => {
   const [position, setPosition] = useState<ToastPosition>('top-start')
 
   return (
-    <>
+    <div>
       <div className="mb-3">
         <label htmlFor="selectToastPlacement">Toast position</label>
         <Form.Select
@@ -61,7 +61,7 @@ const ToastPlacement = () => {
           </Toast>
         </ToastContainer>
       </div>
-    </>
+    </div>
   )
 }
 

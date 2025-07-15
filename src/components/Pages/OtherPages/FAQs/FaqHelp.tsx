@@ -9,7 +9,7 @@ const avatarImages = [avatar1, avatar2, avatar3]
 
 const FaqHelp = () => {
   return (
-    <>
+    <div>
       <div className="text-center mx-auto" style={{ maxWidth: '600px' }}>
         <div className="avatar-group avatar-group-lg mb-4 justify-content-center">
           {avatarImages.map((avatarSrc, index) => (
@@ -31,7 +31,7 @@ const FaqHelp = () => {
           Get in touch
         </Link>
       </div>
-    </>
+    </div>
   )
 }
 

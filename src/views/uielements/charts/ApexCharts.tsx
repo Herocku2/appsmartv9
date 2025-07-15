@@ -21,7 +21,7 @@ import {
 
 const ApexCharts = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="Apexchart"
         subName="Charts"
@@ -459,7 +459,7 @@ const ApexCharts = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

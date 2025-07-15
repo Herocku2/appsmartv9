@@ -14,7 +14,7 @@ import {
 
 const AdvRadio = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumb title="Radios" subName="Forms" />
       <Row className="g-3 g-md-4">
         {/* Start:: Col */}
@@ -182,7 +182,7 @@ const AdvRadio = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

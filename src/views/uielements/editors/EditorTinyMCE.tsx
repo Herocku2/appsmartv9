@@ -6,7 +6,7 @@ import { EditorTyneMCE, EditorTyneMCEFull } from '@/components/UiElements/Editor
 
 const EditorTinyMCE = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="TinyMCE"
         subName="Editors"
@@ -59,7 +59,7 @@ const EditorTinyMCE = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

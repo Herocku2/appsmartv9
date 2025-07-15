@@ -86,7 +86,7 @@ const orders = [
 
 const RecentOrderList = () => {
   return (
-    <>
+    <div>
       <Card>
         <Card.Header className="hstack py-3">
           <Card.Title>Recent Orders</Card.Title>
@@ -187,7 +187,7 @@ const RecentOrderList = () => {
           </Pagination>
         </Card.Footer>
       </Card>
-    </>
+    </div>
   )
 }
 

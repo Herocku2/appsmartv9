@@ -38,7 +38,7 @@ export default function DeposistsTable() {
                                     <td><span className=''>${history.amount.toLocaleString()} USD</span></td>
                                     <td><span className=''>${history.withdrawn_from_deposit.toLocaleString()} USD</span></td>
 
-                                    <td><span className=''>{history.pay_with_balance ? t("Paid with balance") : t("USDT TRC20")}</span></td>
+                                    <td><span className=''>{history.pay_with_balance ? t("Paid with balance") : t("USDT BEP20")}</span></td>
                                     <td className='text-end'><span className=''>${history.before_investment_value.toLocaleString()} USD</span></td>
                                      <td className='text-end'>
                                         {history.coinpayments_response?.information?.transaction_hash ? (

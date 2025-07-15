@@ -11,7 +11,7 @@ const buttonsData = [
 
 const MiscBadge = () => {
   return (
-    <>
+    <div>
       <div className="d-flex flex-wrap gap-8">
         {buttonsData.map(({ variant }, index) => (
           <Button
@@ -61,7 +61,7 @@ const MiscBadge = () => {
           </Button>
         ))}
       </div>
-    </>
+    </div>
   )
 }
 

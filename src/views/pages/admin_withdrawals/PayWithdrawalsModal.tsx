@@ -36,6 +36,7 @@ const CONTRACT_ADDRESS = "0xB4DD0cDD43298db6Ead92ce893EB1F2B128e3d12" as Address
 
 const WithdrawalProcessor: React.FC<WithdrawalProcessorProps> = ({
     selectedWithdrawals,
+    setSelectedWithdrawals,
     disabled = false
 }) => {
     // --- STATE & HOOKS ---
@@ -82,6 +83,7 @@ const WithdrawalProcessor: React.FC<WithdrawalProcessorProps> = ({
                 .unwrap()
                 .then(() => {
                     setStatus('success');
+                    setSelectedWithdrawals([])
                     setTimeout(() => setShowConfirmModal(false), 2000); // Cierra el modal tras 2s de éxito
                 })
                 .catch((err) => {
@@ -158,15 +160,15 @@ const WithdrawalProcessor: React.FC<WithdrawalProcessorProps> = ({
 
         if (status === 'dropped' || status === 'error') {
             return (
-                <>
+                <div>
                     <Button variant="secondary" onClick={handleCloseModal}>{t('Cerrar')}</Button>
                     <Button variant="primary" onClick={handleRetry}>{t('Reintentar Pago')}</Button>
-                </>
+                </div>
             );
         }
 
         return (
-            <>
+            <div>
                 <Button variant="secondary" onClick={handleCloseModal} disabled={isProcessing}>{t('Cancelar')}</Button>
                 <Button variant="primary" onClick={handleConfirmPayment} disabled={isProcessing || !CONTRACT_ADDRESS}>
                     {isProcessing ? <Spinner animation="border" size="sm" className="me-2" /> : null}
@@ -175,12 +177,12 @@ const WithdrawalProcessor: React.FC<WithdrawalProcessorProps> = ({
                     {status === 'updatingBackend' && t('Finalizando en servidor...')}
                     {status === 'idle' && t('Confirmar y Pagar')}
                 </Button>
-            </>
+            </div>
         );
     };
 
     return (
-        <>
+        <div>
             <Button onClick={handleInitiatePayment} disabled={disabled || selectedWithdrawals.length === 0}>
                 {isConnected ? t('Pagar Retiros Seleccionados') : t('Conectar Billetera para Pagar')}
             </Button>
@@ -221,7 +223,7 @@ const WithdrawalProcessor: React.FC<WithdrawalProcessorProps> = ({
                     {getFooter()}
                 </Modal.Footer>
             </Modal>
-        </>
+        </div>
     );
 };
 

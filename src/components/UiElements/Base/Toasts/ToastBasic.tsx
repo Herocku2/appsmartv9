@@ -4,7 +4,7 @@ import bell from '@/assets/images/general/bell.svg'
 
 const ToastBasic = () => {
   return (
-    <>
+    <div>
       <Toast>
         <Toast.Header>
           <Image src={bell} className="rounded me-3" />
@@ -13,7 +13,7 @@ const ToastBasic = () => {
         </Toast.Header>
         <Toast.Body>Hello, world! This is a toast message.</Toast.Body>
       </Toast>
-    </>
+    </div>
   )
 }
 

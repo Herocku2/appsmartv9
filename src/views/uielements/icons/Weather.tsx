@@ -5,7 +5,7 @@ import { IconsWeather } from '@/components/UiElements/Icons'
 
 const Weather = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="Weather"
         subName="Icons"
@@ -30,7 +30,7 @@ const Weather = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

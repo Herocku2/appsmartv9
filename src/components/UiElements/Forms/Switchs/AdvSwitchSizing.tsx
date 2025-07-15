@@ -15,9 +15,9 @@ const squareSwitches = [
 
 const AdvSwitchSizing = () => {
   return (
-    <>
+    <div>
       {switches.map(({ size, label }, index) => (
-        <React.Fragment key={index}>
+        <div key={index}>
           <Form.Check.Label className={`switch${size ? ` switch-${size}` : ''}`}>
             <Form.Check.Input
               type="checkbox"
@@ -36,11 +36,11 @@ const AdvSwitchSizing = () => {
           </Form.Check.Label>
           <br />
           <br />
-        </React.Fragment>
+        </div>
       ))}
       <hr className="my-4" />
       {squareSwitches.map(({ size, label, className }, index) => (
-        <React.Fragment key={index}>
+        <div key={index}>
           <Form.Check.Label
             className={`switch${size ? ` switch-${size}` : ''}${className ? ` ${className}` : ''}`}
           >
@@ -61,9 +61,9 @@ const AdvSwitchSizing = () => {
           </Form.Check.Label>
           <br />
           <br />
-        </React.Fragment>
+        </div>
       ))}
-    </>
+    </div>
   )
 }
 

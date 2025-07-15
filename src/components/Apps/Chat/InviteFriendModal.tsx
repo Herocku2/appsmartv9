@@ -136,19 +136,19 @@ const InviteFriendModal: React.FC<InviteFriendModalProps> = ({
           disabled={loading}
         >
           {loading ? (
-            <>
+            <div>
               <span
                 className="spinner-border spinner-border-sm me-2"
                 role="status"
                 aria-hidden="true"
               ></span>
               Sending...
-            </>
+            </div>
           ) : (
-            <>
+            <div>
               <i className="fi fi-rr-paper-plane me-2 fs-14"></i>
               Send Invite
-            </>
+            </div>
           )}
         </Button>
       </Modal.Footer>

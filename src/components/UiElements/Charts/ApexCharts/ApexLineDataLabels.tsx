@@ -76,9 +76,9 @@ const ApexLineDataLabels: React.FC<ApexLineDataLabelsProps> = () => {
   }
 
   return (
-    <>
+    <div>
       <ReactApexChart options={options} series={series} type="line" height={350} />
-    </>
+    </div>
   )
 }
 

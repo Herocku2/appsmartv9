@@ -17,7 +17,7 @@ const PrivacyPolicyContent = () => {
   }
 
   return (
-    <>
+    <div>
       {dataPrivacy.map((item, idx) => (
         <div className="mb-12" key={idx}>
           <h5 className="mb-3">{item.title}</h5>
@@ -50,7 +50,7 @@ const PrivacyPolicyContent = () => {
           )}
         </Stack>
       </div>
-    </>
+    </div>
   )
 }
 

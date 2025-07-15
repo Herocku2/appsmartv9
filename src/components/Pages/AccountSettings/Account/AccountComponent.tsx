@@ -3,7 +3,7 @@ import { AccountAvatarCover, AccountInformation } from './Components.tsx'
 
 const AccountComponent = () => {
   return (
-    <>
+    <div>
       <Card>
         <Card.Body>
           <AccountAvatarCover />
@@ -12,7 +12,7 @@ const AccountComponent = () => {
           <hr className="my-6 my-md-12" />
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }
 

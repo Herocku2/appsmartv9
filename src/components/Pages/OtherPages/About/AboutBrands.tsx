@@ -3,7 +3,7 @@ import brandData from './data/brandData'
 
 const AboutBrands = () => {
   return (
-    <>
+    <div>
       <Row className="g-3 g-md-4">
         <Col lg={12}>
           <div className="w-100 mx-auto text-center" style={{ maxWidth: '576px' }}>
@@ -22,7 +22,7 @@ const AboutBrands = () => {
           </Col>
         ))}
       </Row>
-    </>
+    </div>
   )
 }
 

@@ -49,7 +49,7 @@ const ModalTheme = () => {
   const colors = ['Primary', 'Secondary', 'Success', 'Info', 'Warning', 'Danger']
 
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {colors.map((variant, idx) => (
           <Button
@@ -97,7 +97,7 @@ const ModalTheme = () => {
           </Modal.Footer>
         </Modal>
       ))}
-    </>
+    </div>
   )
 }
 

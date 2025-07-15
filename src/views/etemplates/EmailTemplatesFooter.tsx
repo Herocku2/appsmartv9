@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const EmailTemplatesFooter = () => {
   return (
-    <>
+    <div>
       <div className="my-16 px-6 py-6 bg-secondary-subtle border border-secondary border-opacity-10 rounded-3 text-center">
         <i className="fi fi-rr-interrogation fs-2 mb-4 d-block"></i>
         <h4 className="fs-18 fw-bold">Still needs more help?</h4>
@@ -74,7 +74,7 @@ const EmailTemplatesFooter = () => {
           </Link>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

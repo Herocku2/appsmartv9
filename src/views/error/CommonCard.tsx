@@ -9,7 +9,7 @@ export interface CommonCardProps {
 
 const CommingSoon: React.FC<CommonCardProps> = ({ error, errorTitle, errorMessage }) => {
   return (
-    <>
+    <div>
       <ErrorLayout>
         <h2 className="fw-bolder mb-4 text-primary" style={{ fontSize: '5rem' }}>
           {error}
@@ -22,7 +22,7 @@ const CommingSoon: React.FC<CommonCardProps> = ({ error, errorTitle, errorMessag
           Back to Home
         </Link>
       </ErrorLayout>
-    </>
+    </div>
   )
 }
 

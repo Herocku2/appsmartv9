@@ -3,7 +3,7 @@ import { Form, Row, Col, ListGroup } from 'react-bootstrap'
 
 const AcSecurity = () => {
   return (
-    <>
+    <div>
       <Row className="g-md-4 mb-4">
         <Col md={3}>
           <h5 className="fw-semibold">Security</h5>
@@ -98,7 +98,7 @@ const AcSecurity = () => {
           </ListGroup>
         </Col>
       </Row>
-    </>
+    </div>
   )
 }
 

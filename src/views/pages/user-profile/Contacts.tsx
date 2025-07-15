@@ -4,11 +4,11 @@ import { ContactsComponent } from '@/components/Pages/UserProfile/Contacts'
 
 const Contacts = () => {
   return (
-    <>
+    <div>
       <TitleHelmet title="Contacts" />
       <ProfileCover />
       <ContactsComponent />
-    </>
+    </div>
   )
 }
 

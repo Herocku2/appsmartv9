@@ -56,7 +56,7 @@ const SweetAlert2Type = () => {
   }
 
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {alertTypes.map(({ variant, text, icon, customClass }, index) => (
           <Button key={index} variant={variant} onClick={() => showAlert(text, icon, customClass)}>
@@ -64,7 +64,7 @@ const SweetAlert2Type = () => {
           </Button>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

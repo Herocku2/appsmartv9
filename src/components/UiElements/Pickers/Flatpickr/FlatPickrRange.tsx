@@ -38,7 +38,7 @@ class FlatPickrRange extends Component<Record<string, never>, FlatPickrRangeStat
 
   render() {
     return (
-      <>
+      <div>
         <Flatpickr
           value={this.state.range}
           options={{ mode: 'range' }}
@@ -51,7 +51,7 @@ class FlatPickrRange extends Component<Record<string, never>, FlatPickrRangeStat
           className="form-control"
           placeholder="Select date..."
         />
-      </>
+      </div>
     )
   }
 }

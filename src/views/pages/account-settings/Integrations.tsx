@@ -4,11 +4,11 @@ import { IntegrationsComponent } from '@/components/Pages/AccountSettings/Integr
 
 const Integrations = () => {
   return (
-    <>
+    <div>
       <TitleHelmet title="Integrations" />
       <AccountSettingsNav />
       <IntegrationsComponent />
-    </>
+    </div>
   )
 }
 

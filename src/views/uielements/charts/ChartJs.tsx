@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom'
 
 const ChartJs = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="ChartJS"
         subName="Charts"
@@ -169,7 +169,7 @@ const ChartJs = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

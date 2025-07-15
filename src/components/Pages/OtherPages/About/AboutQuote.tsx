@@ -5,7 +5,7 @@ import avatar from '@/assets/images/avatars/1.png'
 
 const AboutQuote = () => {
   return (
-    <>
+    <div>
       <div className="py-8 py-md-16 py-lg-24 bg-secondary-subtle rounded-3 border">
         <div className="px-4 w-100 mx-auto text-center" style={{ maxWidth: '768px' }}>
           <div className="mx-auto text-primary mb-4">
@@ -30,7 +30,7 @@ const AboutQuote = () => {
           </Stack>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

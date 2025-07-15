@@ -17,7 +17,7 @@ function ToastifyPosition() {
   }
 
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {notificationPositions.map(({ position, label }, index) => (
           <Button key={index} onClick={() => notifyPosition(position)}>
@@ -27,7 +27,7 @@ function ToastifyPosition() {
       </Stack>
 
       <ToastContainer />
-    </>
+    </div>
   )
 }
 

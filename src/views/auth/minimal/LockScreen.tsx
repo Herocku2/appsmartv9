@@ -40,7 +40,7 @@ const LockScreen = () => {
   }
 
   return (
-    <>
+    <div>
       <TitleHelmet title="Lock Screen" />
       <AuthLayout>
         <AuthMinmal>
@@ -83,14 +83,14 @@ const LockScreen = () => {
                 className="text-white"
               >
                 {loading ? (
-                  <>
+                  <div>
                     <span
                       className="spinner-border spinner-border-sm me-2"
                       role="status"
                       aria-hidden="true"
                     ></span>
                     Unlocking...
-                  </>
+                  </div>
                 ) : (
                   'Unlock'
                 )}
@@ -110,7 +110,7 @@ const LockScreen = () => {
           </Form>
         </AuthMinmal>
       </AuthLayout>
-    </>
+    </div>
   )
 }
 

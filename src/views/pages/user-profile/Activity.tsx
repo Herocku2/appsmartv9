@@ -4,11 +4,11 @@ import { ActivityComponent } from '@/components/Pages/UserProfile/Activity'
 
 const Activity = () => {
   return (
-    <>
+    <div>
       <TitleHelmet title="Activity" />
       <ProfileCover />
       <ActivityComponent />
-    </>
+    </div>
   )
 }
 

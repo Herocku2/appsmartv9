@@ -115,7 +115,7 @@ const ForgotPassword = () => {
 
 
   return (
-    <>
+    <div>
       <TitleHelmet title="Forgot Password" />
       <AuthLayout>
         <AuthMinmal>
@@ -137,7 +137,7 @@ const ForgotPassword = () => {
             </Form.Group>
             {
               isSuccess && (
-                <>
+                <div>
                   <Form.Group className="mb-3">
                     <Form.Control
                       {...register2("otp")}
@@ -180,7 +180,7 @@ const ForgotPassword = () => {
                     <Form.Control.Feedback type="invalid">{errors2?.password2?.message}</Form.Control.Feedback>
                   </Form.Group>
 
-                </>
+                </div>
               )
             }
             <div className="d-grid gap-2 my-4">
@@ -192,18 +192,18 @@ const ForgotPassword = () => {
                 className="text-white"
               >
                 {(isLoading || isLoading2) ? (
-                  <>
+                  <div>
                     <span
                       className="spinner-border spinner-border-sm me-2"
                       role="status"
                       aria-hidden="true"
                     ></span>
                     Loading...
-                  </>
+                  </div>
                 ) : (
-                  <>
+                  <div>
                     {t('Send code')}
-                  </>
+                  </div>
 
                 )}
               </Button>
@@ -216,7 +216,7 @@ const ForgotPassword = () => {
           </Form>
         </AuthMinmal>
       </AuthLayout>
-    </>
+    </div>
   )
 }
 

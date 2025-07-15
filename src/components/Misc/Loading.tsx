@@ -19,7 +19,7 @@ const Loading: React.FC<LoadingProps> = ({ style, className }) => {
   }
 
   return (
-    <>
+    <div>
       <Button
         variant="soft-light"
         className={`btn-lg rounded-pill border ${className}`}
@@ -29,19 +29,19 @@ const Loading: React.FC<LoadingProps> = ({ style, className }) => {
         onClick={handleLoadMore}
       >
         {isLoading ? (
-          <>
+          <div>
             <span
               className="spinner-border spinner-border-sm me-2"
               role="status"
               aria-hidden="true"
             ></span>
             Loading...
-          </>
+          </div>
         ) : (
           'Load more...'
         )}
       </Button>
-    </>
+    </div>
   )
 }
 

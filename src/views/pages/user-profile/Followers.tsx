@@ -4,11 +4,11 @@ import { FollowersComponent } from '@/components/Pages/UserProfile/Followers'
 
 const Followers = () => {
   return (
-    <>
+    <div>
       <TitleHelmet title="Followers" />
       <ProfileCover />
       <FollowersComponent />
-    </>
+    </div>
   )
 }
 

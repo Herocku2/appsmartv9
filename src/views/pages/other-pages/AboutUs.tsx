@@ -13,7 +13,7 @@ import {
 
 const AboutUs = () => {
   return (
-    <>
+    <div>
       <TitleHelmet title="About Us" />
       <Card>
         <CommonHeader
@@ -41,7 +41,7 @@ const AboutUs = () => {
         </section>
         <CommonFooter />
       </Card>
-    </>
+    </div>
   )
 }
 

@@ -20,7 +20,7 @@ const Profile = () => {
   }
 
   return (
-    <>
+    <div>
       <Dropdown show={dropDownOpen} onToggle={toggleDropDown}>
         <Dropdown.Toggle
           className="arrow-none header-btn px-2"
@@ -53,7 +53,7 @@ const Profile = () => {
         </Dropdown.Menu>
       </Dropdown>
      
-    </>
+    </div>
   )
 }
 

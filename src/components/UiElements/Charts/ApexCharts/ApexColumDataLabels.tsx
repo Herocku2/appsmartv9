@@ -119,9 +119,9 @@ const ApexColumDataLabels: React.FC<ApexColumDataLabelsProps> = () => {
   }
 
   return (
-    <>
+    <div>
       <ReactApexChart options={options} series={series} type="bar" height={350} />
-    </>
+    </div>
   )
 }
 

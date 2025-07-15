@@ -54,7 +54,7 @@ const RechartRadarChart = () => {
   const themeColor = colors[selectedColor] || selectedColor
 
   return (
-    <>
+    <div>
       <ResponsiveContainer width="100%" height={400}>
         <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
           <PolarGrid />
@@ -63,7 +63,7 @@ const RechartRadarChart = () => {
           <Radar name="Mike" dataKey="A" stroke={themeColor} fill={themeColor} fillOpacity={0.5} />
         </RadarChart>
       </ResponsiveContainer>
-    </>
+    </div>
   )
 }
 

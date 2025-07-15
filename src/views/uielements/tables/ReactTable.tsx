@@ -13,7 +13,7 @@ import {
 
 const ReactTable = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="ReactTable"
         subName="Tables"
@@ -126,7 +126,7 @@ const ReactTable = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

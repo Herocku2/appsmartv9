@@ -166,7 +166,7 @@
   "Total Profit": "Total Profit",
   "Transaction created successfully!": "Transaction created successfully!",
   "Transaction successfully, investment increased!": "Transaction successfully, investment increased!",
-  "USDT TRC20": "USDT TRC20",
+  "USDT BEP20": "USDT BEP20",
   "USDT wallet is required": "USDT wallet is required",
   "Unilevel Tree": "Unilevel Tree",
   "Unilevel tree": "Unilevel tree",
@@ -177,7 +177,7 @@
   "View": "View",
   "Wallet": "Wallet",
   "Wallet USDT": "Wallet USDT",
-  "Wallet address USDT TRC20 is required": {
+  "Wallet address USDT BEP20 is required": {
     "": ""
   },
   "Wallet invalid, register USDT wallet on profile section and try again!": "Wallet invalid, register USDT wallet on profile section and try again!",

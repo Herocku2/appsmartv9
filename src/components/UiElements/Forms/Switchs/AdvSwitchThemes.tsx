@@ -4,7 +4,7 @@ const AdvSwitchThemes = () => {
   const colors = ['Primary', 'Secondary', 'Success', 'Info', 'Warning', 'Danger']
 
   return (
-    <>
+    <div>
       <div className="hstack flex-wrap gap-6 ">
         {colors.map((variant) => (
           <Form.Check.Label
@@ -65,7 +65,7 @@ const AdvSwitchThemes = () => {
           </Form.Check.Label>
         ))}
       </div>
-    </>
+    </div>
   )
 }
 

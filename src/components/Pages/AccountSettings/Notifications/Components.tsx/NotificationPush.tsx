@@ -2,7 +2,7 @@ import { Col, Row, Form } from 'react-bootstrap'
 
 const NotificationPush = () => {
   return (
-    <>
+    <div>
       <Row className="g-4">
         <Col md={3}>
           <h5 className="fw-semibold">Push Notify</h5>
@@ -50,7 +50,7 @@ const NotificationPush = () => {
           />
         </Col>
       </Row>
-    </>
+    </div>
   )
 }
 

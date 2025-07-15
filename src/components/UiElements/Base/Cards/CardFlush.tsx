@@ -29,7 +29,7 @@ const CardFlush = () => {
   ]
 
   return (
-    <>
+    <div>
       <Row className="g-3 g-md-4">
         {cardsData.map(({ title, text, links }, index) => (
           <Col lg={4} key={index}>
@@ -51,7 +51,7 @@ const CardFlush = () => {
           </Col>
         ))}
       </Row>
-    </>
+    </div>
   )
 }
 

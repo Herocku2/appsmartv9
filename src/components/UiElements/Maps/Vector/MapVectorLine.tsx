@@ -14,9 +14,9 @@ interface MapVectorLineProps {
 
 const MapVectorLine = ({ width, height }: MapVectorLineProps) => {
   return (
-    <>
+    <div>
       <MapBase type="world" width={width} height={height} options={mapOptsLine} />
-    </>
+    </div>
   )
 }
 

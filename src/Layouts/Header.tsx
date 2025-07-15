@@ -58,7 +58,7 @@ const Header = ({ toggleMenu, navOpen }: HeaderProps) => {
   }
 
   return (
-    <>
+    <div>
       <header className="header-navbar">
         <div className="header-inner px-2 px-md-3">
           {/* header-left */}
@@ -99,7 +99,7 @@ const Header = ({ toggleMenu, navOpen }: HeaderProps) => {
           </div>
         </div>
       </header>
-    </>
+    </div>
   )
 }
 

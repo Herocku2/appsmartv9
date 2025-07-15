@@ -7,7 +7,7 @@ const ToastAutohide = () => {
   const [show, setShow] = useState(false)
 
   return (
-    <>
+    <div>
       <Button onClick={() => setShow(true)}>Show Live Toast</Button>
 
       <ToastContainer className="p-3 position-fixed" position="top-end" style={{ zIndex: 9999 }}>
@@ -20,7 +20,7 @@ const ToastAutohide = () => {
           <Toast.Body>Woohoo, you're reading this text in a Toast!</Toast.Body>
         </Toast>
       </ToastContainer>
-    </>
+    </div>
   )
 }
 

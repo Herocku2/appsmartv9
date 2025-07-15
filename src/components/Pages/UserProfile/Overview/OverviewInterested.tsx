@@ -9,7 +9,7 @@ import EpisodesData from './data/interested/EpisodesData'
 
 const OverviewInterested = () => {
   return (
-    <>
+    <div>
       <h5 className="fw-semibold mb-5">Interested</h5>
       <div className="d-flex flex-wrap gap-1">
         <div className="text-muted me-3">Movies: </div>
@@ -64,7 +64,7 @@ const OverviewInterested = () => {
           </Link>
         ))}
       </div>
-    </>
+    </div>
   )
 }
 

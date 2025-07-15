@@ -124,9 +124,9 @@ const ApexBarWithLine: React.FC<ApexBarWithLineProps> = () => {
   }
 
   return (
-    <>
+    <div>
       <ReactApexChart options={options} series={series} height={350} />
-    </>
+    </div>
   )
 }
 

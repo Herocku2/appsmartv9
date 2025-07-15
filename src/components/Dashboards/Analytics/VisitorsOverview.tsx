@@ -161,7 +161,7 @@ const VisitorsOverview = () => {
   }
 
   return (
-    <>
+    <div>
       <Card>
         <Card.Header className="d-sm-flex align-items-center py-3">
           <Card.Title>Visitors Overview</Card.Title>
@@ -184,7 +184,7 @@ const VisitorsOverview = () => {
           />
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }
 

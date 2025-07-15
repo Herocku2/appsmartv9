@@ -3,7 +3,7 @@ import { tabsData } from './data/tabsData'
 
 const NavTabPills = () => {
   return (
-    <>
+    <div>
       <Tab.Container defaultActiveKey="home">
         <Nav variant="pills" className="mb-3">
           {tabsData.map(({ eventKey, title, disabled }) => (
@@ -22,7 +22,7 @@ const NavTabPills = () => {
           ))}
         </Tab.Content>
       </Tab.Container>
-    </>
+    </div>
   )
 }
 

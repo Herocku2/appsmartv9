@@ -40,7 +40,7 @@ const KanbanColumnEditModal: React.FC<ColumnEditModalProps> = ({
   }
 
   return (
-    <>
+    <div>
       <Modal show={isOpen} onHide={handleCancel} centered>
         <Modal.Header closeButton>
           <Modal.Title>{`Edit ${columnName}`}</Modal.Title>
@@ -77,7 +77,7 @@ const KanbanColumnEditModal: React.FC<ColumnEditModalProps> = ({
           </Button>
         </Modal.Footer>
       </Modal>
-    </>
+    </div>
   )
 }
 

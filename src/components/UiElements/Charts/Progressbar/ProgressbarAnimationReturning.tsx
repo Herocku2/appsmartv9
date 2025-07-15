@@ -9,7 +9,7 @@ const ProgressbarAnimationReturning = () => {
   const selectedColor = settings.color as keyof typeof colors
   const themeColor = colors[selectedColor] || selectedColor
   return (
-    <>
+    <div>
       <ChangingProgressProvider values={[0, 100]}>
         {(percentage: number) => (
           <CircularProgressbar
@@ -36,7 +36,7 @@ const ProgressbarAnimationReturning = () => {
           />
         )}
       </ChangingProgressProvider>
-    </>
+    </div>
   )
 }
 

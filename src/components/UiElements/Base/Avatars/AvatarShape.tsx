@@ -4,7 +4,7 @@ import { avatarTextData } from './data/avatarData'
 
 const AvatarShape = () => {
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {avatarTextData.map(({ text, shape }, index) => (
           <Avatar
@@ -17,7 +17,7 @@ const AvatarShape = () => {
           />
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

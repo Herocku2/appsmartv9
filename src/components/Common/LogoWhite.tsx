@@ -1,6 +1,6 @@
 const LogoWhite = () => {
   return (
-    <>
+    <div>
       <div className="barnd-logo">
         <div className="logo-icon">
           <svg
@@ -103,7 +103,7 @@ z"
         </div>
         <div className="logo-text text-white">Window</div>
       </div>
-    </>
+    </div>
   )
 }
 

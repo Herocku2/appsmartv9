@@ -63,7 +63,7 @@ const notificationTypes = [
 
 const HotToastType = () => {
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {notificationTypes.map(({ label, action, variant }, index) => (
           <Button key={index} variant={variant} onClick={action}>
@@ -72,7 +72,7 @@ const HotToastType = () => {
         ))}
       </Stack>
       <Toaster />
-    </>
+    </div>
   )
 }
 

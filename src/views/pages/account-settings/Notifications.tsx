@@ -4,11 +4,11 @@ import { NotificationsComponent } from '@/components/Pages/AccountSettings/Notif
 
 const Notifications = () => {
   return (
-    <>
+    <div>
       <TitleHelmet title="Notifications" />
       <AccountSettingsNav />
       <NotificationsComponent />
-    </>
+    </div>
   )
 }
 

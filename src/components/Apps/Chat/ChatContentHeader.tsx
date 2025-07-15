@@ -81,7 +81,7 @@ const ChatContentHeader: React.FC<ChatContentHeaderProps> = ({
   }
 
   return (
-    <>
+    <div>
       <Stack
         direction="horizontal"
         className="ps-2 ps-md-3 pe-2 pe-md-3 border-bottom justify-content-between"
@@ -165,7 +165,7 @@ const ChatContentHeader: React.FC<ChatContentHeaderProps> = ({
           </Dropdown>
         </Stack>
       </Stack>
-    </>
+    </div>
   )
 }
 

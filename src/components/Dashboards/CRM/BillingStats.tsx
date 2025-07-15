@@ -9,7 +9,7 @@ const BillingStats = () => {
   const selectedColor = settings.color as keyof typeof colors
   const themeColor = colors[selectedColor] || selectedColor
   return (
-    <>
+    <div>
       <Card>
         <Card.Header className="py-3 pe-3 d-flex justify-content-between align-items-center">
           <Card.Title>Billing Stats</Card.Title>
@@ -87,7 +87,7 @@ const BillingStats = () => {
           </Link>
         </Card.Footer>
       </Card>
-    </>
+    </div>
   )
 }
 

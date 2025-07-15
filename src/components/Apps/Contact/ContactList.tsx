@@ -42,7 +42,7 @@ const ContactList: React.FC<ContactListProps> = ({
   }
 
   return (
-    <>
+    <div>
       <PerfectScrollbar className="h-100 d-flex flex-column">
         {filteredContacts.length === 0 ? (
           <ListGroup.Item className="py-4 text-center flex-grow-1">No items found</ListGroup.Item>
@@ -74,7 +74,7 @@ const ContactList: React.FC<ContactListProps> = ({
           <Loading className="w-100" />
         </div>
       </PerfectScrollbar>
-    </>
+    </div>
   )
 }
 

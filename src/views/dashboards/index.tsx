@@ -30,7 +30,7 @@ const Dashboard = () => {
   const navigate = useNavigate()
 
   function copyLink() {
-    copiarTexto(`https://office.smartsolutions.name/auth/register/${user?.ref_code}`, t("Link copied"))
+    copiarTexto(`https://app.smartsolution.name/auth/register/${user?.ref_code}`, t("Link copied"))
   }
 
   return (
@@ -53,7 +53,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="col-6 col-sm-4 col-lg-3 col-xl-2 mb-4">
+        <div className="col-12 col-sm-4 col-lg-3 col-xl-2 mb-4">
           <div className="card adminuiux-card">
             <div className="card-body">
               <p className="text-secondary small mb-2">{t('Investment value')}</p>
@@ -65,13 +65,13 @@ const Dashboard = () => {
         <div className="col-12 col-sm-4 col-lg-3 col-xl-2 mb-4">
           <div className="card adminuiux-card">
             <div className="card-body">
-              <p className="text-secondary small mb-2">{t('Monthly Earns')}</p>
+              <p className="text-secondary small mb-2">{t('Earns')}</p>
               <h4 className="mb-3">${data?.daily_payment?.toLocaleString() || 0} USD</h4>
               <span className="badge badge-light text-bg-success"><i className="me-1 bi bi-arrow-down-short" />+{data?.daily_percentage.toLocaleString()}%</span>
             </div>
           </div>
         </div>
-        <div className="col-6 col-sm-4 col-lg-3 col-xl-2 mb-4">
+        <div className="col-12 col-sm-4 col-lg-3 col-xl-2 mb-4">
           <div className="card adminuiux-card">
             <div className="card-body">
               <p className="text-secondary small mb-2">{t('Total Profit')}</p>
@@ -83,7 +83,7 @@ const Dashboard = () => {
 
 
       </div>
-      <ButtonWithLink label={t("Copy link")} link={`https://office.smartsolutions.name/auth/register/${user?.ref_code}`}
+      <ButtonWithLink label={t("Copy link")} link={`https://app.smartsolution.name/auth/register/${user?.ref_code}`}
         onClick={() => copyLink()} />
       <div className='row align-items-center ' style={{ maxWidth: "500px" }}>
 

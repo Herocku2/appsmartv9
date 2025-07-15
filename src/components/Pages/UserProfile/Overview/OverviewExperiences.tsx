@@ -4,7 +4,7 @@ import ExperiencesData from './data/ExperiencesData'
 
 const OverviewExperiences = () => {
   return (
-    <>
+    <div>
       <h5 className="fw-semibold mb-5">Experiences</h5>
       {ExperiencesData.map(({ image, title, time, duration, description }, idx) => (
         <div key={idx} className="border p-3 mb-3 rounded d-sm-flex align-items-start">
@@ -32,7 +32,7 @@ const OverviewExperiences = () => {
           </div>
         </div>
       ))}
-    </>
+    </div>
   )
 }
 

@@ -13,7 +13,7 @@ import {
 
 const Dropdowns = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumb title="Dropdowns" subName="Base UI" />
       <Row className="g-3 g-md-4">
         {/* Start:: Col */}
@@ -338,7 +338,7 @@ const Dropdowns = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

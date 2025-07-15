@@ -30,9 +30,9 @@ const stackedSquareSwitches = [
 
 const AdvSwitchStacked = () => {
   return (
-    <>
+    <div>
       {stackedSwitches.map(({ size, name, label }, index) => (
-        <React.Fragment key={index}>
+        <div key={index}>
           <Form.Check.Label className={`switch${size ? ` switch-${size}` : ''}`}>
             <Form.Check.Input
               type="radio"
@@ -48,13 +48,13 @@ const AdvSwitchStacked = () => {
           </Form.Check.Label>
           <br />
           <br />
-        </React.Fragment>
+        </div>
       ))}
 
       <hr className="my-4" />
 
       {stackedSquareSwitches.map(({ size, name, label, className }, index) => (
-        <React.Fragment key={index}>
+        <div key={index}>
           <Form.Check.Label
             className={`switch${size ? ` switch-${size}` : ''}${className ? ` ${className}` : ''}`}
           >
@@ -72,9 +72,9 @@ const AdvSwitchStacked = () => {
           </Form.Check.Label>
           <br />
           <br />
-        </React.Fragment>
+        </div>
       ))}
-    </>
+    </div>
   )
 }
 

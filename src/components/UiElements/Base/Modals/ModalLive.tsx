@@ -7,7 +7,7 @@ const ModalLive = () => {
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
   return (
-    <>
+    <div>
       <Button variant="primary" onClick={handleShow}>
         Launch Live Modal
       </Button>
@@ -26,7 +26,7 @@ const ModalLive = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-    </>
+    </div>
   )
 }
 

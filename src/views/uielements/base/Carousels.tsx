@@ -10,7 +10,7 @@ import {
 
 const Carousels = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumb title="Carousels" subName="Base UI" />
       <Row className="g-3 g-md-4">
         {/* Start:: Col */}
@@ -62,7 +62,7 @@ const Carousels = () => {
         </Col>
         {/* End:: Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

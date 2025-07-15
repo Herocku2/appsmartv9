@@ -4,7 +4,7 @@ const DropdownThemeSoft = () => {
   const colors = ['Primary', 'Secondary', 'Success', 'Info', 'Warning', 'Danger']
 
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {colors.map((variant) => (
           <Dropdown
@@ -36,7 +36,7 @@ const DropdownThemeSoft = () => {
           </Dropdown>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

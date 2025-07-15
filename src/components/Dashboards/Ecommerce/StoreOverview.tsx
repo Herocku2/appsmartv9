@@ -23,7 +23,7 @@ const storeData = [
 
 const StoreOverview = () => {
   return (
-    <>
+    <div>
       <Card>
         <Card.Header className="py-3 pe-3 d-flex justify-content-between align-items-center">
           <Card.Title>Store Overview</Card.Title>
@@ -70,7 +70,7 @@ const StoreOverview = () => {
           </Row>
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }
 

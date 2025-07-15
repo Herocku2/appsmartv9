@@ -14,7 +14,7 @@ import {
 
 const ReactSlick = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="Slick Slider"
         subName="Extended"
@@ -126,7 +126,7 @@ const ReactSlick = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

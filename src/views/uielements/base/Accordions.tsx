@@ -13,7 +13,7 @@ import {
 
 const Accordions = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumb title="Accrodions" subName="Base UI" />
       <Row className="g-3 g-md-4">
         {/* Start:: Col */}
@@ -156,7 +156,7 @@ const Accordions = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

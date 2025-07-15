@@ -5,7 +5,7 @@ import 'react-quill/dist/quill.snow.css'
 const EditorSnow = () => {
   const [value, setValue] = useState('')
   return (
-    <>
+    <div>
       <div style={{ height: '240px' }}>
         <ReactQuill
           theme="snow"
@@ -15,7 +15,7 @@ const EditorSnow = () => {
           placeholder={'Compose an epic...'}
         />
       </div>
-    </>
+    </div>
   )
 }
 

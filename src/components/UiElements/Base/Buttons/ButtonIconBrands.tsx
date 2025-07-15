@@ -3,7 +3,7 @@ import { buttonBrandVariants } from './data/buttonData'
 
 const ButtonIconBrands = () => {
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {buttonBrandVariants.map(({ variant, iconClass }, index) => (
           <Button key={index} variant={variant} className={`btn-icon btn-${iconClass} rounded`}>
@@ -19,7 +19,7 @@ const ButtonIconBrands = () => {
           </Button>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

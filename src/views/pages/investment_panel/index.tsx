@@ -92,14 +92,16 @@ const InvestmentDashboard: React.FC = () => {
 
   const chartOptions: ChartOptions<'line'> = {
     responsive: true,
+      maintainAspectRatio: false,
     plugins: {
       legend: { position: 'top' as const },
       title: { display: true, text: t('Investment Evolution Over Time') },
     },
+    
   };
 
   return (
-    <Container fluid className="p-4">
+    <Container >
       <h2 className="mb-4">{t('Investment Dashboard')}</h2>
 
       <Row className="mb-4">
@@ -123,7 +125,7 @@ const InvestmentDashboard: React.FC = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col md={3}>
+        <Col md={3} className="mb-3 mb-md-0">
           <Card className="shadow-sm h-100">
             <Card.Body>
               <Card.Title>{t('Average Investment')}</Card.Title>
@@ -134,7 +136,7 @@ const InvestmentDashboard: React.FC = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col md={3}>
+        <Col md={3} className="mb-md-0">
           <Card className="shadow-sm h-100">
             <Card.Body>
               <Card.Title>{t('Paid')}</Card.Title>
@@ -147,10 +149,12 @@ const InvestmentDashboard: React.FC = () => {
         </Col>
       </Row>
       <Row>
-        <Col className="mb-3 mb-lg-0">
-          <Card className="shadow-sm h-100">
-            <Card.Body>
-              <Line options={chartOptions} data={chartData} />
+        <Col className="mb-3 mb-lg-0 ">
+          <Card className="shadow-sm h-100" style={{ minHeight: '600px' }}>
+            <Card.Body className="d-flex align-items-center">
+              <div style={{ width: '100%', height: '100%' }}>
+                <Line options={chartOptions} data={chartData} />
+              </div>
             </Card.Body>
           </Card>
         </Col>

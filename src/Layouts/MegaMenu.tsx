@@ -11,7 +11,7 @@ const MegaMenu = () => {
   }
 
   return (
-    <>
+    <div>
       <div className="megamenu">
         <div
           className="w-100 d-flex d-lg-none align-items-center gap-4 ps-4 pe-3 py-3 border-bottom"
@@ -39,7 +39,7 @@ const MegaMenu = () => {
         ></span>
         <MegaMenuAuth isOpen={authOpen} setIsOpen={setAuthOpen} /> */}
       </div>
-    </>
+    </div>
   )
 }
 

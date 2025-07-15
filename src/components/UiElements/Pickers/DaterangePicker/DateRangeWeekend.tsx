@@ -53,7 +53,7 @@ const DateRangeWeekend = () => {
   }
 
   return (
-    <>
+    <div>
       <DateRangePicker
         onChange={(item) => setState({ ...state, ...item })}
         moveRangeOnFirstSelection={false}
@@ -62,7 +62,7 @@ const DateRangeWeekend = () => {
         direction="horizontal"
         dayContentRenderer={customDayContent}
       />
-    </>
+    </div>
   )
 }
 

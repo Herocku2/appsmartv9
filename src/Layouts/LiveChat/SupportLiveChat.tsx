@@ -43,7 +43,7 @@ const SupportLiveChat = ({ show }: SupportLiveChatProps) => {
   }, [show, isExpanded])
 
   return (
-    <>
+    <div>
       <Card
         className={`support-live-chat ${show ? 'chat-show' : ''} ${
           isExpanded ? 'chat-expanded' : ''
@@ -141,7 +141,7 @@ const SupportLiveChat = ({ show }: SupportLiveChatProps) => {
           </Form>
         </Card.Footer>
       </Card>
-    </>
+    </div>
   )
 }
 

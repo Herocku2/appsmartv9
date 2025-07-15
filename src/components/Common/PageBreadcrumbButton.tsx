@@ -9,7 +9,7 @@ interface PageTitleProps {
 }
 const PageBreadcrumbButton = ({ title, subName, url }: PageTitleProps) => {
   return (
-    <>
+    <div>
       <Stack direction="horizontal" className="justify-content-between">
         <PageBreadcrumb title={title} subName={subName} />
         <Stack gap={2} direction="horizontal" className="mt-2 mb-4 mb-md-6">
@@ -18,7 +18,7 @@ const PageBreadcrumbButton = ({ title, subName, url }: PageTitleProps) => {
           </Link>
         </Stack>
       </Stack>
-    </>
+    </div>
   )
 }
 

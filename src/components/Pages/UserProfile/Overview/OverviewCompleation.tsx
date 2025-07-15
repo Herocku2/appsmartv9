@@ -3,7 +3,7 @@ import { ProgressBar } from 'react-bootstrap'
 
 const OverviewCompleation = () => {
   return (
-    <>
+    <div>
       <div className="hstack gap-4 justify-content-between mb-16">
         <h5 className="card-title fw-semibold mb-0">Compleation</h5>
         <Link to="#!" className="icon-link icon-link-hover link-primary">
@@ -18,7 +18,7 @@ const OverviewCompleation = () => {
         </div>
         <ProgressBar now={78} className="w-100  rounded" style={{ height: '5px' }} />
       </div>
-    </>
+    </div>
   )
 }
 

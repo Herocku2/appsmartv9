@@ -3,7 +3,7 @@ import { buttonVariants, buttonSoftVariants } from './data/buttonData'
 
 const ButtonIconSolid = () => {
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {buttonVariants.map(({ variant, text }, index) => (
           <Button key={index} variant={variant} className="btn-icon">
@@ -19,7 +19,7 @@ const ButtonIconSolid = () => {
           </Button>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

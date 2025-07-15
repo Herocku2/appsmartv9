@@ -58,7 +58,7 @@ const MenuItemWithChildren = ({
       <div className={`${subMenuClassNames} ${showMenu ? 'show' : ''}`} aria-labelledby={item.key}>
         {(item.children || []).map((child, idx) => {
           return (
-            <React.Fragment key={idx}>
+            <div key={idx}>
               {child.children ? (
                 <MenuItemWithChildren
                   item={child}
@@ -79,7 +79,7 @@ const MenuItemWithChildren = ({
                   }`}
                 />
               )}
-            </React.Fragment>
+            </div>
           )
         })}
       </div>
@@ -151,7 +151,7 @@ const AppMenu = ({ menuItems }: AppMenuProps) => {
     <ul className="navbar-nav" ref={menuRef} id="main-side-menu">
       {(topNavMenuItems || []).map((item, idx) => {
         return (
-          <React.Fragment key={idx}>
+          <div key={idx}>
             {item.children ? (
               <MenuItemWithChildren
                 item={item}
@@ -169,7 +169,7 @@ const AppMenu = ({ menuItems }: AppMenuProps) => {
                 linkClassName={activeMenuItems.includes(item.key) ? 'active' : ''}
               />
             )}
-          </React.Fragment>
+          </div>
         )
       })}
     </ul>

@@ -12,7 +12,7 @@ const CardOverlay = () => {
     backgroundImage: ' linear-gradient(rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75))',
   }
   return (
-    <>
+    <div>
       <Row className="g-3 g-md-4">
         <Col lg={4}>
           <Card className="text-bg-dark" style={cardGradintColor}>
@@ -54,7 +54,7 @@ const CardOverlay = () => {
           </Card>
         </Col>
       </Row>
-    </>
+    </div>
   )
 }
 

@@ -5,7 +5,7 @@ import { IconsFontAwesome } from '@/components/UiElements/Icons'
 
 const FontAwesome = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="FontAwesome"
         subName="Icons"
@@ -30,7 +30,7 @@ const FontAwesome = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

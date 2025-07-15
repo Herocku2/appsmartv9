@@ -30,7 +30,7 @@ const ThemeRoutes = (props: IRoutesProps) => {
   
 
   return (
-    <React.Fragment>
+    <div>
       <Routes>
         <Route>
           {publicProtectedFlattenRoutes.map((route, idx) => (
@@ -64,7 +64,7 @@ const ThemeRoutes = (props: IRoutesProps) => {
         </Route>
       </Routes>
       <Toaster position="top-center" />
-    </React.Fragment>
+    </div>
   )
 }
 

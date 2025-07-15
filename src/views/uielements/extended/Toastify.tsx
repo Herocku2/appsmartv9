@@ -10,7 +10,7 @@ import {
 
 const Toastify = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="Toastify"
         subName="Extended"
@@ -74,7 +74,7 @@ const Toastify = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

@@ -37,9 +37,9 @@ const ApexBasicRadar: React.FC<ApexBasicRadarProps> = () => {
   }
 
   return (
-    <>
+    <div>
       <ReactApexChart options={options} series={series} type="radar" height={380} />
-    </>
+    </div>
   )
 }
 

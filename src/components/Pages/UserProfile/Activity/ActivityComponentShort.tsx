@@ -4,7 +4,7 @@ import dataActivityShort from './data/dataActivityShort'
 
 const ActivityComponentShort = () => {
   return (
-    <>
+    <div>
       <Card>
         <Card.Body>
           <ListGroup className="list-group-timeline list-group list-group-flush ms-3">
@@ -31,7 +31,7 @@ const ActivityComponentShort = () => {
           </ListGroup>
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }
 

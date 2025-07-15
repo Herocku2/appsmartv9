@@ -5,7 +5,7 @@ import coupon from '@/assets/images/etemplate/coupon.svg'
 
 const EmailTemplateCouponSale = () => {
   return (
-    <>
+    <div>
       <EmailTemplatesLayout>
         <div className="text-center mx-auto">
           <div className="mt-4 mb-12">
@@ -29,7 +29,7 @@ const EmailTemplateCouponSale = () => {
         </div>
         <EmailTemplatesFooter />
       </EmailTemplatesLayout>
-    </>
+    </div>
   )
 }
 

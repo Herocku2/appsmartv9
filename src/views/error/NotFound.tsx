@@ -12,10 +12,10 @@ const NotFound: React.FC = () => {
   }
 
   return (
-    <>
+    <div>
       <TitleHelmet title="404 Not Found" />
       <CommonCard {...commonCardProps} />
-    </>
+    </div>
   )
 }
 

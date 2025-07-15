@@ -4,7 +4,7 @@ import { GalleryOne, GalleryThree, GalleryTwo } from '.'
 
 const AllsGallery = () => {
   return (
-    <>
+    <div>
       <Row className="g-3 g-md-4">
         <Col lg={4}>
           <GalleryOne />
@@ -37,7 +37,7 @@ const AllsGallery = () => {
           <Loading />
         </Col>
       </Row>
-    </>
+    </div>
   )
 }
 

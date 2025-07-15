@@ -15,7 +15,7 @@ const MegaMenuApps: React.FC<MegaMenuAppsProps> = ({ isOpen, setIsOpen }) => {
   }
 
   return (
-    <>
+    <div>
       <Dropdown
         show={isOpen}
         onMouseEnter={() => setIsOpen(true)}
@@ -87,7 +87,7 @@ const MegaMenuApps: React.FC<MegaMenuAppsProps> = ({ isOpen, setIsOpen }) => {
           </Row>
         </Dropdown.Menu>
       </Dropdown>
-    </>
+    </div>
   )
 }
 

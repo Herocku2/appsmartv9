@@ -32,7 +32,7 @@ const KanbanTask: React.FC<TaskProps> = ({ id, content, index, onDelete }) => {
   }
 
   return (
-    <>
+    <div>
       <Draggable key={id} draggableId={id} index={index}>
         {(provided) => (
           <Card
@@ -92,7 +92,7 @@ const KanbanTask: React.FC<TaskProps> = ({ id, content, index, onDelete }) => {
         taskDetails={content[0]}
         onDelete={onDelete}
       />
-    </>
+    </div>
   )
 }
 

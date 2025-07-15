@@ -5,7 +5,7 @@ import { IconsLucide } from '@/components/UiElements/Icons'
 
 const Lucide = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="Lucide"
         subName="Icons"
@@ -30,7 +30,7 @@ const Lucide = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

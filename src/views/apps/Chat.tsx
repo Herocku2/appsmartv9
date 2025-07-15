@@ -145,7 +145,7 @@ const Chat: React.FC = () => {
   }, [sidebarRightToggle])
 
   return (
-    <>
+    <div>
       <TitleHelmet title="Chats" />
       <Card
         className={`apps-card  ${selectedChat ? 'apps-container-toggle' : ''}  ${
@@ -188,7 +188,7 @@ const Chat: React.FC = () => {
                 </Button>
               </Stack>
             ) : (
-              <>
+              <div>
                 <ChatContentHeader
                   selectedChat={selectedChat}
                   onDeleteChat={handleDeleteChat}
@@ -201,7 +201,7 @@ const Chat: React.FC = () => {
                 />
                 <ChatContentDetails selectedChat={selectedChat} />
                 <ChatActionFooter onReplyMessage={handleReplyMessage} />
-              </>
+              </div>
             )}
           </div>
           <ChatUserInfoSidebar
@@ -217,7 +217,7 @@ const Chat: React.FC = () => {
         setInviteEmail={setInviteEmail}
         handleInviteClose={() => setShowInviteModal(false)}
       />
-    </>
+    </div>
   )
 }
 

@@ -7,7 +7,7 @@ interface InvoiceAsideCreateProps {
 
 const InvoiceAsideCreate: React.FC<InvoiceAsideCreateProps> = ({ handleCreateInvoice }) => {
   return (
-    <>
+    <div>
       <Stack
         direction="horizontal"
         gap={3}
@@ -19,7 +19,7 @@ const InvoiceAsideCreate: React.FC<InvoiceAsideCreateProps> = ({ handleCreateInv
           <span className="ms-2">Create Invoice</span>
         </Button>
       </Stack>
-    </>
+    </div>
   )
 }
 

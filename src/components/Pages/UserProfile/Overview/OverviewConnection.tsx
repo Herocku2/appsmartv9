@@ -23,7 +23,7 @@ const OverviewConnection = () => {
   }
 
   return (
-    <>
+    <div>
       <h5 className="fw-semibold mb-4">Connections</h5>
       {followerData.map(({ image, name, connection, isFollowing }, idx) => (
         <Stack key={idx} direction="horizontal" gap={3} className="w-100 mb-4">
@@ -52,7 +52,7 @@ const OverviewConnection = () => {
         <i className="fi fi-rr-arrow-small-right bi"></i>
       </Link>
       <Toaster position="top-center" />
-    </>
+    </div>
   )
 }
 

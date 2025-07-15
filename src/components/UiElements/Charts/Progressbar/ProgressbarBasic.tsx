@@ -8,7 +8,7 @@ const ProgressbarBasic = () => {
   const selectedColor = settings.color as keyof typeof colors
   const themeColor = colors[selectedColor] || selectedColor
   return (
-    <>
+    <div>
       <CircularProgressbar
         value={60}
         text={`${60}%`}
@@ -32,7 +32,7 @@ const ProgressbarBasic = () => {
           },
         }}
       />
-    </>
+    </div>
   )
 }
 

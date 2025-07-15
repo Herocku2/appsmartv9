@@ -47,7 +47,7 @@ const AccountSettingsNav = () => {
 
 
   return (
-    <>
+    <div>
       <Card className="mb-3 mb-md-4">
         <Card.Body className="py-6 d-md-flex align-items-center">
           <div className="d-flex align-items-center">
@@ -108,7 +108,7 @@ const AccountSettingsNav = () => {
           </Nav>
         </PerfectScrollbar>
       </Card>
-    </>
+    </div>
   )
 }
 

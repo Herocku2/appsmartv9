@@ -147,7 +147,7 @@ const ProjectCustomerCard = () => {
   ]
 
   return (
-    <>
+    <div>
       <div className="d-grid gap-3 gap-md-4">
         <Card>
           <Card.Body>
@@ -192,7 +192,7 @@ const ProjectCustomerCard = () => {
           <ReactApexChart options={optionsDanger} series={series} type="area" height={140} />
         </Card>
       </div>
-    </>
+    </div>
   )
 }
 

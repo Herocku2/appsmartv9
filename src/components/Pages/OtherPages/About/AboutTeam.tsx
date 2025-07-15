@@ -44,7 +44,7 @@ const AboutTeam = () => {
     ],
   }
   return (
-    <>
+    <div>
       <div className="w-100 mx-auto text-center mb-16" style={{ maxWidth: '600px' }}>
         <p className="fs-12 fw-semibold text-primary mb-4 text-uppercase">Our Team</p>
         <div className="fw-bold  text-dark display-5 lh-base mb-4">Amazing team of us.</div>
@@ -77,7 +77,7 @@ const AboutTeam = () => {
           </div>
         ))}
       </Slider>
-    </>
+    </div>
   )
 }
 

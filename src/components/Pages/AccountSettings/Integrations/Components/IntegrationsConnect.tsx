@@ -55,7 +55,7 @@ const IntegrationsConnect: React.FC = () => {
   }
 
   return (
-    <>
+    <div>
       <div className="d-md-flex align-items-center justify-content-between gap-4 mb-6">
         <div>
           <h5 className="fw-semibold">Connected</h5>
@@ -107,7 +107,7 @@ const IntegrationsConnect: React.FC = () => {
       <Modal centered show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Body>
           {selectedIntegration && (
-            <>
+            <div>
               <Stack direction="horizontal" className="mb-4">
                 <Stack gap={3} direction="horizontal">
                   <div
@@ -135,7 +135,7 @@ const IntegrationsConnect: React.FC = () => {
                 <span className="fw-semibold text-dark">Description: </span>{' '}
                 {selectedIntegration.fulldesc}
               </p>
-            </>
+            </div>
           )}
         </Modal.Body>
         <Modal.Footer>
@@ -148,10 +148,10 @@ const IntegrationsConnect: React.FC = () => {
             onClick={handleUninstallModal}
             disabled={isSaving}>
             {isSaving ? (
-              <>
+              <div>
                 <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" />
                 <span className="ms-2">{'Uninstalling...'}</span>
-              </>
+              </div>
             ) : (
               'Uninstall'
             )}
@@ -160,7 +160,7 @@ const IntegrationsConnect: React.FC = () => {
       </Modal>
 
       <Toaster position="top-center" />
-    </>
+    </div>
   )
 }
 

@@ -14,7 +14,7 @@ import {
 
 const BootstapTable = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="Bootstrap"
         subName="Tables"
@@ -118,7 +118,7 @@ const BootstapTable = () => {
         </Col>
         {/* End:: Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

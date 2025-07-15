@@ -35,7 +35,7 @@ const IntegrationsAvaiable: React.FC = () => {
   }
 
   return (
-    <>
+    <div>
       <div className="d-md-flex align-items-center justify-content-between gap-4 mb-6">
         <div>
           <h5 className="fw-semibold">Available</h5>
@@ -111,17 +111,17 @@ const IntegrationsAvaiable: React.FC = () => {
             onClick={handleInstallModal}
             disabled={isSaving}>
             {isSaving ? (
-              <>
+              <div>
                 <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" />
                 <span className="ms-2">{'Installing...'}</span>
-              </>
+              </div>
             ) : (
               'Install Now'
             )}
           </Button>
         </Modal.Footer>
       </Modal>
-    </>
+    </div>
   )
 }
 

@@ -158,7 +158,7 @@ const AdminWithdrawals: React.FC = () => {
                                                 {/* <td>{withdrawal.payed_date ? new Date(withdrawal.payed_date).toLocaleString() : t('N/A')}</td> */}
                                                 <td>{t(withdrawal.verbose_status)}</td>
                                                 {/* <td>${parseFloat(withdrawal.fee).toFixed(2)}</td> */}
-                                                <td>{withdrawal.wallet_address.slice(0,10)}...</td>
+                                                <td>{withdrawal.wallet_address.slice(0, 10)}...</td>
                                                 <td>
                                                     {withdrawal.payment_link ? (
                                                         <a href={"https://bscscan.com/tx/" + withdrawal.payment_link} target="_blank" rel="noopener noreferrer">
@@ -187,8 +187,13 @@ const AdminWithdrawals: React.FC = () => {
                         </div>
                     </Container>
                 </Card.Body>
-                <WithdrawalProcessor
-                    selectedWithdrawals={selectedWithdrawals} />
+                {
+                    (selectedWithdrawals?.length > 0) && (
+                        <WithdrawalProcessor
+                            selectedWithdrawals={selectedWithdrawals} setSelectedWithdrawals={setSelectedWithdrawals} />
+                    )
+                }
+
             </Card>
         </Web3Context>
     );

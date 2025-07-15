@@ -6,7 +6,7 @@ import confirm from '@/assets/images/etemplate/confirm.svg'
 
 const EmailTemplateConfirmAccount = () => {
   return (
-    <>
+    <div>
       <EmailTemplatesLayout>
         <div className="text-center mx-auto">
           <div className="mt-4 mb-12">
@@ -35,7 +35,7 @@ const EmailTemplateConfirmAccount = () => {
         </div>
         <EmailTemplatesFooter />
       </EmailTemplatesLayout>
-    </>
+    </div>
   )
 }
 

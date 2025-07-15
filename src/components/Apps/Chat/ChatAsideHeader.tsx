@@ -20,7 +20,7 @@ const ChatAsideHeaderUser: React.FC<ChatAsideHeaderUserProps> = ({ handleInviteC
   }
 
   return (
-    <>
+    <div>
       <Stack
         direction="horizontal"
         gap={3}
@@ -44,7 +44,7 @@ const ChatAsideHeaderUser: React.FC<ChatAsideHeaderUserProps> = ({ handleInviteC
           <Status status={status} changeStatus={handleStatusChange} />
         </div>
       </Stack>
-    </>
+    </div>
   )
 }
 

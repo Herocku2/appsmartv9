@@ -111,7 +111,7 @@ const KanbanColumn: React.FC<
   }
 
   return (
-    <>
+    <div>
       <div style={{ minWidth: '300px', maxWidth: '300px' }}>
         <div className="border border-top-0 rounded mb-3">
           <Stack
@@ -192,7 +192,7 @@ const KanbanColumn: React.FC<
           }}
         />
       )}
-    </>
+    </div>
   )
 }
 

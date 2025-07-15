@@ -14,11 +14,11 @@ import TitleHelmet from '@/components/Common/TitleHelmet'
 
 function renderEventContent(eventInfo: any) {
   return (
-    <>
+    <div>
       <span className="fc-daygrid-event-dot"></span>
       <strong>{eventInfo.timeText}</strong>
       <span className="ms-1">{eventInfo.event.title}</span>
-    </>
+    </div>
   )
 }
 
@@ -68,7 +68,7 @@ const Calendar = () => {
   }
 
   return (
-    <>
+    <div>
       <TitleHelmet title="Calendar" />
       <Card>
         <Card.Header
@@ -136,7 +136,7 @@ const Calendar = () => {
         handleUpdateEvent={handleUpdateEvent}
       />
       <Toaster position="top-center" />
-    </>
+    </div>
   )
 }
 

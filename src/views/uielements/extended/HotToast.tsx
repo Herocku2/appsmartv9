@@ -6,7 +6,7 @@ import { HotToastPosition, HotToastType } from '@/components/UiElements/Extended
 
 const HotToast = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="HotToast"
         subName="Extended"
@@ -58,7 +58,7 @@ const HotToast = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

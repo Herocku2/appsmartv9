@@ -23,7 +23,7 @@ export default class ReactSlickSingle extends Component {
     ]
 
     return (
-      <>
+      <div>
         <Slider {...settings}>
           {slideItems.map(({ id, content }) => (
             <div className="slick-slide-items" key={id}>
@@ -31,7 +31,7 @@ export default class ReactSlickSingle extends Component {
             </div>
           ))}
         </Slider>
-      </>
+      </div>
     )
   }
 }

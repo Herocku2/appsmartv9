@@ -20,7 +20,7 @@ const MegaMenuAuth: React.FC<MegaMenuAuthProps> = ({ isOpen, setIsOpen }) => {
   }
 
   return (
-    <>
+    <div>
       <Dropdown
         show={isOpen}
         onMouseEnter={() => setIsOpen(true)}
@@ -107,7 +107,7 @@ const MegaMenuAuth: React.FC<MegaMenuAuthProps> = ({ isOpen, setIsOpen }) => {
           </Row>
         </Dropdown.Menu>
       </Dropdown>
-    </>
+    </div>
   )
 }
 

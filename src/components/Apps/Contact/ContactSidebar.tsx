@@ -19,7 +19,7 @@ const ContactSidebar: React.FC<{
   }
 
   return (
-    <>
+    <div>
       <Stack
         direction="horizontal"
         gap={3}
@@ -111,7 +111,7 @@ const ContactSidebar: React.FC<{
         onHide={() => setShowAddContactModal(false)}
         onAddContact={handleAddContact}
       />
-    </>
+    </div>
   )
 }
 

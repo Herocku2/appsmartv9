@@ -290,9 +290,9 @@ const ApexCandlestick: React.FC<ApexCandlestickProps> = () => {
   })
 
   return (
-    <>
+    <div>
       <ReactApexChart options={options} series={series} type="candlestick" height={350} />
-    </>
+    </div>
   )
 }
 

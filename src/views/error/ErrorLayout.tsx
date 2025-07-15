@@ -18,7 +18,7 @@ const ErrorLayout: React.FC<ErrorLayoutProps> = ({ children }) => {
   }, [settings])
 
   return (
-    <>
+    <div>
       <Stack
         className="error-layout align-items-center justify-content-center mx-4 mx-sm-6"
         style={{ minHeight: '100vh' }}
@@ -29,7 +29,7 @@ const ErrorLayout: React.FC<ErrorLayoutProps> = ({ children }) => {
           </Card.Body>
         </Card>
       </Stack>
-    </>
+    </div>
   )
 }
 

@@ -49,10 +49,10 @@ const ModalPosition = () => {
   ]
 
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {modalData.map((modal) => (
-          <React.Fragment key={modal.key}>
+          <div key={modal.key}>
             <Button variant="primary" onClick={() => handleShow(modal.key as keyof Modals)}>
               {modal.buttonText}
             </Button>
@@ -82,10 +82,10 @@ const ModalPosition = () => {
                 </span>
               </Modal.Body>
             </Modal>
-          </React.Fragment>
+          </div>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

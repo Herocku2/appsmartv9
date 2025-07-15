@@ -17,7 +17,7 @@ const IconsTabler = () => {
   )
 
   return (
-    <>
+    <div>
       <Card>
         <Card.Header>
           <div className="input-group">
@@ -45,7 +45,7 @@ const IconsTabler = () => {
           </Row>
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }
 

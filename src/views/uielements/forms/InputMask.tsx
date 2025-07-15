@@ -17,7 +17,7 @@ import {
 
 const InputMask = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="InputMask"
         subName="Forms"
@@ -187,7 +187,7 @@ const InputMask = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

@@ -83,18 +83,18 @@ export default function DepositsForm() {
         </Form.Group>
         <Button className='col-12 mt-4' type='submit'>
           {isLoading ? (
-            <>
+            <div>
               <span
                 className="spinner-border spinner-border-sm me-2"
                 role="status"
                 aria-hidden="true"
               ></span>
               Loading...
-            </>
+            </div>
           ) : (
-            <>
+            <div>
               {t("Create deposit")}
-            </>
+            </div>
           )}
         </Button>
       </Form>

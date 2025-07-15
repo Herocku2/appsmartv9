@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom'
 
 const Toasts = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumb title="Toasts" subName="Base UI" />
       <Row className="g-3 g-md-4">
         {/* Start:: Col */}
@@ -221,7 +221,7 @@ const Toasts = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

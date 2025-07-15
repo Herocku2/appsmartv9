@@ -10,7 +10,7 @@ export default function Deposits() {
     
 
     return (
-        <>
+        <div>
             <TitleHelmet title={t("My deposits")} />
             <Card className="mb-4">
                 <Card.Header className="py-3 pe-3 d-flex align-items-center justify-content-between">
@@ -25,6 +25,6 @@ export default function Deposits() {
                 </Card.Body>
             </Card>
             
-        </>
+        </div>
     )
 }

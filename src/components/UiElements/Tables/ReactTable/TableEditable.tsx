@@ -200,7 +200,7 @@ const TableEditable = () => {
   }
 
   return (
-    <>
+    <div>
       <Table responsive className="mb-0">
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
@@ -268,7 +268,7 @@ const TableEditable = () => {
           />
         </Pagination>
       </Stack>
-    </>
+    </div>
   )
 }
 

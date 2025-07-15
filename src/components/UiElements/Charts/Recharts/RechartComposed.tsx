@@ -63,7 +63,7 @@ const RechartComposed = () => {
   const themeColor = colors[selectedColor] || selectedColor
 
   return (
-    <>
+    <div>
       <ResponsiveContainer width="100%" height={350}>
         <ComposedChart
           data={data}
@@ -83,7 +83,7 @@ const RechartComposed = () => {
           <Scatter dataKey="cnt" fill="red" />
         </ComposedChart>
       </ResponsiveContainer>
-    </>
+    </div>
   )
 }
 

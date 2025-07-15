@@ -4,7 +4,7 @@ import 'react-circular-progressbar/dist/styles.css'
 
 const AnalyticProgress = () => {
   return (
-    <>
+    <div>
       <Card className="mb-3 mb-md-4">
         <Card.Body className="hstack gap-4">
           <CircularProgressbar
@@ -104,7 +104,7 @@ const AnalyticProgress = () => {
           </div>
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }
 

@@ -3,7 +3,7 @@ import { Dropdown, DropdownButton, ButtonGroup, Stack } from 'react-bootstrap'
 const DropdownBasic = () => {
   const colors = ['Primary', 'Secondary', 'Success', 'Info', 'Warning', 'Danger']
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {colors.map((variant) => (
           <DropdownButton
@@ -23,7 +23,7 @@ const DropdownBasic = () => {
           </DropdownButton>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

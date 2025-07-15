@@ -180,7 +180,7 @@ const SalesReportChart: React.FC<SalesReportChartProps> = () => {
   }
 
   return (
-    <>
+    <div>
       <Card>
         <Card.Header className="d-flex align-items-center py-3">
           <Card.Title>Sales Report</Card.Title>
@@ -203,7 +203,7 @@ const SalesReportChart: React.FC<SalesReportChartProps> = () => {
           />
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }
 

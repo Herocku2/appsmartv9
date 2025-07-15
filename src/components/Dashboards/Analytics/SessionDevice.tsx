@@ -81,7 +81,7 @@ const SessionDevice = () => {
   }
 
   return (
-    <>
+    <div>
       <Card>
         <Card.Header className="py-3 pe-3 d-flex justify-content-between align-items-center">
           <Card.Title>Session Device</Card.Title>
@@ -143,7 +143,7 @@ const SessionDevice = () => {
           </Row>
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }
 

@@ -11,7 +11,7 @@ const statistics = [
 
 const AboutCount = () => {
   return (
-    <>
+    <div>
       <div className="mb-8 mb-md-12 mb-lg-16 position-relative">
         <Image src={workingOffice} alt="Image" className="img-fluid img-thumbnail rounded-3" />
         <div style={OverlayLayerStyle}>
@@ -36,7 +36,7 @@ const AboutCount = () => {
           </Col>
         ))}
       </Row>
-    </>
+    </div>
   )
 }
 

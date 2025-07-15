@@ -102,7 +102,7 @@ const GrowthBarCard = () => {
   }
 
   return (
-    <>
+    <div>
       <Card>
         <Card.Body>
           <Stack direction="horizontal" gap={2} className="align-items-start">
@@ -123,7 +123,7 @@ const GrowthBarCard = () => {
           />
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }
 

@@ -3,7 +3,7 @@ import { tabsData } from './data/tabsData'
 
 const NavTabUnderline = () => {
   return (
-    <>
+    <div>
       <Tab.Container defaultActiveKey="home">
         <Nav className="mb-3 nav-underline">
           {tabsData.map(({ eventKey, title, disabled }) => (
@@ -22,7 +22,7 @@ const NavTabUnderline = () => {
           ))}
         </Tab.Content>
       </Tab.Container>
-    </>
+    </div>
   )
 }
 

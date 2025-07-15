@@ -14,7 +14,7 @@ import {
 
 const Recharts = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton title="Recharts" subName="Charts" url={'https://recharts.org/'} />
       <Row className="g-3 g-md-4">
         {/* Start:: Col */}
@@ -174,7 +174,7 @@ const Recharts = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

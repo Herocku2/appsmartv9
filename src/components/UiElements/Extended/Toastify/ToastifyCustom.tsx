@@ -42,7 +42,7 @@ function ToastifyCustom() {
   }
 
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1}>
         <Button variant="success" onClick={() => messageToast()}>
           Message With Title
@@ -54,7 +54,7 @@ function ToastifyCustom() {
           Dark Version
         </Button>
       </Stack>
-    </>
+    </div>
   )
 }
 

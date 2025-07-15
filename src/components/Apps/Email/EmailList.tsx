@@ -42,7 +42,7 @@ const EmailList: React.FC<EmailListProps> = ({
   }
 
   return (
-    <>
+    <div>
       <PerfectScrollbar className="h-100 d-flex flex-column">
         {filteredEmails.length === 0 ? (
           <ListGroup.Item className="py-4 text-center flex-grow-1">No items found</ListGroup.Item>
@@ -107,7 +107,7 @@ const EmailList: React.FC<EmailListProps> = ({
           <Loading className="w-100" />
         </div>
       </PerfectScrollbar>
-    </>
+    </div>
   )
 }
 

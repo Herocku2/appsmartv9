@@ -123,7 +123,7 @@ const PurchasePlanModal: React.FC<PurchasePlanModalProps> = ({ handleCloseModal,
                                     <p className='mt-2'><span className='fw-bold'>{data.result.address}</span></p>
                                     <div className='mt-2'>
                                         <span>{t("Please send ")} <span className='fw-bold'>{data.result?.amount}</span>
-                                            {" "} USDT (TRC20)</span>
+                                            {" "} USDT (BEP20)</span>
                                         <p >{t("and then click on verify payment to confirm transaction.")}</p>
 
                                     </div>
@@ -170,26 +170,26 @@ const PurchasePlanModal: React.FC<PurchasePlanModalProps> = ({ handleCloseModal,
 
                             <Button className='col-xl-6 col-12' type='submit'>
                                 {(isLoading || isLoadingVerification) ? (
-                                    <>
+                                    <div>
                                         <span
                                             className="spinner-border spinner-border-sm me-2"
                                             role="status"
                                             aria-hidden="true"
                                         ></span>
                                         Loading...
-                                    </>
+                                    </div>
                                 ) : (
-                                    <> {
+                                    <div> {
                                         isSuccess ? (
-                                            <>
+                                            <div>
                                                 {t("Verify payment")}
-                                            </>
+                                            </div>
                                         ) : (
-                                            <>
+                                            <div>
                                                 {t("Invest")}
-                                            </>
+                                            </div>
                                         )
-                                    } </>
+                                    } </div>
 
                                 )}
                             </Button>

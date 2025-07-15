@@ -13,7 +13,7 @@ export default function BinaryTree() {
   const { data: treeData, isLoading } = useGetBinaryTreeQuery()
 
   return (
-    <>
+    <div>
       <TitleHelmet title={t("My Unilevel Tree")} />
       <Card className="mb-4">
         <Card.Header className="py-3 pe-3 d-flex align-items-center justify-content-between">
@@ -33,6 +33,6 @@ export default function BinaryTree() {
 
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }

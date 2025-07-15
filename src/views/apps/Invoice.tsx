@@ -103,7 +103,7 @@ const Invoice: React.FC = () => {
   }, [sidebarLeftToggle])
 
   return (
-    <>
+    <div>
       <TitleHelmet title="Invoice" />
       <Card
         className={`apps-card  ${selectedInvoice ? 'apps-container-toggle' : ''} ${
@@ -132,7 +132,7 @@ const Invoice: React.FC = () => {
                 <Preloader />
               </Stack>
             ) : (
-              <>
+              <div>
                 {showInvoiceCreateContent ? (
                   <InvoiceCreateContent
                     handleSendClick={handleSendClick}
@@ -158,7 +158,7 @@ const Invoice: React.FC = () => {
                     </Button>
                   </Stack>
                 ) : (
-                  <>
+                  <div>
                     <InvoiceContentHeader
                       selectedInvoice={selectedInvoice}
                       handleSendClick={handleSendClick}
@@ -169,9 +169,9 @@ const Invoice: React.FC = () => {
                       setSidebarLeftToggle={setSidebarLeftToggle}
                     />
                     <InvoiceContentDetails selectedInvoice={selectedInvoice} colSpan={2} />
-                  </>
+                  </div>
                 )}
-              </>
+              </div>
             )}
           </div>
         </div>
@@ -180,7 +180,7 @@ const Invoice: React.FC = () => {
         showSendOptions={showSendOptions}
         handleCloseSendOptions={() => setShowSendOptions(false)}
       />
-    </>
+    </div>
   )
 }
 export default Invoice

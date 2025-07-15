@@ -66,7 +66,7 @@ const ContactForm = () => {
   }
 
   return (
-    <>
+    <div>
       <Card className="mx-4 mx-md-6 border-0">
         <Card.Body
           className="p-4 p-md-12 p-lg-16 w-100 mx-auto rounded-5 bg-secondary-subtle z-1 shadow-sm border"
@@ -145,14 +145,14 @@ const ContactForm = () => {
               disabled={!isFormValid || isLoading}
             >
               {isLoading ? (
-                <>
+                <div>
                   <span
                     className="spinner-border spinner-border-sm me-2"
                     role="status"
                     aria-hidden="true"
                   ></span>
                   Sending...
-                </>
+                </div>
               ) : (
                 'Send Message'
               )}
@@ -162,7 +162,7 @@ const ContactForm = () => {
       </Card>
 
       <Toaster position="top-center" />
-    </>
+    </div>
   )
 }
 

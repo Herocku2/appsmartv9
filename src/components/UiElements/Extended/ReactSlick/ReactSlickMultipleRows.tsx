@@ -22,7 +22,7 @@ export default class ReactSlickMultipleRows extends Component {
     }))
 
     return (
-      <>
+      <div>
         <Slider {...settings}>
           {slideItems.map(({ id, content }) => (
             <div className="slick-slide-items" key={id}>
@@ -30,7 +30,7 @@ export default class ReactSlickMultipleRows extends Component {
             </div>
           ))}
         </Slider>
-      </>
+      </div>
     )
   }
 }

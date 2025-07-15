@@ -16,7 +16,7 @@ const HotToastType = () => {
   }
 
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {notificationPositions.map(({ position, label }, index) => (
           <Button key={index} variant="primary" onClick={() => notifyPosition(position)}>
@@ -25,7 +25,7 @@ const HotToastType = () => {
         ))}
       </Stack>
       <Toaster reverseOrder={false} />
-    </>
+    </div>
   )
 }
 

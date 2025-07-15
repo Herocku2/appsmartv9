@@ -85,7 +85,7 @@ const Login = () => {
 
 
   return (
-    <>
+    <div>
       <TitleHelmet title="Login" />
       <AuthLayout>
         <AuthMinmal>
@@ -139,18 +139,18 @@ const Login = () => {
                 className="text-white"
               >
                 {isLoading ? (
-                  <>
+                  <div>
                     <span
                       className="spinner-border spinner-border-sm me-2"
                       role="status"
                       aria-hidden="true"
                     ></span>
                     Loading...
-                  </>
+                  </div>
                 ) : (
-                  <>
+                  <div>
                     {t('Login')}
-                  </>
+                  </div>
                 )}
               </Button>
             </div>
@@ -160,7 +160,7 @@ const Login = () => {
           </Form>
         </AuthMinmal>
       </AuthLayout>
-    </>
+    </div>
   )
 }
 

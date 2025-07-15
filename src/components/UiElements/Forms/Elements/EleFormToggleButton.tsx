@@ -35,7 +35,7 @@ const EleFormSolidRadio = () => {
   ]
 
   return (
-    <>
+    <div>
       <div className="hstack flex-wrap gap-2">
         {checkboxes.map(({ id, label, variant, disabled, defaultChecked }) => (
           <div key={id} className="form-check ps-0">
@@ -70,7 +70,7 @@ const EleFormSolidRadio = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   )
 }
 

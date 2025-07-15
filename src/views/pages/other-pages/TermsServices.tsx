@@ -7,7 +7,7 @@ import { TermsServicesContent } from '@/components/Pages/OtherPages/TermsService
 
 const TermsServices = () => {
   return (
-    <>
+    <div>
       <TitleHelmet title="Terms of Services" />
       <Card>
         <CommonHeader
@@ -25,7 +25,7 @@ const TermsServices = () => {
         </section>
         <CommonFooter />
       </Card>
-    </>
+    </div>
   )
 }
 

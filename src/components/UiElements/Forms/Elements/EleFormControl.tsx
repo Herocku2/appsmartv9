@@ -3,7 +3,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel'
 
 const EleFormControl = () => {
   return (
-    <>
+    <div>
       <Row className="gy-6 gy-sm-8 gy-md-12">
         <Col xs={12}>
           <Form.Label htmlFor="basiInput">Basic Input</Form.Label>
@@ -136,7 +136,7 @@ const EleFormControl = () => {
           </Form.Select>
         </Col>
       </Row>
-    </>
+    </div>
   )
 }
 

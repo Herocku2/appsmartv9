@@ -6,7 +6,7 @@ const animatedComponents = makeAnimated()
 
 const SelectSingle = () => {
   return (
-    <>
+    <div>
       <Select
         closeMenuOnSelect={false}
         components={animatedComponents}
@@ -15,7 +15,7 @@ const SelectSingle = () => {
         options={colourOptions}
         classNamePrefix="select"
       />
-    </>
+    </div>
   )
 }
 

@@ -4,11 +4,11 @@ import { BillingComponent } from '@/components/Pages/AccountSettings/Billing'
 
 const Billing = () => {
   return (
-    <>
+    <div>
       <TitleHelmet title="Billing" />
       <AccountSettingsNav />
       <BillingComponent />
-    </>
+    </div>
   )
 }
 

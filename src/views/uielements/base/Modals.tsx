@@ -11,7 +11,7 @@ import {
 
 const Modals = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumb title="Modals" subName="Base UI" />
       <Row className="g-3 g-md-4">
         {/* Start:: Col */}
@@ -312,7 +312,7 @@ const Modals = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

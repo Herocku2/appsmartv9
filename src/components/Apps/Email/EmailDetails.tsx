@@ -47,7 +47,7 @@ const EmailDetails: React.FC<{
   const { name, email, subject, fulldatetime, message, description, attachment } = selectedEmail
 
   return (
-    <>
+    <div>
       <PerfectScrollbar className="px-4 py-4 h-100">
         <h2 className="fs-20 fw-semibold text-dark mb-4">{subject}</h2>
         <Card className="mb-4">
@@ -79,7 +79,7 @@ const EmailDetails: React.FC<{
               <span className="fw-bold">{name}</span>
             </div>
             {attachment && (
-              <>
+              <div>
                 <hr className="my-4" />
                 <h6 className="mb-3">
                   <i className="fi fi-rr-paperclip-vertical fs-12"></i> Attachment
@@ -106,7 +106,7 @@ const EmailDetails: React.FC<{
                     </div>
                   </Link>
                 </div>
-              </>
+              </div>
             )}
           </Card.Body>
         </Card>
@@ -122,7 +122,7 @@ const EmailDetails: React.FC<{
           </Button>
         </Stack>
         {showEditor && (
-          <>
+          <div>
             <ReactQuill
               value={editorContent}
               onChange={(content) => setEditorContent(content)}
@@ -145,29 +145,29 @@ const EmailDetails: React.FC<{
                 disabled={loading}
               >
                 {loading ? (
-                  <>
+                  <div>
                     <span
                       className="spinner-border spinner-border-sm me-2"
                       role="status"
                       aria-hidden="true"
                     ></span>
                     Sending...
-                  </>
+                  </div>
                 ) : (
-                  <>
+                  <div>
                     <i className="fi fi-rr-paper-plane me-2 fs-14"></i>
                     Send
-                  </>
+                  </div>
                 )}
               </Button>
               <Button variant="" className="text-danger" onClick={handleDiscard}>
                 Discard
               </Button>
             </Stack>
-          </>
+          </div>
         )}
       </PerfectScrollbar>
-    </>
+    </div>
   )
 }
 

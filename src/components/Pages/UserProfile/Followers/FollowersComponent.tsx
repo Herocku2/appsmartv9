@@ -23,7 +23,7 @@ const FollowersComponent = () => {
   }
 
   return (
-    <>
+    <div>
       <Row className="g-3 g-md-4">
         {followerData.map(({ image, name, email, isFollowing }, idx) => (
           <Col sm={6} lg={4} xxl={3} key={idx}>
@@ -59,7 +59,7 @@ const FollowersComponent = () => {
         </Col>
       </Row>
       <Toaster position="top-center" />
-    </>
+    </div>
   )
 }
 

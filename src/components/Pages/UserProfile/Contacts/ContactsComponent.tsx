@@ -24,7 +24,7 @@ const ContactsComponent = () => {
   }
 
   return (
-    <>
+    <div>
       <Row className="g-3 g-md-4">
         {contactsData.map(({ image, name, email, phone, isFavorite }, idx) => (
           <Col sm={6} lg={4} xxl={3} key={idx}>
@@ -65,7 +65,7 @@ const ContactsComponent = () => {
         </Col>
       </Row>
       <Toaster position="top-center" />
-    </>
+    </div>
   )
 }
 

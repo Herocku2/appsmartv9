@@ -162,7 +162,7 @@ const InvoiceCreateContent: React.FC<InvoiceCreateContentProps> = ({
   }
 
   return (
-    <>
+    <div>
       <Stack
         direction="horizontal"
         gap={3}
@@ -409,7 +409,7 @@ const InvoiceCreateContent: React.FC<InvoiceCreateContentProps> = ({
           </Row>
         </div>
       </PerfectScrollbar>
-    </>
+    </div>
   )
 }
 

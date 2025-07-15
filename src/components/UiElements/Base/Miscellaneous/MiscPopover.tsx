@@ -7,7 +7,7 @@ const MiscPopover = () => {
   const colors = ['Primary', 'Secondary', 'Success', 'Info', 'Warning', 'Danger']
 
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {colors.map((variant) => (
           <OverlayTrigger
@@ -27,7 +27,7 @@ const MiscPopover = () => {
           </OverlayTrigger>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

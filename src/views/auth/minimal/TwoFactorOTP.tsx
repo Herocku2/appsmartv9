@@ -53,7 +53,7 @@ const TwoFactorOTP: React.FC = () => {
   }
 
   return (
-    <>
+    <div>
       <TitleHelmet title="Verify OTP" />
       <AuthLayout>
         <AuthMinmal>
@@ -96,14 +96,14 @@ const TwoFactorOTP: React.FC = () => {
                 className="text-white"
               >
                 {loading ? (
-                  <>
+                  <div>
                     <span
                       className="spinner-border spinner-border-sm me-2"
                       role="status"
                       aria-hidden="true"
                     ></span>
                     Validating...
-                  </>
+                  </div>
                 ) : (
                   'Validate'
                 )}
@@ -120,7 +120,7 @@ const TwoFactorOTP: React.FC = () => {
           </Form>
         </AuthMinmal>
       </AuthLayout>
-    </>
+    </div>
   )
 }
 

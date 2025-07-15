@@ -8,7 +8,7 @@ const RegisterSuccess = () => {
   const { username, email, password } = location.state || {}
 
   return (
-    <>
+    <div>
       <TitleHelmet title="Register Success" />
       <AuthLayout>
         <AuthMinmal>
@@ -37,7 +37,7 @@ const RegisterSuccess = () => {
           </Link>
         </AuthMinmal>
       </AuthLayout>
-    </>
+    </div>
   )
 }
 

@@ -9,17 +9,17 @@ const dropdownItems = [
 
 const DropdownWithIcon = () => {
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {dropdownItems.map(({ autoClose, title, icon }, index) => (
           <DropdownButton
             key={index}
             as={ButtonGroup}
             title={
-              <>
+              <div>
                 <i className={icon}></i>
                 <span className="ms-2">{title}</span>
-              </>
+              </div>
             }
             autoClose={autoClose}
           >
@@ -43,7 +43,7 @@ const DropdownWithIcon = () => {
           </DropdownButton>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

@@ -10,6 +10,22 @@ import { initReactI18next } from "react-i18next";
 import en from "./locales/en/translation.json"
 import es from "./locales/es/translation.json"
 
+import { ErrorBoundary } from "react-error-boundary";
+
+
+function fallbackRender({ error, resetErrorBoundary }) {
+  // Call resetErrorBoundary() to reset the error boundary and retry the render.
+
+
+  return (
+    <div role="alert " className="p-4">
+      <p>La aplicación ha tenido un error inesperado en tu dispositivo, actualiza tu navegador en la app store (iOs) o play store (Android)
+        y envia este capture a soporte para resolver tu caso con los desarrolladores. </p>
+      <pre style={{ color: "red" }}>{error.message}</pre>
+    </div>
+  );
+}
+
 
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
@@ -36,10 +52,17 @@ const container = document.getElementById('root')
 if (container) {
   const root = createRoot(container)
   root.render(
-    <BrowserRouter>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </BrowserRouter>,
+    <ErrorBoundary
+      fallbackRender={fallbackRender}
+      onReset={(details) => {
+        // Reset the state of your app so the error doesn't happen again
+      }}
+    >
+      <BrowserRouter>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </BrowserRouter>
+    </ErrorBoundary>
   )
 }

@@ -15,7 +15,7 @@ const DateRangePicker = () => {
   ])
 
   return (
-    <>
+    <div>
       <Calendar
         onChange={(item) => setState([item.selection as Range])}
         moveRangeOnFirstSelection={false}
@@ -23,7 +23,7 @@ const DateRangePicker = () => {
         ranges={state}
         direction="horizontal"
       />
-    </>
+    </div>
   )
 }
 

@@ -4,7 +4,7 @@ const DropdownTheme = () => {
   const colors = ['Primary', 'Secondary', 'Success', 'Info', 'Warning', 'Danger']
 
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {colors.map((variant) => (
           <Dropdown className={`d-inline-block dropdown-${variant.toLowerCase()}`} key={variant}>
@@ -33,7 +33,7 @@ const DropdownTheme = () => {
           </Dropdown>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

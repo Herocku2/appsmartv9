@@ -53,7 +53,7 @@ const toastConfigs = [
 
 function ToastifyStates() {
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {toastConfigs.map((config, index) => (
           <Button key={index} variant={config.variant} onClick={config.onClick}>
@@ -63,7 +63,7 @@ function ToastifyStates() {
       </Stack>
 
       <ToastContainer />
-    </>
+    </div>
   )
 }
 

@@ -5,7 +5,7 @@ import { AnalyticProgress, AnalyticPromoAction, BrowserUsed, CampaignState, Sale
 
 const Analytics = () => {
   return (
-    <>
+    <div>
       <PageDashBreadcrumb title="Analytics" subName="Dashboards" />
       <Row className="g-3 g-md-4">
         <Col xl={12}>
@@ -33,7 +33,7 @@ const Analytics = () => {
           <AnalyticProgress />
         </Col>
       </Row>
-    </>
+    </div>
   )
 }
 

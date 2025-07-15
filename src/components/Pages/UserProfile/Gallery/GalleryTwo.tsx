@@ -20,7 +20,7 @@ const GalleryTwo = () => {
   const [index, setIndex] = useState(-1)
 
   return (
-    <>
+    <div>
       <style>
         {`
           .yarl__icon {
@@ -90,7 +90,7 @@ const GalleryTwo = () => {
           </Stack>
         </Card.Footer>
       </Card>
-    </>
+    </div>
   )
 }
 

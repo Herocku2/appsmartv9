@@ -38,7 +38,10 @@ const Register = () => {
 
   const schema = yup
     .object({
-      username: yup.string().required(t("Username is required")),
+      username: yup
+      .string()
+      .required(t("Username is required"))
+      .matches(/^\S*$/, t("Username must not contain spaces")),
       email: yup.string().email(t("Invalid email")).required(t("Email is required")),
       password: yup.string().required(t("Password is required")).min(8, t("The password must be at least 8 characters long."))
         .max(20, t("The password can only contain a maximum of 20 characters.")),
@@ -100,7 +103,7 @@ const Register = () => {
 
 
   return (
-    <>
+    <div>
       <TitleHelmet title={t("Register")} />
       <AuthLayout>
         <AuthMinmal>
@@ -193,16 +196,16 @@ const Register = () => {
                 className="text-white"
               >
                 {isLoading ? (
-                  <>
+                  <div>
                     <span
                       className="spinner-border spinner-border-sm me-2"
                       role="status"
                       aria-hidden="true"
                     ></span>
                     Loading...
-                  </>
+                  </div>
                 ) : (
-                  <>  {t("Register")}</>
+                  <div>  {t("Register")}</div>
 
                 )}
               </Button>
@@ -213,7 +216,7 @@ const Register = () => {
           </Form>
         </AuthMinmal>
       </AuthLayout>
-    </>
+    </div>
   )
 }
 

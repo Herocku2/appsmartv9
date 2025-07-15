@@ -32,7 +32,7 @@ export default class ReactSlickAutoPlay extends Component {
     }
 
     return (
-      <>
+      <div>
         <Slider {...settings}>
           {banners.map((banner, index) => (
             <div className="slick-slide-items" key={index}>
@@ -40,7 +40,7 @@ export default class ReactSlickAutoPlay extends Component {
             </div>
           ))}
         </Slider>
-      </>
+      </div>
     )
   }
 }

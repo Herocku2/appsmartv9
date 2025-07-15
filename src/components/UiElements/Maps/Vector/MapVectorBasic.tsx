@@ -14,9 +14,9 @@ interface MapVectorBasicProps {
 
 const MapVectorBasic = ({ width, height }: MapVectorBasicProps) => {
   return (
-    <>
+    <div>
       <MapBase type="world" width={width} height={height} options={mapOptsBasic} />
-    </>
+    </div>
   )
 }
 

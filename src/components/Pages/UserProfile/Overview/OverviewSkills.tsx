@@ -5,7 +5,7 @@ import SkillsData from './data/SkillsData'
 
 const OverviewSkills = () => {
   return (
-    <>
+    <div>
       <Stack direction="horizontal" className="justify-content-between mb-4">
         <Card.Title className="fw-semibold">Skills</Card.Title>
         <Link to="#!">
@@ -19,7 +19,7 @@ const OverviewSkills = () => {
           </Link>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

@@ -50,9 +50,9 @@ const ApexSimplePie: React.FC<ApexSimplePieProps> = () => {
   }
 
   return (
-    <>
+    <div>
       <ReactApexChart options={options} series={series} type="pie" height={380} />
-    </>
+    </div>
   )
 }
 

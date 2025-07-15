@@ -6,7 +6,7 @@ import reset from '@/assets/images/etemplate/reset.svg'
 
 const EmailTemplateResetPassword = () => {
   return (
-    <>
+    <div>
       <EmailTemplatesLayout>
         <div className="text-center mx-auto">
           <div className="mt-4 mb-12">
@@ -35,7 +35,7 @@ const EmailTemplateResetPassword = () => {
         </div>
         <EmailTemplatesFooter />
       </EmailTemplatesLayout>
-    </>
+    </div>
   )
 }
 

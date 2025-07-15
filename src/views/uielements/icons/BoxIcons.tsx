@@ -4,7 +4,7 @@ import { IconsBoxIcons } from '@/components/UiElements/Icons'
 
 const BoxIcons = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="BoxIcons"
         subName="Icons"
@@ -29,7 +29,7 @@ const BoxIcons = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

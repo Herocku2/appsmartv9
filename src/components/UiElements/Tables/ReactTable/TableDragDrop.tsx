@@ -123,7 +123,7 @@ const TableDragDrop = () => {
   )
 
   return (
-    <>
+    <div>
       <DndContext
         collisionDetection={closestCenter}
         modifiers={[restrictToVerticalAxis]}
@@ -153,7 +153,7 @@ const TableDragDrop = () => {
           </tbody>
         </Table>
       </DndContext>
-    </>
+    </div>
   )
 }
 

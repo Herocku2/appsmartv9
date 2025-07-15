@@ -56,14 +56,14 @@ const TablePagination = () => {
   const [data] = React.useState(() => makeData(100))
 
   return (
-    <>
+    <div>
       <Table
         {...{
           data,
           columns,
         }}
       />
-    </>
+    </div>
   )
 }
 
@@ -143,7 +143,7 @@ function Table({ data, columns }: { data: Person[]; columns: ColumnDef<Person>[]
   }
 
   return (
-    <>
+    <div>
       <div className="table-responsive">
         <table className="table mb-0">
           <thead>
@@ -220,7 +220,7 @@ function Table({ data, columns }: { data: Person[]; columns: ColumnDef<Person>[]
           />
         </Pagination>
       </Stack>
-    </>
+    </div>
   )
 }
 

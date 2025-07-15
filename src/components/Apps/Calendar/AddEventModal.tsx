@@ -91,7 +91,7 @@ const AddEventModal: React.FC<AddEventModalProps> = ({
   }
 
   return (
-    <>
+    <div>
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
           <Modal.Title>Add Event</Modal.Title>
@@ -172,7 +172,7 @@ const AddEventModal: React.FC<AddEventModalProps> = ({
           setShowUpdateEventModal(false)
         }}
       />
-    </>
+    </div>
   )
 }
 

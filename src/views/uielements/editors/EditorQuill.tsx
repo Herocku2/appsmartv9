@@ -5,7 +5,7 @@ import { EditorFull, EditorSnow } from '@/components/UiElements/Editors/Quill'
 
 const EditorQuill = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="Quill Editor"
         subName="Editors"
@@ -58,7 +58,7 @@ const EditorQuill = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

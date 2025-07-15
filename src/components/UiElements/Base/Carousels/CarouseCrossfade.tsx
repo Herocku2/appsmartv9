@@ -3,7 +3,7 @@ import carouselItems from './data/carouseData'
 
 const CarouseCrossfade = () => {
   return (
-    <>
+    <div>
       <Carousel fade interval={null}>
         {carouselItems.map(({ src, alt, caption, text }, index) => (
           <Carousel.Item key={index}>
@@ -15,7 +15,7 @@ const CarouseCrossfade = () => {
           </Carousel.Item>
         ))}
       </Carousel>
-    </>
+    </div>
   )
 }
 

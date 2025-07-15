@@ -12,7 +12,7 @@ const Activity = () => {
   }
 
   return (
-    <>
+    <div>
       <div className="header-btn" onClick={openOffcanvas}>
         <i className="fi fi-rr-pulse" />
         <div
@@ -23,7 +23,7 @@ const Activity = () => {
       {showOffcanvas && (
         <ActivityOffcanvas show={showOffcanvas} handleClose={handleCloseOffcanvas} />
       )}
-    </>
+    </div>
   )
 }
 

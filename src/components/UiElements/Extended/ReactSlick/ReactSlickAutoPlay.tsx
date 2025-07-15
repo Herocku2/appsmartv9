@@ -21,7 +21,7 @@ export default class ReactSlickAutoPlay extends Component {
     }))
 
     return (
-      <>
+      <div>
         <Slider {...settings}>
           {slideItems.map(({ id, content }) => (
             <div className="slick-slide-items" key={id}>
@@ -29,7 +29,7 @@ export default class ReactSlickAutoPlay extends Component {
             </div>
           ))}
         </Slider>
-      </>
+      </div>
     )
   }
 }

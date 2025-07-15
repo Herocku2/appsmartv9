@@ -11,10 +11,10 @@ const ServerError: React.FC = () => {
   }
 
   return (
-    <>
+    <div>
       <TitleHelmet title="500 Server Error" />
       <CommonCard {...commonCardProps} />
-    </>
+    </div>
   )
 }
 

@@ -203,7 +203,7 @@ const Email: React.FC = () => {
   }, [containerToggle])
 
   return (
-    <>
+    <div>
       <TitleHelmet title="Email" />
       <Card className={`apps-card ${sidebarMiniToggle ? 'apps-sidebar-mini-toggle' : ''}`}>
         <div className="apps-sidebar-mini">
@@ -260,7 +260,7 @@ const Email: React.FC = () => {
                 </Button>
               </Stack>
             ) : (
-              <>
+              <div>
                 <EmailDetailsHeader
                   onDelete={handleDeleteEmail}
                   handlePrev={handlePrev}
@@ -276,7 +276,7 @@ const Email: React.FC = () => {
                   setSidebarLeftToggle={setSidebarLeftToggle}
                 />
                 <EmailDetails key={selectedEmail?.id} selectedEmail={selectedEmail} />
-              </>
+              </div>
             )}
           </div>
         </div>
@@ -287,7 +287,7 @@ const Email: React.FC = () => {
         onHide={() => setShowComposeModal(false)}
         onCompose={handleCompose}
       />
-    </>
+    </div>
   )
 }
 

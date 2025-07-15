@@ -6,7 +6,7 @@ import card from '@/assets/images/etemplate/card.svg'
 
 const EmailTemplateExpiredCard = () => {
   return (
-    <>
+    <div>
       <EmailTemplatesLayout>
         <div className="text-center mx-auto">
           <div className="mt-4 mb-12">
@@ -37,7 +37,7 @@ const EmailTemplateExpiredCard = () => {
         </div>
         <EmailTemplatesFooter />
       </EmailTemplatesLayout>
-    </>
+    </div>
   )
 }
 

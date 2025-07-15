@@ -30,7 +30,7 @@ const Helpdesk = () => {
   ]
 
   return (
-    <>
+    <div>
       <Dropdown show={dropDownOpen} onToggle={toggleDropDown}>
         <Dropdown.Toggle
           as="a"
@@ -82,7 +82,7 @@ const Helpdesk = () => {
           </PerfectScrollbar>
         </Dropdown.Menu>
       </Dropdown>
-    </>
+    </div>
   )
 }
 

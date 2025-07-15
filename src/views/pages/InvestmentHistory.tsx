@@ -10,7 +10,7 @@ export default function InvestmentHistory() {
   const {t} = useTranslation()
 
   return (
-    <>
+    <div>
             <TitleHelmet title={t("Investment History")} />
             <Card className="mb-4">
                 <Card.Header className="py-3 pe-3 d-flex align-items-center justify-content-between">
@@ -23,6 +23,6 @@ export default function InvestmentHistory() {
                     <InvestmentHistoryTable />
                 </Card.Body>
             </Card>
-        </>
+        </div>
   )
 }

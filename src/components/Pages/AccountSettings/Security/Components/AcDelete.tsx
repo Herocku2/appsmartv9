@@ -58,7 +58,7 @@ const AcDelete = () => {
   }
 
   return (
-    <>
+    <div>
       <h5 className="fw-semibold">Delete Account</h5>
       <p>
         He moonlights difficult engrossed it, sportsmen. Interested has all Devonshire difficulty
@@ -108,7 +108,7 @@ const AcDelete = () => {
           </Button>
         </div>
       </Form>
-    </>
+    </div>
   )
 }
 

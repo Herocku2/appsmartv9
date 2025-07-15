@@ -38,7 +38,7 @@ const RechartStackedBar = () => {
   const themeColor = colors[selectedColor] || selectedColor
 
   return (
-    <>
+    <div>
       <ResponsiveContainer width="100%" height={350}>
         <BarChart
           data={data}
@@ -60,7 +60,7 @@ const RechartStackedBar = () => {
           <Bar dataKey="calcelled" stackId="a" fill="#6610F2" />
         </BarChart>
       </ResponsiveContainer>
-    </>
+    </div>
   )
 }
 

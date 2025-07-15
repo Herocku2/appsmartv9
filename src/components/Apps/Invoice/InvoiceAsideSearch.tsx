@@ -15,7 +15,7 @@ const InvoiceAsideSearch: React.FC<InvoiceAsideSearchProps> = ({ onSearch }) => 
   }
 
   return (
-    <>
+    <div>
       <Stack
         direction="horizontal"
         gap={3}
@@ -32,7 +32,7 @@ const InvoiceAsideSearch: React.FC<InvoiceAsideSearchProps> = ({ onSearch }) => 
           />
         </Form>
       </Stack>
-    </>
+    </div>
   )
 }
 

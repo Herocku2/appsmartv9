@@ -3,7 +3,7 @@ import accordionData from './data/accordionData'
 
 const AccrodionFlush = () => {
   return (
-    <>
+    <div>
       <Accordion defaultActiveKey="0" flush>
         {accordionData.map(({ id, header, body }) => (
           <Accordion.Item key={id} eventKey={id}>
@@ -12,7 +12,7 @@ const AccrodionFlush = () => {
           </Accordion.Item>
         ))}
       </Accordion>
-    </>
+    </div>
   )
 }
 

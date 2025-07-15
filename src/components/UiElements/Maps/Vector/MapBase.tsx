@@ -24,9 +24,9 @@ const MapBase = ({ width, height, options, type }: MapBaseProps) => {
   }, [selectorId, map, options, type])
 
   return (
-    <>
+    <div>
       <div id={selectorId} style={{ width: width, height: height }}></div>
-    </>
+    </div>
   )
 }
 

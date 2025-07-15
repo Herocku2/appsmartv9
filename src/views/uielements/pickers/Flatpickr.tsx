@@ -13,7 +13,7 @@ import {
 
 const Flatpickr = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="Flatpicker"
         subName="Pickers"
@@ -114,7 +114,7 @@ const Flatpickr = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

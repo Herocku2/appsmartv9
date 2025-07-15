@@ -2,7 +2,7 @@ import { Col, Row, Form } from 'react-bootstrap'
 
 const NotificationEmail = () => {
   return (
-    <>
+    <div>
       <div className="mb-6 mb-md-12">
         <h5 className="fw-semibold">Nofication Settings</h5>
         <p>Select how you'll be notified when the following changes occur.</p>
@@ -184,7 +184,7 @@ const NotificationEmail = () => {
           </Row>
         </Col>
       </Row>
-    </>
+    </div>
   )
 }
 

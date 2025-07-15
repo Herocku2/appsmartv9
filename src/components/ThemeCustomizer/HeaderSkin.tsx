@@ -8,7 +8,7 @@ type HeaderSkinProps = {
 }
 const HeaderSkin = ({ handleChangeHeaderSkin, headerSkin, headerConstants }: HeaderSkinProps) => {
   return (
-    <>
+    <div>
       <h6
         className="fs-11 fw-bold text-dark text-uppercase mb-3"
         style={{ letterSpacing: '0.5px' }}
@@ -59,7 +59,7 @@ const HeaderSkin = ({ handleChangeHeaderSkin, headerSkin, headerConstants }: Hea
           </Form.Check.Label>
         </Col>
       </Row>
-    </>
+    </div>
   )
 }
 

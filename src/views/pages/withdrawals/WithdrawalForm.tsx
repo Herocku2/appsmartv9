@@ -32,7 +32,7 @@ export default function WithdrawalForm() {
         .required(t("Amount is required"))
         .typeError(t("Amount is invalid"))
         .positive(t("Amount must be positive")),
-      wallet_address: yup.string().required(t("Wallet address USDT TRC20 is required.")),
+      wallet_address: yup.string().required(t("Wallet address USDT BEP20 is required.")),
       used_code: yup.string().required(t("Secret code is required.")),
       type: yup.string().required(t("Withdrawal type is required."))
     })
@@ -114,7 +114,8 @@ export default function WithdrawalForm() {
   return (
     <div className='row'>
       <Form className='col-xl-4 col-md-6 mx-auto border p-4 rounded-2' onSubmit={handleSubmit(handleSubmitWithdrawal)}>
-        <p>{t("Withdrawals are processing since 1 until 72 hours")}</p>
+        <p>{t("Withdrawals are processing 24 hours")}</p>
+        <p>{t("Withdrawals are only available on Friday and Saturday")}</p>
         <Form.Group controlId="eventColor" className='mt-4'>
           <Form.Label>{t("Withdrawal Type")}</Form.Label>
           <Select
@@ -166,18 +167,18 @@ export default function WithdrawalForm() {
             !isSuccessCode ? (
               <Button variant='info' className='mx-auto' onClick={() => createCode()}>
                 {isLoadingCode ? (
-                  <>
+                  <div>
                     <span
                       className="spinner-border spinner-border-sm me-2"
                       role="status"
                       aria-hidden="true"
                     ></span>
                     Loading...
-                  </>
+                  </div>
                 ) : (
-                  <>
+                  <div>
                     {t("Generate secret code")}
-                  </>
+                  </div>
                 )}</Button>
             ) : (
               <a href="#" onClick={(e) => createCode()} className='link-opacity-100'>{t("Try again")}</a>
@@ -198,18 +199,18 @@ export default function WithdrawalForm() {
         </Form.Group>
         <Button className='col-12 mt-4' type='submit'>
           {isLoading ? (
-            <>
+            <div>
               <span
                 className="spinner-border spinner-border-sm me-2"
                 role="status"
                 aria-hidden="true"
               ></span>
               Loading...
-            </>
+            </div>
           ) : (
-            <>
+            <div>
               {t("Submit")}
-            </>
+            </div>
           )}
         </Button>
       </Form>

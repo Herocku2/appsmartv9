@@ -4,7 +4,7 @@ import { avatarImgData } from './data/avatarData'
 
 const AvatarSizing = () => {
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={3} className="flex-wrap">
         {avatarImgData.map(({ src, alt, size }, index) => (
           <Avatar
@@ -16,7 +16,7 @@ const AvatarSizing = () => {
           />
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

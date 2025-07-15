@@ -37,11 +37,11 @@ const alerts: AlertItem[] = [
 
 const MiscAlert = () => {
   return (
-    <>
+    <div>
       {alerts.map((alert, index) => (
         <AlertComponent key={index} {...alert} />
       ))}
-    </>
+    </div>
   )
 }
 

@@ -5,7 +5,7 @@ import welcome from '@/assets/images/etemplate/welcome.svg'
 
 const EmailTemplateWelcomeMessage = () => {
   return (
-    <>
+    <div>
       <EmailTemplatesLayout>
         <div className="text-center mx-auto">
           <div className="mt-4 mb-12">
@@ -36,7 +36,7 @@ const EmailTemplateWelcomeMessage = () => {
         </div>
         <EmailTemplatesFooter />
       </EmailTemplatesLayout>
-    </>
+    </div>
   )
 }
 

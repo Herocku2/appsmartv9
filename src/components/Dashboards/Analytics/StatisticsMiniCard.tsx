@@ -76,7 +76,7 @@ const columns = [
 
 const StatisticsMiniCard = () => {
   return (
-    <>
+    <div>
       <Row className="g-3 g-md-4">
         {columns.map((column, index) => (
           <Col xl={3} md={6} key={index}>
@@ -109,7 +109,7 @@ const StatisticsMiniCard = () => {
           </Col>
         ))}
       </Row>
-    </>
+    </div>
   )
 }
 

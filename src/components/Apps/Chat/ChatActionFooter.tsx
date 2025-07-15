@@ -39,7 +39,7 @@ const ChatActionFooter = ({ onReplyMessage }: { onReplyMessage: (message: string
   }
 
   return (
-    <>
+    <div>
       <div
         className="border-top w-100 px-3 px-md-4 d-flex align-items-center justify-content-between"
         style={{ minHeight: '4.5rem' }}
@@ -80,7 +80,7 @@ const ChatActionFooter = ({ onReplyMessage }: { onReplyMessage: (message: string
           </Button>
         </Form>
       </div>
-    </>
+    </div>
   )
 }
 

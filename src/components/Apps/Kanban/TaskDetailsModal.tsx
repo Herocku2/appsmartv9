@@ -113,10 +113,10 @@ const TaskDetailsModal: React.FC<TaskDetailsModalProps> = ({
           onClick={handleDelete}
           disabled={isDeleting}>
           {isDeleting ? (
-            <>
+            <div>
               <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" />
               <span className="ms-2">{'Deleting...'}</span>
-            </>
+            </div>
           ) : (
             'Delete'
           )}

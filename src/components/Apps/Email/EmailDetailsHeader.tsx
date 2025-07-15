@@ -69,7 +69,7 @@ const EmailDetailsHeader: React.FC<{
   }
 
   return (
-    <>
+    <div>
       <Stack
         gap={4}
         direction="horizontal"
@@ -168,7 +168,7 @@ const EmailDetailsHeader: React.FC<{
           </Dropdown>
         </Stack>
       </Stack>
-    </>
+    </div>
   )
 }
 

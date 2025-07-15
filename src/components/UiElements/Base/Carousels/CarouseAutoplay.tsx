@@ -3,7 +3,7 @@ import carouselItems from './data/carouseData'
 
 const CarouseAutoplay = () => {
   return (
-    <>
+    <div>
       <Carousel>
         {carouselItems.map(({ src, alt, caption, text }, index) => (
           <Carousel.Item key={index} interval={1200}>
@@ -15,7 +15,7 @@ const CarouseAutoplay = () => {
           </Carousel.Item>
         ))}
       </Carousel>
-    </>
+    </div>
   )
 }
 

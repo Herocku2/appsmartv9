@@ -4,7 +4,7 @@ import { avatarImgData } from './data/avatarData'
 
 const AvatarStatus = () => {
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {avatarImgData.map(({ src, alt, status }, index) => (
           <Avatar key={index} type="image" size="md" src={src} alt={alt}>
@@ -12,7 +12,7 @@ const AvatarStatus = () => {
           </Avatar>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

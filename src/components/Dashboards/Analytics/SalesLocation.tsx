@@ -99,7 +99,7 @@ const SalesLocation = ({ width, height }: MapVectorMarkerProps) => {
   ]
 
   return (
-    <>
+    <div>
       <Card>
         <Card.Header className="py-3 pe-3 d-flex justify-content-between align-items-center">
           <Card.Title>Sales Location</Card.Title>
@@ -158,7 +158,7 @@ const SalesLocation = ({ width, height }: MapVectorMarkerProps) => {
           ))}
         </ListGroup>
       </Card>
-    </>
+    </div>
   )
 }
 

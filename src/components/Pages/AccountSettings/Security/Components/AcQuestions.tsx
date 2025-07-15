@@ -26,7 +26,7 @@ const QuestionOptions = [
 
 const AcQuestions = () => {
   return (
-    <>
+    <div>
       <div className="mb-6 mb-md-12">
         <h5 className="fw-semibold">Questions</h5>
         <p>Change security questions for your account</p>
@@ -63,7 +63,7 @@ const AcQuestions = () => {
           <Form.Control type="password" placeholder="Answer #2" />
         </Col>
       </Row>
-    </>
+    </div>
   )
 }
 

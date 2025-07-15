@@ -15,9 +15,9 @@ const NoUiSliderKeyboard = () => {
   }
 
   return (
-    <>
+    <div>
       <Nouislider {...sliderOptions} />
-    </>
+    </div>
   )
 }
 

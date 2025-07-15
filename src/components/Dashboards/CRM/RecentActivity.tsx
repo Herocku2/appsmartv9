@@ -4,7 +4,7 @@ import ActivityComponentShort from '@/components/Pages/UserProfile/Activity/Acti
 
 const RecentActivity = () => {
   return (
-    <>
+    <div>
       <Card className="overflow-hidden">
         <Card.Header className="py-3 pe-3 d-flex justify-content-between align-items-center">
           <Card.Title>Recent Activity</Card.Title>
@@ -33,7 +33,7 @@ const RecentActivity = () => {
           <ActivityComponentShort />
         </PerfectScrollbar>
       </Card>
-    </>
+    </div>
   )
 }
 

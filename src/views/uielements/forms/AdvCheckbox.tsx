@@ -14,7 +14,7 @@ import {
 
 const AdvCheckbox = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumb title="Checkboxs" subName="Forms" />
       <Row className="g-3 g-md-4">
         {/* Start:: Col */}
@@ -182,7 +182,7 @@ const AdvCheckbox = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

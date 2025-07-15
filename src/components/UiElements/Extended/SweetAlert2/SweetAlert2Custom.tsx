@@ -66,7 +66,7 @@ const SweetAlert2Custom = () => {
   }
 
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {swalConfigs.map((config, index) => (
           <Button
@@ -78,7 +78,7 @@ const SweetAlert2Custom = () => {
           </Button>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

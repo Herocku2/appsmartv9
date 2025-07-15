@@ -47,7 +47,7 @@ const CountdownTimer: FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Row className="gy-12">
         {timers.map(({ duration, unit }, index) => (
           <Col
@@ -75,7 +75,7 @@ const CountdownTimer: FC = () => {
           </Col>
         ))}
       </Row>
-    </>
+    </div>
   )
 }
 

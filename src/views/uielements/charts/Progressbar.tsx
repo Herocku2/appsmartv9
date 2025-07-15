@@ -12,7 +12,7 @@ import {
 
 const Progressbar = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="ProgressBar"
         subName="Charts"
@@ -210,7 +210,7 @@ const Progressbar = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

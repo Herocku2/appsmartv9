@@ -21,7 +21,7 @@ import {
 
 const Buttons = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumb title="Buttons" subName="Base UI" />
       <Row className="g-3 g-md-4">
         {/* Start:: Col */}
@@ -274,7 +274,7 @@ const Buttons = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

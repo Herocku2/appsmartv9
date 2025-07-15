@@ -52,7 +52,7 @@ const ResetPassword = () => {
   const {t} = useTranslation()
 
   return (
-    <>
+    <div>
       <TitleHelmet title={t("Reset Password")} />
       <AuthLayout>
         <AuthMinmal>
@@ -104,14 +104,14 @@ const ResetPassword = () => {
                 className="text-white"
               >
                 {loading ? (
-                  <>
+                  <div>
                     <span
                       className="spinner-border spinner-border-sm me-2"
                       role="status"
                       aria-hidden="true"
                     ></span>
                     Loading...
-                  </>
+                  </div>
                 ) : (
                   t('Reset Password')
                 )}
@@ -123,7 +123,7 @@ const ResetPassword = () => {
           </div>
         </AuthMinmal>
       </AuthLayout>
-    </>
+    </div>
   )
 }
 

@@ -32,7 +32,7 @@ class PageDashBreadcrumb extends Component<PageDashBreadcrumbProps, PageDashBrea
 
   render() {
     return (
-      <>
+      <div>
         <Stack direction="horizontal" className="justify-content-between">
           <PageBreadcrumb title={this.props.title} subName={this.props.subName} />
           <Stack gap={2} direction="horizontal" className="mt-2 mb-4 mb-md-6 d-none d-md-flex">
@@ -54,7 +54,7 @@ class PageDashBreadcrumb extends Component<PageDashBreadcrumbProps, PageDashBrea
             </Button>
           </Stack>
         </Stack>
-      </>
+      </div>
     )
   }
 }

@@ -10,7 +10,7 @@ import {
 
 const Elements = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="Elements"
         subName="Forms"
@@ -182,7 +182,7 @@ const Elements = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

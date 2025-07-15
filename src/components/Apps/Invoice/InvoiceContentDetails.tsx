@@ -14,7 +14,7 @@ const InvoiceContentDetails: React.FC<InvoiceContentDetailsProps> = ({ selectedI
   }
 
   return (
-    <>
+    <div>
       <PerfectScrollbar className="h-100">
         <div id="invoice-content" className="bg-body-tertiary mx-auto">
           <div className="px-4 py-4 d-md-flex align-items-start">
@@ -148,7 +148,7 @@ const InvoiceContentDetails: React.FC<InvoiceContentDetailsProps> = ({ selectedI
           </div>
         </div>
       </PerfectScrollbar>
-    </>
+    </div>
   )
 }
 

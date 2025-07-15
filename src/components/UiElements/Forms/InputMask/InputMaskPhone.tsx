@@ -3,12 +3,12 @@ import { Form } from 'react-bootstrap'
 
 const InputMaskPhones = () => {
   return (
-    <>
+    <div>
       <InputMask mask="+49 99 999 99" maskChar={null} className="form-control" />
       <Form.Text>
         Phone format: <code>(xxx) xxx-xxxx</code>
       </Form.Text>
-    </>
+    </div>
   )
 }
 

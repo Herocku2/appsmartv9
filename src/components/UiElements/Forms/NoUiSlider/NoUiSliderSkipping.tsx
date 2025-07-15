@@ -28,7 +28,7 @@ class NoUiSliderSkipping extends Component<
     const { skippingValue } = this.state
 
     return (
-      <>
+      <div>
         <Nouislider
           start={20}
           snap
@@ -46,7 +46,7 @@ class NoUiSliderSkipping extends Component<
           onSlide={this.onSkipSlide}
         />
         {!!skippingValue && <div>Value: {skippingValue}</div>}
-      </>
+      </div>
     )
   }
 }

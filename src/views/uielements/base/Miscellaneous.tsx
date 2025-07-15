@@ -10,7 +10,7 @@ import {
 
 const Miscellaneous = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumb title="Miscellaneous" subName="Base UI" />
       <Row className="g-3 g-md-4">
         {/* Start:: Col */}
@@ -62,7 +62,7 @@ const Miscellaneous = () => {
         </Col>
         {/* End:: Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

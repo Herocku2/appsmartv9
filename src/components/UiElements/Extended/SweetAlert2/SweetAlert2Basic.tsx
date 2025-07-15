@@ -85,7 +85,7 @@ const SweetAlert2Basic = () => {
   }
 
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {sweetAlertData.map((item, index) => (
           <Button key={index} variant="primary" onClick={item.onClick}>
@@ -93,7 +93,7 @@ const SweetAlert2Basic = () => {
           </Button>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

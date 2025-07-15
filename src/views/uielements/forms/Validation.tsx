@@ -9,7 +9,7 @@ import {
 
 const Validation = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="Validations"
         subName="Forms"
@@ -114,7 +114,7 @@ const Validation = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

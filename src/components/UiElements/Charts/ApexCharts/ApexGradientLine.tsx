@@ -97,9 +97,9 @@ const ApexGradientLine: React.FC<ApexGradientLineProps> = () => {
   }
 
   return (
-    <>
+    <div>
       <ReactApexChart options={options} series={series} type="line" height={350} />
-    </>
+    </div>
   )
 }
 

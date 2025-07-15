@@ -4,7 +4,7 @@ import { IconsFeather } from '@/components/UiElements/Icons'
 
 const Feather = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="Feather"
         subName="Icons"
@@ -29,7 +29,7 @@ const Feather = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

@@ -3,7 +3,7 @@ import accordionData from './data/accordionData'
 
 const AccordionDefault = () => {
   return (
-    <>
+    <div>
       <Accordion defaultActiveKey="0">
         {accordionData.map(({ id, header, body }) => (
           <Accordion.Item key={id} eventKey={id}>
@@ -12,7 +12,7 @@ const AccordionDefault = () => {
           </Accordion.Item>
         ))}
       </Accordion>
-    </>
+    </div>
   )
 }
 

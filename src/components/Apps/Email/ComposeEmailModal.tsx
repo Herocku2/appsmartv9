@@ -130,7 +130,7 @@ const ComposeEmailModal: React.FC<ComposeEmailModalProps> = ({ show, onHide, onC
   const quillFormats = ['bold', 'italic', 'underline', 'strike', 'list', 'bullet', 'link', 'image']
 
   return (
-    <>
+    <div>
       <Modal show={show} onHide={onHide} centered size="lg">
         <Modal.Header closeButton>
           <Modal.Title>New Message</Modal.Title>
@@ -248,24 +248,24 @@ const ComposeEmailModal: React.FC<ComposeEmailModalProps> = ({ show, onHide, onC
             disabled={loading}
           >
             {loading ? (
-              <>
+              <div>
                 <span
                   className="spinner-border spinner-border-sm me-2"
                   role="status"
                   aria-hidden="true"
                 ></span>
                 Sending...
-              </>
+              </div>
             ) : (
-              <>
+              <div>
                 <i className="fi fi-rr-paper-plane me-2 fs-14"></i>
                 Send
-              </>
+              </div>
             )}
           </Button>
         </Modal.Footer>
       </Modal>
-    </>
+    </div>
   )
 }
 

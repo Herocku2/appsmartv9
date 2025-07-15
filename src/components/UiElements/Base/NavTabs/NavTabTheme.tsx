@@ -5,7 +5,7 @@ const NavTabTheme = () => {
   const colors = ['Primary', 'Secondary', 'Success', 'Info', 'Warning', 'Danger']
 
   return (
-    <>
+    <div>
       {colors.map((variant, idx) => (
         <Tab.Container defaultActiveKey="home" key={idx}>
           <Nav fill variant="pills" className={`mb-3 nav-theme-tabs-${variant.toLowerCase()}`}>
@@ -28,7 +28,7 @@ const NavTabTheme = () => {
           <hr className="my-12" />
         </Tab.Container>
       ))}
-    </>
+    </div>
   )
 }
 

@@ -4,11 +4,11 @@ import ProfileCover from '@/components/Pages/UserProfile/ProfileCover'
 
 const Gallery = () => {
   return (
-    <>
+    <div>
       <TitleHelmet title="Gallery" />
       <ProfileCover />
       <AllsGallery />
-    </>
+    </div>
   )
 }
 

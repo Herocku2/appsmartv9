@@ -53,7 +53,7 @@ const RechartStackedArea = () => {
   const themeColor = colors[selectedColor] || selectedColor
 
   return (
-    <>
+    <div>
       <ResponsiveContainer width="100%" height={350}>
         <AreaChart
           data={data}
@@ -71,7 +71,7 @@ const RechartStackedArea = () => {
           <Area type="monotone" dataKey="amt" stackId="1" stroke="#ffc658" fill="#ffc658" />
         </AreaChart>
       </ResponsiveContainer>
-    </>
+    </div>
   )
 }
 

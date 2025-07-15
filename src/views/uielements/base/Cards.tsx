@@ -14,7 +14,7 @@ import {
 
 const Cards = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumb title="Cards" subName="Base UI" />
       <Row className="g-3 g-md-4">
         <Col xs={12}>
@@ -291,7 +291,7 @@ const Cards = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

@@ -99,7 +99,7 @@ const AddContactModal: React.FC<AddContactModalProps> = ({ show, onHide, onAddCo
   }
 
   return (
-    <>
+    <div>
       <Modal show={show} onHide={onHide} centered>
         <Modal.Header closeButton>
           <Modal.Title>Add New Contact</Modal.Title>
@@ -290,23 +290,23 @@ const AddContactModal: React.FC<AddContactModalProps> = ({ show, onHide, onAddCo
             className={`text-white ${loading ? 'disabled' : ''}`}
             disabled={loading}>
             {loading ? (
-              <>
+              <div>
                 <span
                   className="spinner-border spinner-border-sm me-2"
                   role="status"
                   aria-hidden="true"></span>
                 Adding...
-              </>
+              </div>
             ) : (
-              <>
+              <div>
                 <i className="fi fi-rr-plus me-2 fs-14"></i>
                 Add Contact
-              </>
+              </div>
             )}
           </Button>
         </Modal.Footer>
       </Modal>
-    </>
+    </div>
   )
 }
 

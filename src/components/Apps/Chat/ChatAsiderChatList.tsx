@@ -39,7 +39,7 @@ const ChatAsiderChatList: React.FC<ChatAsiderChatListProps> = ({
   )
 
   return (
-    <>
+    <div>
       <PerfectScrollbar className="h-100 d-flex flex-column">
         <ListGroup variant="flush" className="flex-grow-1">
           {filteredChatItems.length === 0 ? (
@@ -77,7 +77,7 @@ const ChatAsiderChatList: React.FC<ChatAsiderChatListProps> = ({
           <Loading className="w-100" />
         </div>
       </PerfectScrollbar>
-    </>
+    </div>
   )
 }
 

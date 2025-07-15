@@ -24,7 +24,7 @@ export default class ReactSlickVariableWidth extends Component {
     ]
 
     return (
-      <>
+      <div>
         <Slider {...settings}>
           {slideItems.map(({ id, width, content }) => (
             <div className="slick-slide-items" key={id} style={{ width: width }}>
@@ -32,7 +32,7 @@ export default class ReactSlickVariableWidth extends Component {
             </div>
           ))}
         </Slider>
-      </>
+      </div>
     )
   }
 }

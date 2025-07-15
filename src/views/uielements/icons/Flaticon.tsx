@@ -4,7 +4,7 @@ import { IconsFlaticon } from '@/components/UiElements/Icons'
 
 const Flaticon = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="Flaticon"
         subName="Icons"
@@ -17,7 +17,7 @@ const Flaticon = () => {
         </Col>
         {/* End:: Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

@@ -158,7 +158,7 @@ const TableRowSelection = () => {
   }
 
   return (
-    <>
+    <div>
       <Table responsive className="mb-0">
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
@@ -167,7 +167,7 @@ const TableRowSelection = () => {
                 return (
                   <th key={header.id} colSpan={header.colSpan}>
                     {header.isPlaceholder ? null : (
-                      <>{flexRender(header.column.columnDef.header, header.getContext())}</>
+                      <div>{flexRender(header.column.columnDef.header, header.getContext())}</div>
                     )}
                   </th>
                 )
@@ -227,7 +227,7 @@ const TableRowSelection = () => {
           />
         </Pagination>
       </Stack>
-    </>
+    </div>
   )
 }
 

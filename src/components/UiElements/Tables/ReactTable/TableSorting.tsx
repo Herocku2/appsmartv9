@@ -103,7 +103,7 @@ const TableSorting = () => {
   })
 
   return (
-    <>
+    <div>
       <Table responsive className="mb-0">
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
@@ -147,7 +147,7 @@ const TableSorting = () => {
             })}
         </tbody>
       </Table>
-    </>
+    </div>
   )
 }
 

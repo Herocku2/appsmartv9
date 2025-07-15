@@ -6,7 +6,7 @@ const ContactSearchBar: React.FC<{
   handleSearch: (value: string) => void
 }> = ({ searchTerm, handleSearch }) => {
   return (
-    <>
+    <div>
       <Stack
         direction="horizontal"
         gap={3}
@@ -25,7 +25,7 @@ const ContactSearchBar: React.FC<{
           />
         </Form>
       </Stack>
-    </>
+    </div>
   )
 }
 

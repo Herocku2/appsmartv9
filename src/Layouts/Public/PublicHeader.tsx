@@ -30,7 +30,7 @@ const PublicHeader = () => {
   const location = useLocation()
 
   return (
-    <>
+    <div>
       <header
         className="header-public bg-body-tertiary hstack sticky-top border-bottom"
         style={{ minHeight: '4.5rem' }}>
@@ -61,7 +61,7 @@ const PublicHeader = () => {
           </Navbar>
         </div>
       </header>
-    </>
+    </div>
   )
 }
 

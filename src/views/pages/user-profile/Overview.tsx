@@ -14,7 +14,7 @@ import {
 
 const Overview = () => {
   return (
-    <>
+    <div>
       <TitleHelmet title="Overview" />
       <ProfileCover />
       <Row className="g-3 g-md-4">
@@ -62,7 +62,7 @@ const Overview = () => {
         </Col>
         {/* End:: Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

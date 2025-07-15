@@ -15,7 +15,7 @@ import {
 
 const NavTabs = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumb title="NavTabs" subName="Base UI" />
       <Row className="g-3 g-md-4">
         {/* Start:: Col */}
@@ -267,7 +267,7 @@ const NavTabs = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

@@ -61,7 +61,7 @@ const Search = () => {
   }
 
   return (
-    <>
+    <div>
       <div className="header-btn" onClick={toggleSearch}>
         <i className="fi fi-rr-search" />
       </div>
@@ -86,13 +86,13 @@ const Search = () => {
         </Modal.Header>
         <div className="p-4 overflow-x-hidden" style={{ maxHeight: '400px' }}>
           {searchResults.length === 0 ? (
-            <>
+            <div>
               {searchTerm ? (
                 <h5 className="text-muted my-4">
                   No results found for <span className="text-dark">"{searchTerm}"</span>
                 </h5>
               ) : (
-                <>
+                <div>
                   <div className="mb-6">
                     <p className="fs-11 text-uppercase text-muted">Popular Search</p>
                     <SearchLink to="/apps/chat" label="Chats" />
@@ -107,12 +107,12 @@ const Search = () => {
                     <SearchLink to="/docs/changelog" label="Changelog" />
                     <SearchLink to="/docs/documentation" label="Documentation" />
                   </div>
-                </>
+                </div>
               )}
-            </>
+            </div>
           ) : (
             searchResults.map((parentItem) => (
-              <React.Fragment key={parentItem.key}>
+              <div key={parentItem.key}>
                 {parentItem.isTitle && (
                   <h6 className="fs-11 text-muted text-uppercase mb-3 mt-4">{parentItem.label}</h6>
                 )}
@@ -127,7 +127,7 @@ const Search = () => {
                       label={childItem.label}
                     />
                   ))}
-              </React.Fragment>
+              </div>
             ))
           )}
         </div>
@@ -137,7 +137,7 @@ const Search = () => {
           </div>
         </Modal.Footer>
       </Modal>
-    </>
+    </div>
   )
 }
 

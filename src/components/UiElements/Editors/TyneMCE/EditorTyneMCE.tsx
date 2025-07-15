@@ -13,7 +13,7 @@ const EditorTyneMCE: React.FC<AppProps> = () => {
   }
 
   return (
-    <>
+    <div>
       <Editor
         onInit={handleEditorInit}
         init={{
@@ -31,7 +31,7 @@ const EditorTyneMCE: React.FC<AppProps> = () => {
             'removeformat | help',
         }}
       />
-    </>
+    </div>
   )
 }
 

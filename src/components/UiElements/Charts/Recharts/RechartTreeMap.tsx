@@ -141,7 +141,7 @@ const RechartTreeMap = () => {
   const themeColor = colors[selectedColor] || selectedColor
 
   return (
-    <>
+    <div>
       <ResponsiveContainer width="100%" height={400}>
         <Treemap
           width={400}
@@ -153,7 +153,7 @@ const RechartTreeMap = () => {
           fill={themeColor}
         />
       </ResponsiveContainer>
-    </>
+    </div>
   )
 }
 

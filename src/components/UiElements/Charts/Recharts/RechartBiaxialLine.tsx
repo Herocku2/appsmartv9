@@ -53,7 +53,7 @@ const RechartBiaxialLine = () => {
   const themeColor = colors[selectedColor] || selectedColor
 
   return (
-    <>
+    <div>
       <ResponsiveContainer width="100%" height={350}>
         <LineChart
           data={data}
@@ -71,7 +71,7 @@ const RechartBiaxialLine = () => {
           <Line type="monotone" dataKey="uv" stroke="#adb5bd" />
         </LineChart>
       </ResponsiveContainer>
-    </>
+    </div>
   )
 }
 

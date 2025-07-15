@@ -7,7 +7,7 @@ import { ContactCard } from '@/components/Pages/OtherPages/Contact'
 
 const FAQs = () => {
   return (
-    <>
+    <div>
       <TitleHelmet title="FAQs" />
       <Card>
         <CommonHeader
@@ -26,7 +26,7 @@ const FAQs = () => {
         </section>
         <CommonFooter />
       </Card>
-    </>
+    </div>
   )
 }
 

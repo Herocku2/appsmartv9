@@ -9,7 +9,7 @@ const Cover = () => {
   const navigate = useNavigate()
 
   return (
-    <>
+    <div>
       <Card className="mb-3 mb-md-4">
         <Card.Img variant="top" src={profileBanner} alt="profile banner" />
         <Card.Body>
@@ -47,7 +47,7 @@ const Cover = () => {
         </Card.Body>
         <ProfileNav />
       </Card>
-    </>
+    </div>
   )
 }
 

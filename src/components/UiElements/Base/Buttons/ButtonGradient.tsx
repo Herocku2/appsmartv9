@@ -3,7 +3,7 @@ import { buttonGradientVariants } from './data/buttonData'
 
 const ButtonGradient = () => {
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {buttonGradientVariants.map(({ variant, text }, index) => (
           <Button key={index} variant={variant} className="bg-gradient">
@@ -19,7 +19,7 @@ const ButtonGradient = () => {
           </Button>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

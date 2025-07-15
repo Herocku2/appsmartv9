@@ -10,7 +10,7 @@ interface PageTitleProps {
 }
 const PageBreadcrumb = ({ subName, title, addedChild }: PageTitleProps) => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>{title}</title>
       </Helmet>
@@ -29,7 +29,7 @@ const PageBreadcrumb = ({ subName, title, addedChild }: PageTitleProps) => {
           </div>
         </div>
       )}
-    </>
+    </div>
   )
 }
 

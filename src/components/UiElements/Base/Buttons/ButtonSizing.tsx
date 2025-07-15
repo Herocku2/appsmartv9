@@ -3,7 +3,7 @@ import { buttonSizingVariants } from './data/buttonData'
 
 const ButtonSizing = () => {
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {buttonSizingVariants.map(({ size }, index) => (
           <Button key={index} variant="primary" className={`btn-${size}`}>
@@ -19,7 +19,7 @@ const ButtonSizing = () => {
           </Button>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

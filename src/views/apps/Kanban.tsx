@@ -83,7 +83,7 @@ const Kanban: React.FC = () => {
   }
 
   return (
-    <>
+    <div>
       <TitleHelmet title="Kanban" />
       <Card>
         <Card.Header
@@ -126,7 +126,7 @@ const Kanban: React.FC = () => {
           </PerfectScrollbar>
         </DragDropContext>
       </Card>
-    </>
+    </div>
   )
 }
 

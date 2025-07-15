@@ -5,11 +5,11 @@ import { SecurityComponent } from "../../../components/Pages/AccountSettings/Sec
 
 const Security = () => {
   return (
-    <>
+    <div>
       <TitleHelmet title="Security" />
       <AccountSettingsNav />
       <SecurityComponent />
-    </>
+    </div>
   )
 }
 

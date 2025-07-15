@@ -82,7 +82,7 @@ const AccountAvatarCover = () => {
 
 
   return (
-    <>
+    <div>
       <div className="mb-6 mb-md-16">
         <h5 className="fw-semibold">{t("Profile photo")} </h5>
         <p>{t("Change avatar")}</p>
@@ -137,7 +137,7 @@ const AccountAvatarCover = () => {
           </p>
         </Col>
       </Row>
-    </>
+    </div>
   )
 }
 

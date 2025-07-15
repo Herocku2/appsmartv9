@@ -27,7 +27,7 @@ const contactCards = [
 
 const ContactCard = () => {
   return (
-    <>
+    <div>
       <Row className="g-3 g-md-4">
         {contactCards.map(({ col, iconClass, title, description, link }, index) => (
           <Col key={index} className={col}>
@@ -44,7 +44,7 @@ const ContactCard = () => {
           </Col>
         ))}
       </Row>
-    </>
+    </div>
   )
 }
 

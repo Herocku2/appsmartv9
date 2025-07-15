@@ -20,9 +20,9 @@ const switches = [
 
 const AdvSwitchWithText = () => {
   return (
-    <>
+    <div>
       {switches.map(({ label, className, onText, offText, defaultChecked }, index) => (
-        <React.Fragment key={index}>
+        <div key={index}>
           <Form.Check.Label className={className}>
             <Form.Check.Input
               type="checkbox"
@@ -37,9 +37,9 @@ const AdvSwitchWithText = () => {
           </Form.Check.Label>
           <br />
           <br />
-        </React.Fragment>
+        </div>
       ))}
-    </>
+    </div>
   )
 }
 

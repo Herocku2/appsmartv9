@@ -8,11 +8,11 @@ interface PageTitleProps {
 }
 const TitleHelmet = ({ title }: PageTitleProps) => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>{title}</title>
       </Helmet>
-    </>
+    </div>
   )
 }
 

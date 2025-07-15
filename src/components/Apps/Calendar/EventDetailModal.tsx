@@ -48,7 +48,7 @@ const EventDetailModal: React.FC<EventDetailModalProps> = ({
   }
 
   return (
-    <>
+    <div>
       <Modal centered show={selectedEvent !== null} onHide={handleCloseModal}>
         <Modal.Header closeButton className={`${selectedEvent?.classNames.join(' ') || ''}`}>
           <Modal.Title>{selectedEvent?.title}</Modal.Title>
@@ -120,7 +120,7 @@ const EventDetailModal: React.FC<EventDetailModalProps> = ({
         selectedEvent={selectedEvent}
         handleUpdateEvent={handleUpdateEvent}
       />
-    </>
+    </div>
   )
 }
 

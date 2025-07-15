@@ -13,7 +13,7 @@ export default function ReferralsTable() {
     const { data: user } = useGetUserQuery()
 
     function copyLink() {
-        copiarTexto(`https://office.smartsolutions.name/auth/register/${user?.ref_code}`, t("Link copied"))
+        copiarTexto(`https://app.smartsolution.name/auth/register/${user?.ref_code}`, t("Link copied"))
 
     }
 
@@ -21,7 +21,7 @@ export default function ReferralsTable() {
 
     return (
         <div className="">
-            <ButtonWithLink label={t("Copy link")} link={`https://office.smartsolutions.name/auth/register/${user?.ref_code}`}
+            <ButtonWithLink label={t("Copy link")} link={`https://app.smartsolution.name/auth/register/${user?.ref_code}`}
                 onClick={() => copyLink()} />
             <Table responsive bordered className='mt-4'>
                 <thead>
@@ -55,17 +55,17 @@ export default function ReferralsTable() {
                                                 <td className="text-dark fw-semibold text-end">
                                                     <Button onClick={() => handleOpenMasterConfirmation(referral.id)}>
                                                         {isLoading ? (
-                                                            <>
+                                                            <div>
                                                                 <span
                                                                     className="spinner-border spinner-border-sm me-2"
                                                                     role="status"
                                                                     aria-hidden="true"
                                                                 ></span>
                                                                 Loading...
-                                                            </>) : (
-                                                            <>
+                                                            </div>) : (
+                                                            <div>
                                                                 {t("Make master")}
-                                                            </>
+                                                            </div>
                                                         )}
                                                     </Button>
                                                 </td>

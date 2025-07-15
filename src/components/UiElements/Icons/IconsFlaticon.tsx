@@ -10,7 +10,7 @@ import {
 
 const IconsFlaticon = () => {
   return (
-    <>
+    <div>
       <Card className="mb-3 mb-md-4">
         <Card.Header className="d-flex align-item-center justify-content-between">
           <Card.Title>Regular</Card.Title>
@@ -136,7 +136,7 @@ const IconsFlaticon = () => {
           </Row>
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }
 

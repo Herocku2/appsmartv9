@@ -98,10 +98,10 @@ const SideBarContent = () => {
   ]
 
   return (
-    <>
+    <div>
       <AppMenu menuItems={MENU_ITEMS} />
       <div className="clearfix" />
-    </>
+    </div>
   )
 }
 const Navigation = () => {
@@ -112,7 +112,7 @@ const Navigation = () => {
 
 
   return (
-    <>
+    <div>
       <aside className="leftside-menu position-fixed top-0 bottom-0 z-1040">
         <div className="navigation-header top-0 sticky-top z-1020 px-4">
           <Link to="/">
@@ -154,7 +154,7 @@ const Navigation = () => {
           </div>
         </SimpleBar>
       </aside>
-    </>
+    </div>
   )
 }
 

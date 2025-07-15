@@ -19,7 +19,7 @@ const Saving: React.FC<SavingProps> = ({ message }) => {
   }
 
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1}>
         <Button
           variant="primary"
@@ -28,10 +28,10 @@ const Saving: React.FC<SavingProps> = ({ message }) => {
           disabled={isSaving}
         >
           {isSaving ? (
-            <>
+            <div>
               <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" />
               <span className="ms-2">{' Saving...'}</span>
-            </>
+            </div>
           ) : (
             'Save Changes'
           )}
@@ -41,7 +41,7 @@ const Saving: React.FC<SavingProps> = ({ message }) => {
         </Button>
       </Stack>
       <Toaster position="top-center"  />
-    </>
+    </div>
   )
 }
 

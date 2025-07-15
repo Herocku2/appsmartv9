@@ -4,7 +4,7 @@ const DropdownBasic = () => {
   const sizings = ['sm', 'default', 'md', 'lg', 'xl', 'xxl']
 
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {sizings.map((variant) => (
           <Dropdown className="d-inline-block" key={variant}>
@@ -31,7 +31,7 @@ const DropdownBasic = () => {
           </Dropdown>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

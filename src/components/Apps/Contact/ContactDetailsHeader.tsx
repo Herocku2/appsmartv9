@@ -72,7 +72,7 @@ const ContactDetailsHeader: React.FC<ContactDetailsHeaderProps> = ({
   }
 
   return (
-    <>
+    <div>
       <Stack
         direction="horizontal"
         className="px-3 border-bottom justify-content-between"
@@ -171,7 +171,7 @@ const ContactDetailsHeader: React.FC<ContactDetailsHeaderProps> = ({
           </Dropdown>
         </Stack>
       </Stack>
-    </>
+    </div>
   )
 }
 

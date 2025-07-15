@@ -68,10 +68,10 @@ const MeetingItem: React.FC<MeetingItemProps> = ({
               ) : joined ? (
                 <span>Joined</span>
               ) : (
-                <>
+                <div>
                   <i className="fi fi-rr-plus fs-10"></i>
                   <span className="ms-1">{joinButtonText}</span>
-                </>
+                </div>
               )}
             </Button>
           </Stack>
@@ -132,7 +132,7 @@ const NewMeeting = () => {
   ]
 
   return (
-    <>
+    <div>
       <Card>
         <Card.Header className="py-3 pe-3 d-flex justify-content-between align-items-center">
           <Card.Title>New Meeting</Card.Title>
@@ -171,7 +171,7 @@ const NewMeeting = () => {
           </Link>
         </Card.Footer>
       </Card>
-    </>
+    </div>
   )
 }
 

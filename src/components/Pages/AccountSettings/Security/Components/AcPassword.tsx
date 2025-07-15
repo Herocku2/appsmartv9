@@ -61,7 +61,7 @@ const AcPassword = () => {
   console.log(errors);
 
   return (
-    <>
+    <div>
       <Form onSubmit={handleSubmit(handleChangePassword)}>
         <div className="mb-6 mb-md-12">
           <h5 className="fw-semibold">{t("Password")}</h5>
@@ -126,20 +126,20 @@ const AcPassword = () => {
         </Row>
         <Button type='submit'>
           {isLoading ? (
-            <>
+            <div>
               <span
                 className="spinner-border spinner-border-sm me-2"
                 role="status"
                 aria-hidden="true"
               ></span>
               Loading...
-            </>
+            </div>
           ) : (
             t('Change Password')
           )}
         </Button>
       </Form>
-    </>
+    </div>
   )
 }
 

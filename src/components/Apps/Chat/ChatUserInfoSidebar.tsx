@@ -45,7 +45,7 @@ const ChatUserInfoSidebar: React.FC<ChatUserInfoSidebarProps> = ({
   }
 
   return (
-    <>
+    <div>
       <div className="apps-sidebar apps-sidebar-right">
         <Stack
           direction="horizontal"
@@ -189,7 +189,7 @@ const ChatUserInfoSidebar: React.FC<ChatUserInfoSidebarProps> = ({
           </div>
         </PerfectScrollbar>
       </div>
-    </>
+    </div>
   )
 }
 

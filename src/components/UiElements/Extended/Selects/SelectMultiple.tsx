@@ -3,7 +3,7 @@ import { colourOptions } from './data'
 
 const SelectMultiple = () => {
   return (
-    <>
+    <div>
       <Select
         defaultValue={[colourOptions[2], colourOptions[3]]}
         isMulti
@@ -11,7 +11,7 @@ const SelectMultiple = () => {
         options={colourOptions}
         classNamePrefix="select"
       />
-    </>
+    </div>
   )
 }
 

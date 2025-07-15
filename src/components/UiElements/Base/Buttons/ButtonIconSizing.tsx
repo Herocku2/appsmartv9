@@ -3,7 +3,7 @@ import { buttonSizingVariants } from './data/buttonData'
 
 const ButtonWithIcon = () => {
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {buttonSizingVariants.map(({ variant, size }, index) => (
           <Button key={index} variant={variant} className={`btn-icon rounded btn-${size}`}>
@@ -19,7 +19,7 @@ const ButtonWithIcon = () => {
           </Button>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

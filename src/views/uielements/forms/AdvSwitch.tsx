@@ -12,7 +12,7 @@ import {
 
 const AdvSwitch = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumb title="Switchs" subName="Forms" />
       <Row className="g-3 g-md-4">
         {/* Start:: Col */}
@@ -166,7 +166,7 @@ const AdvSwitch = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

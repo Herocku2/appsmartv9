@@ -50,9 +50,9 @@ const ApexGradientDonut: React.FC<ApexGradientDonutProps> = () => {
   }
 
   return (
-    <>
+    <div>
       <ReactApexChart options={options} series={series} type="donut" height={380} />
-    </>
+    </div>
   )
 }
 

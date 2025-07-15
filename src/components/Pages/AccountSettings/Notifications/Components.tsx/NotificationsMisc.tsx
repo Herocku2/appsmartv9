@@ -2,7 +2,7 @@ import { Col, Row, Form } from 'react-bootstrap'
 
 const NotificationsMisc = () => {
   return (
-    <>
+    <div>
       <Row className="g-4">
         <Col md={3}>
           <h5 className="fw-semibold">Miscellaneous</h5>
@@ -56,7 +56,7 @@ const NotificationsMisc = () => {
           />
         </Col>
       </Row>
-    </>
+    </div>
   )
 }
 

@@ -23,12 +23,12 @@ const InputMaskCard = () => {
   }
 
   return (
-    <>
+    <div>
       <InputMask {...state} onChange={onChange} className="form-control" />
       <Form.Text>
         Credit Card format: <code>xxxx-xxxx-xxxx-xxxx</code>
       </Form.Text>
-    </>
+    </div>
   )
 }
 

@@ -6,7 +6,7 @@ import OverlayLayerStyle from '@/components/Misc/OverlayLayer'
 const AboutCompany = () => {
   const navigate = useNavigate()
   return (
-    <>
+    <div>
       <Row className="g-6 align-items-center">
         <Col xl={6}>
           <p className="fs-12 fw-semibold text-primary mb-4 text-uppercase">WHO WE ARE</p>
@@ -91,7 +91,7 @@ const AboutCompany = () => {
           </div>
         </Col>
       </Row>
-    </>
+    </div>
   )
 }
 

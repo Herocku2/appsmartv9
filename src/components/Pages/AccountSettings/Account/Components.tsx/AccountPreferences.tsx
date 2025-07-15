@@ -29,7 +29,7 @@ const LanguageOptions = [
 
 const AccountPreferences = () => {
   return (
-    <>
+    <div>
       <div className="mb-6 mb-md-12">
         <h5 className="fw-semibold">Account Preferences</h5>
         <p>Your personalized preference displayed in your account</p>
@@ -93,7 +93,7 @@ const AccountPreferences = () => {
           />
         </Col>
       </Row>
-    </>
+    </div>
   )
 }
 

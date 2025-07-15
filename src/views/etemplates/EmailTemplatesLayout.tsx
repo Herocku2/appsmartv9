@@ -20,7 +20,7 @@ const EmailTemplatesLayout: React.FC<EmailTemplatesLayoutProps> = ({ children })
   }, [settings])
 
   return (
-    <>
+    <div>
       <Stack
         className="email-layout align-items-center justify-content-center mx-4 mx-sm-6"
         style={{ minHeight: '100vh' }}
@@ -41,7 +41,7 @@ const EmailTemplatesLayout: React.FC<EmailTemplatesLayoutProps> = ({ children })
           <span className="ms-2">Back to Home</span>
         </Link>
       </Stack>
-    </>
+    </div>
   )
 }
 

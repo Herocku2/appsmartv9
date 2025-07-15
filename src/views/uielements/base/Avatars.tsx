@@ -14,7 +14,7 @@ import {
 
 const Avatars = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumb title="Avatars" subName="Base UI" />
       <Row className="g-3 g-md-4">
         {/* Start:: Col */}
@@ -194,7 +194,7 @@ const Avatars = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

@@ -3,14 +3,14 @@ import { Card } from 'react-bootstrap'
 
 const StarterPage = () => {
   return (
-    <>
+    <div>
       <TitleHelmet title="Starter Page" />
       <Card className="flex-grow-1">
         <Card.Body className="d-flex align-items-center justify-content-center">
           <div className="display-4 opacity-25">Starter Page</div>
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }
 

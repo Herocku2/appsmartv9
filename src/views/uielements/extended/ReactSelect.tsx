@@ -17,7 +17,7 @@ import {
 
 const ReactSelect = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="Select2"
         subName="Extended"
@@ -165,7 +165,7 @@ const ReactSelect = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

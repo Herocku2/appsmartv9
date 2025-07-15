@@ -51,7 +51,7 @@ const SweetAlert2Positioned = () => {
   ]
 
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {positions.map(({ label, onClick }, index) => (
           <Button key={index} variant="primary" onClick={onClick}>
@@ -59,7 +59,7 @@ const SweetAlert2Positioned = () => {
           </Button>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

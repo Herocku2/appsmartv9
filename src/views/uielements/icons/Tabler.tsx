@@ -5,7 +5,7 @@ import { IconsTabler } from '@/components/UiElements/Icons'
 
 const Tabler = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="Tabler"
         subName="Icons"
@@ -30,7 +30,7 @@ const Tabler = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

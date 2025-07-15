@@ -6,7 +6,7 @@ const ToastSolidColor = () => {
   const colors = ['Primary', 'Secondary', 'Success', 'Info', 'Warning', 'Danger']
 
   return (
-    <>
+    <div>
       <Row className="g-4">
         {colors.map((variant) => (
           <Col lg={4}>
@@ -22,7 +22,7 @@ const ToastSolidColor = () => {
           </Col>
         ))}
       </Row>
-    </>
+    </div>
   )
 }
 

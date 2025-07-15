@@ -83,7 +83,7 @@ const WeeklyStatsCard: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Card>
         <Card.Header className="py-3 pe-3 d-flex justify-content-between align-items-center">
           <Card.Title>Weekly Stats</Card.Title>
@@ -175,7 +175,7 @@ const WeeklyStatsCard: React.FC = () => {
           </Stack>
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }
 

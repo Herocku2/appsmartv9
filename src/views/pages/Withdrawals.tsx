@@ -11,7 +11,7 @@ export default function Withdrawals() {
     
 
     return (
-        <>
+        <div>
             <TitleHelmet title={t("My investment")} />
             <Card className="mb-4">
                 <Card.Header className="py-3 pe-3 d-flex align-items-center justify-content-between">
@@ -25,6 +25,6 @@ export default function Withdrawals() {
                     <WithdrawalsTable />
                 </Card.Body>
             </Card>
-        </>
+        </div>
     )
 }

@@ -84,7 +84,7 @@ const MenuItemWithChildren = ({
           <ul className={`nav-sub-menu ${subMenuClassNames}`}>
             {(item.children || []).map((child, idx) => {
               return (
-                <React.Fragment key={idx}>
+                <div key={idx}>
                   {child.children ? (
                     <MenuItemWithChildren
                       item={child}
@@ -100,7 +100,7 @@ const MenuItemWithChildren = ({
                       linkClassName={activeMenuItems!.includes(child.key) ? 'active' : ''}
                     />
                   )}
-                </React.Fragment>
+                </div>
               )
             })}
           </ul>
@@ -201,15 +201,15 @@ const AppMenu = ({ menuItems }: AppMenuProps) => {
   }, [activeMenu, location])
 
   return (
-    <>
+    <div>
       <ul className="side-nav" ref={menuRef} id="main-menu">
         {(menuItems || []).map((item, idx) => {
           return (
-            <React.Fragment key={idx}>
+            <div key={idx}>
               {item.isTitle ? (
                 <li className="nav-title">{item.label}</li>
               ) : (
-                <>
+                <div>
                   {item.children ? (
                     <MenuItemWithChildren
                       item={item}
@@ -225,13 +225,13 @@ const AppMenu = ({ menuItems }: AppMenuProps) => {
                       className={activeMenuItems.includes(item.key) ? 'active' : ''}
                     />
                   )}
-                </>
+                </div>
               )}
-            </React.Fragment>
+            </div>
           )
         })}
       </ul>
-    </>
+    </div>
   )
 }
 

@@ -53,7 +53,7 @@ const faqs2 = [
 
 const FaqItems = () => {
   return (
-    <>
+    <div>
       <div className="mx-auto" style={{ maxWidth: '960px' }}>
         <div className="mb-8 mb-md-12 mb-lg-16 text-center mx-auto" style={{ maxWidth: '600px' }}>
           <p className="fw-semibold text-primary mb-3">FAQ'S</p>
@@ -91,7 +91,7 @@ const FaqItems = () => {
           </Col>
         </Row>{' '}
       </div>
-    </>
+    </div>
   )
 }
 

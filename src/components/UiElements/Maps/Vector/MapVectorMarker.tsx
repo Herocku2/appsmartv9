@@ -12,9 +12,9 @@ interface MapVectorMarkerProps {
 
 const MapVectorMarker = ({ width, height }: MapVectorMarkerProps) => {
   return (
-    <>
+    <div>
       <MapBase type="world" width={width} height={height} options={mapOptsMarker} />
-    </>
+    </div>
   )
 }
 

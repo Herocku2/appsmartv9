@@ -25,7 +25,7 @@ const ModalUsecase = () => {
       title: 'Congratulations!',
       icon: 'fi-rr-badge-check',
       body: (
-        <>
+        <div>
           <p className="lead">
             You've successfully bought <strong>0.365 BTC</strong> for <strong>$350 USD</strong>.
           </p>
@@ -33,7 +33,7 @@ const ModalUsecase = () => {
             Learn when you receive bitcoin in your wallet.
             <Link to="#"> Click here</Link>
           </p>
-        </>
+        </div>
       ),
       buttonText: 'OK',
       onClick: () => handleClose('showUsecaseSuccess'),
@@ -43,14 +43,14 @@ const ModalUsecase = () => {
       title: 'Unable to Process!',
       icon: 'fi-rr-circle-xmark',
       body: (
-        <>
+        <div>
           <p className="lead">
             We are sorry, we were unable to process your payment. Please try again later.
           </p>
           <p>
             If you need help, please contact us at <Link to="#">support@themeswift.com</Link>.
           </p>
-        </>
+        </div>
       ),
       buttonText: 'Return',
       onClick: () => handleClose('showUsecaseDanger'),
@@ -60,7 +60,7 @@ const ModalUsecase = () => {
       title: 'Reset your Password!',
       icon: 'fi-rr-triangle-warning',
       body: (
-        <>
+        <div>
           <p className="lead">Enter your email and a reset link will be sent to you.</p>
           <form>
             <input
@@ -70,7 +70,7 @@ const ModalUsecase = () => {
               required
             />
           </form>
-        </>
+        </div>
       ),
       buttonText: 'Reset Now',
       onClick: () => handleClose('showUsecaseWarning'),
@@ -80,12 +80,12 @@ const ModalUsecase = () => {
       title: 'Incorrect Information!',
       icon: 'fi-rr-info',
       body: (
-        <>
+        <div>
           <p className="lead">
             In this example, you can see a form where you can request some additional information
             from the customer when they land on the app page.
           </p>
-        </>
+        </div>
       ),
       buttonText: 'Continue',
       onClick: () => handleClose('showUsecaseInfo'),
@@ -93,10 +93,10 @@ const ModalUsecase = () => {
   ]
 
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {usecaseModals.map((modal, index) => (
-          <React.Fragment key={index}>
+          <div key={index}>
             <Button
               variant={modal.variant}
               onClick={() =>
@@ -162,10 +162,10 @@ const ModalUsecase = () => {
                 </div>
               </Modal.Body>
             </Modal>
-          </React.Fragment>
+          </div>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

@@ -4,7 +4,7 @@ import { AcPassword } from './Components'
 
 const SecurityComponent = () => {
   return (
-    <>
+    <div>
       <Card className="mb-3 mb-md-4">
         <Card.Body>
             <AcPassword />
@@ -12,7 +12,7 @@ const SecurityComponent = () => {
         
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }
 

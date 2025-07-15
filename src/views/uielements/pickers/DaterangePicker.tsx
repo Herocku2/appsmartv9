@@ -11,7 +11,7 @@ import {
 
 const DaterangePicker = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="DataRange"
         subName="Pickers"
@@ -87,7 +87,7 @@ const DaterangePicker = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

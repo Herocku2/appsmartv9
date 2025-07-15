@@ -3,7 +3,7 @@ import { Dropdown, SplitButton, Stack } from 'react-bootstrap'
 const DropdownSplit = () => {
   const colors = ['Primary', 'Secondary', 'Success', 'Info', 'Warning', 'Danger']
   return (
-    <>
+    <div>
       <Stack direction="horizontal" gap={1} className="flex-wrap">
         {colors.map((variant) => (
           <SplitButton
@@ -22,7 +22,7 @@ const DropdownSplit = () => {
           </SplitButton>
         ))}
       </Stack>
-    </>
+    </div>
   )
 }
 

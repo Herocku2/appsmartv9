@@ -39,7 +39,7 @@ const ComingSoon = () => {
   }
 
   return (
-    <>
+    <div>
       <TitleHelmet title="Comming Soon" />
       <ErrorLayout>
         <div className="mb-16 mb-md-24">
@@ -72,14 +72,14 @@ const ComingSoon = () => {
             </Form>
             <Button onClick={handleSubscribe} disabled={loading} className="text-white">
               {loading ? (
-                <>
+                <div>
                   <span
                     className="spinner-border spinner-border-sm"
                     role="status"
                     aria-hidden="true"
                     style={{ width: '1.25rem', height: '1.25rem' }}
                   ></span>
-                </>
+                </div>
               ) : (
                 'Subscribe'
               )}
@@ -95,7 +95,7 @@ const ComingSoon = () => {
           ))}
         </Stack>
       </ErrorLayout>
-    </>
+    </div>
   )
 }
 

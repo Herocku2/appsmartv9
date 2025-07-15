@@ -1,6 +1,6 @@
 const OverviewAbout = () => {
   return (
-    <>
+    <div>
       <h5 className="fw-semibold mb-4">About Me</h5>
       <p>
         Hi I'm Alexandra Della, has been the industry's standard dummy text ever since the 1500s,
@@ -19,7 +19,7 @@ const OverviewAbout = () => {
       <p>
         Thanks by, <span className="fw-semibold text-dark">Alexandra Della</span>
       </p>
-    </>
+    </div>
   )
 }
 

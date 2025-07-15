@@ -19,7 +19,7 @@ const TableExpanding = () => {
       {
         accessorKey: 'firstName',
         header: ({ table }) => (
-          <>
+          <div>
             <IndeterminateCheckbox
               {...{
                 checked: table.getIsAllRowsSelected(),
@@ -41,7 +41,7 @@ const TableExpanding = () => {
               )}
             </Button>{' '}
             First Name
-          </>
+          </div>
         ),
         cell: ({ row, getValue }) => (
           <div
@@ -50,7 +50,7 @@ const TableExpanding = () => {
             }}
             className="d-flex align-items-center"
           >
-            <>
+            <div>
               <IndeterminateCheckbox
                 {...{
                   checked: row.getIsSelected(),
@@ -79,7 +79,7 @@ const TableExpanding = () => {
                 ></span>
               )}{' '}
               {getValue()}
-            </>
+            </div>
           </div>
         ),
         footer: (props) => props.column.id,
@@ -213,7 +213,7 @@ const TableExpanding = () => {
   }
 
   return (
-    <>
+    <div>
       <Table responsive className="mb-0">
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
@@ -281,7 +281,7 @@ const TableExpanding = () => {
           />
         </Pagination>
       </Stack>
-    </>
+    </div>
   )
 }
 

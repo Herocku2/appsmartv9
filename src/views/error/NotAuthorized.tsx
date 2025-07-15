@@ -11,10 +11,10 @@ const NotAuthorized: React.FC = () => {
   }
 
   return (
-    <>
+    <div>
       <TitleHelmet title="401 Not Authorized" />
       <CommonCard {...commonCardProps} />
-    </>
+    </div>
   )
 }
 

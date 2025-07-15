@@ -59,7 +59,7 @@ const billingData: billingRecord[] = [
 
 const BillingHistory = () => {
   return (
-    <>
+    <div>
       <Row className="g-4 mb-4">
         <Col md={3}>
           <h5 className="fw-semibold">Billing History</h5>
@@ -103,7 +103,7 @@ const BillingHistory = () => {
           <Pagination className="mt-3">{items}</Pagination>
         </Col>
       </Row>
-    </>
+    </div>
   )
 }
 

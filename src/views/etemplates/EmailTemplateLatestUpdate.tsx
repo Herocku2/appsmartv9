@@ -38,7 +38,7 @@ const updateData = [
 
 const EmailTemplateLatestUpdate = () => {
   return (
-    <>
+    <div>
       <EmailTemplatesLayout>
         <div className="text-center mx-auto">
           <div className="mt-4 mb-12">
@@ -70,7 +70,7 @@ const EmailTemplateLatestUpdate = () => {
         </Row>
         <EmailTemplatesFooter />
       </EmailTemplatesLayout>
-    </>
+    </div>
   )
 }
 

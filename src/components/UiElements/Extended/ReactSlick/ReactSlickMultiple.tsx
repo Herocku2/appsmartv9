@@ -19,7 +19,7 @@ export default class ReactSlickMultiple extends Component {
     }))
 
     return (
-      <>
+      <div>
         <Slider {...settings}>
           {slideItems.map(({ id, content }) => (
             <div className="slick-slide-items" key={id}>
@@ -27,7 +27,7 @@ export default class ReactSlickMultiple extends Component {
             </div>
           ))}
         </Slider>
-      </>
+      </div>
     )
   }
 }

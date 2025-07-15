@@ -11,7 +11,7 @@ import {
 
 const Dropzone = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="Dropzone"
         subName="Extended"
@@ -88,7 +88,7 @@ const Dropzone = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

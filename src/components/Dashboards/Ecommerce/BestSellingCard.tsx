@@ -49,7 +49,7 @@ const products = [
 
 const BestSellingCard = () => {
   return (
-    <>
+    <div>
       <Card>
         <Card.Header className="py-3 pe-3 d-flex justify-content-between align-items-center">
           <Card.Title>Best Selling</Card.Title>
@@ -118,7 +118,7 @@ const BestSellingCard = () => {
           </Pagination>
         </Card.Footer>
       </Card>
-    </>
+    </div>
   )
 }
 

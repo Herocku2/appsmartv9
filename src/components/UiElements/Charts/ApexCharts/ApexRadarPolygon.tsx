@@ -50,9 +50,9 @@ const ApexRadarMultiple: React.FC<ApexRadarMultipleProps> = () => {
   }
 
   return (
-    <>
+    <div>
       <ReactApexChart options={options} series={series} type="radar" height={380} />
-    </>
+    </div>
   )
 }
 

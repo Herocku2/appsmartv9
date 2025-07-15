@@ -11,7 +11,7 @@ import {
 
 const VectorMaps = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="Vector Maps"
         subName="Maps"
@@ -87,7 +87,7 @@ const VectorMaps = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

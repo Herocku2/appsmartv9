@@ -37,7 +37,7 @@ const AboutOffice: React.FC<OfficeProps> = () => {
   const renderAddress = (address: string) => <div dangerouslySetInnerHTML={{ __html: address }} />
 
   return (
-    <>
+    <div>
       <div className="pt-8 pt-md-12 pt-lg-16 px-4 px-md-6 bg-secondary-subtle rounded-3">
         <Row>
           <Col lg={6} className="mb-12">
@@ -67,7 +67,7 @@ const AboutOffice: React.FC<OfficeProps> = () => {
           </Col>
         </Row>
       </div>
-    </>
+    </div>
   )
 }
 

@@ -19,7 +19,7 @@ const socialMediaIcons = [
 
 const CommonFooter = () => {
   return (
-    <>
+    <div>
       <Card.Footer className="px-4 px-6 py-12 py-lg-16">
         <div
           className="mb-6 mx-auto mx-md-0 text-center text-md-start"
@@ -60,7 +60,7 @@ const CommonFooter = () => {
           </Col>
         </Row>
       </Card.Footer>
-    </>
+    </div>
   )
 }
 

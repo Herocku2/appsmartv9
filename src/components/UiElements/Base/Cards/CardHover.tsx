@@ -4,7 +4,7 @@ const CardHover = () => {
   const colors = ['Primary', 'Warning', 'Success']
 
   return (
-    <>
+    <div>
       <Row className="g-3 g-md-4">
         {colors.map((variant) => (
           <Col lg={4} key={variant}>
@@ -27,7 +27,7 @@ const CardHover = () => {
           </Col>
         ))}
       </Row>
-    </>
+    </div>
   )
 }
 

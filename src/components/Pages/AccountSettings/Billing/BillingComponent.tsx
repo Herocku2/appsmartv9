@@ -5,7 +5,7 @@ import { BillingMethord, BillingHistory, BillingSubscription } from './Component
 
 const BillingComponent = () => {
   return (
-    <>
+    <div>
       <Card>
         <Card.Body>
           <BillingSubscription />
@@ -22,7 +22,7 @@ const BillingComponent = () => {
           <BillingHistory />
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }
 

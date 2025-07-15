@@ -77,7 +77,7 @@ const EarningBarCard = () => {
   }
 
   return (
-    <>
+    <div>
       <Card>
         <Card.Body>
           <div>
@@ -100,7 +100,7 @@ const EarningBarCard = () => {
           </div>
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }
 

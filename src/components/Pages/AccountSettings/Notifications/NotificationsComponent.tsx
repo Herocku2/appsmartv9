@@ -4,7 +4,7 @@ import { NotificationEmail, NotificationPush, NotificationsMisc } from './Compon
 
 const NotificationsComponent = () => {
   return (
-    <>
+    <div>
       <Card>
         <Card.Body>
           <NotificationEmail />
@@ -21,7 +21,7 @@ const NotificationsComponent = () => {
           </Row>
         </Card.Body>
       </Card>
-    </>
+    </div>
   )
 }
 

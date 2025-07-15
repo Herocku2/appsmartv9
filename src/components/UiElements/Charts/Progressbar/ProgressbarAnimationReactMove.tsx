@@ -9,7 +9,7 @@ const ProgressbarAnimationReactMove = () => {
   const selectedColor = settings.color as keyof typeof colors
   const themeColor = colors[selectedColor] || selectedColor
   return (
-    <>
+    <div>
       <ChangingProgressProvider values={[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]}>
         {(value) => (
           <CircularProgressbar
@@ -36,7 +36,7 @@ const ProgressbarAnimationReactMove = () => {
           />
         )}
       </ChangingProgressProvider>
-    </>
+    </div>
   )
 }
 

@@ -47,9 +47,9 @@ const ApexSimpleDonut: React.FC<ApexSimpleDonutProps> = () => {
   }
 
   return (
-    <>
+    <div>
       <ReactApexChart options={options} series={series} type="donut" height={380} />
-    </>
+    </div>
   )
 }
 

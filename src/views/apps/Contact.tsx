@@ -202,7 +202,7 @@ const Contact: React.FC = () => {
   }, [containerToggle])
 
   return (
-    <>
+    <div>
       <TitleHelmet title="Contact" />
       <Card className={`apps-card ${sidebarMiniToggle ? 'apps-sidebar-mini-toggle' : ''}`}>
         <div className="apps-sidebar-mini">
@@ -261,7 +261,7 @@ const Contact: React.FC = () => {
                 </Button>
               </Stack>
             ) : (
-              <>
+              <div>
                 <ContactDetailsHeader
                   onDelete={handleDeleteContact}
                   handlePrev={handlePrev}
@@ -281,7 +281,7 @@ const Contact: React.FC = () => {
                   key={selectedContact?.id}
                   selectedContact={selectedContact}
                 />
-              </>
+              </div>
             )}
           </div>
         </div>
@@ -292,7 +292,7 @@ const Contact: React.FC = () => {
         onHide={() => setShowAddContactModal(false)}
         onAddContact={handleAddContact}
       />
-    </>
+    </div>
   )
 }
 

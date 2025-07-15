@@ -132,7 +132,7 @@ const SalesHistoryCard: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Card>
         <Card.Header className="py-3 pe-3 d-flex justify-content-between align-items-center">
           <Card.Title>Sales History</Card.Title>
@@ -177,7 +177,7 @@ const SalesHistoryCard: React.FC = () => {
           ))}
         </ListGroup>
       </Card>
-    </>
+    </div>
   )
 }
 

@@ -9,11 +9,11 @@ const Account = () => {
    const {t} = useTranslation()
 
   return (
-    <>
+    <div>
       <TitleHelmet title={t("Profile")} />
       <AccountSettingsNav />
       <AccountComponent />
-    </>
+    </div>
   )
 }
 

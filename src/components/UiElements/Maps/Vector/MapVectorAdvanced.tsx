@@ -14,9 +14,9 @@ interface MapVectorAdvancedProps {
 
 const MapVectorAdvanced = ({ width, height }: MapVectorAdvancedProps) => {
   return (
-    <>
+    <div>
       <MapBase type="world" width={width} height={height} options={mapOptsAdvanced} />
-    </>
+    </div>
   )
 }
 

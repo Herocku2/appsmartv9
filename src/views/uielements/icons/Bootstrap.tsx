@@ -4,7 +4,7 @@ import { IconsBootstrap } from '@/components/UiElements/Icons'
 
 const Bootstrap = () => {
   return (
-    <>
+    <div>
       <PageBreadcrumbButton
         title="Bootstrap"
         subName="Icons"
@@ -29,7 +29,7 @@ const Bootstrap = () => {
         </Col>
         {/* End:: Documentation Col */}
       </Row>
-    </>
+    </div>
   )
 }
 

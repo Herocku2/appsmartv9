@@ -37,7 +37,7 @@ const Notifications = () => {
   }
 
   return (
-    <>
+    <div>
       <Dropdown show={dropDownOpen} onToggle={toggleDropDown}>
         <Dropdown.Toggle
           as="a"
@@ -120,7 +120,7 @@ const Notifications = () => {
           isSoundOn={isSoundOn}
         />
       )}
-    </>
+    </div>
   )
 }
 

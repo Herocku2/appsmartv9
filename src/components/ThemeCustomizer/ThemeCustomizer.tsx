@@ -40,7 +40,7 @@ const ThemeCustomizer = () => {
       return null
     }
     return (
-      <>
+      <div>
         <hr className="mb-0 mt-2" />
         <div className="p-4">
           <SidenavType
@@ -49,12 +49,12 @@ const ThemeCustomizer = () => {
             sidenavConstants={ThemeSettings.sidebar.size}
           />
         </div>
-      </>
+      </div>
     )
   }
 
   return (
-    <>
+    <div>
       <div className="p-4">
         <ColorScheme
           handleChangeColorScheme={handleChangeColorScheme}
@@ -127,7 +127,7 @@ const ThemeCustomizer = () => {
           fontConstants={ThemeSettings.font}
         />
       </div>
-    </>
+    </div>
   )
 }
 

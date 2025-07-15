@@ -7,7 +7,7 @@ import { PrivacyPolicyContent } from '@/components/Pages/OtherPages/PrivacyPolic
 
 const PrivacyPolicy = () => {
   return (
-    <>
+    <div>
       <TitleHelmet title="Privacy & Policy" />
       <Card>
         <CommonHeader
@@ -25,7 +25,7 @@ const PrivacyPolicy = () => {
         </section>
         <CommonFooter />
       </Card>
-    </>
+    </div>
   )
 }
 
