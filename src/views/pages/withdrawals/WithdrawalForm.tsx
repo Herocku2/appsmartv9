@@ -131,10 +131,16 @@ export default function WithdrawalForm() {
         <div className='mt-4'></div>
         {
           (type == "2") ? (
-            <p>{t("Available balance")} <span className='fw-bold'>${user?.balance.toLocaleString()} USD</span></p>
+            <p>{t("Available balance")} <span className='fw-bold'>${user?.balance.toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+})} USD</span></p>
 
           ) : (type == "1") ? (
-            <p>{t("Earnings balance")} <span className='fw-bold'>${user?.investment_balance.toLocaleString()} USD</span></p>
+            <p>{t("Earnings balance")} <span className='fw-bold'>${user?.investment_balance.toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+})} USD</span></p>
 
           ) : (
             <p className='mt-4'>{t("Please select a withdrawal type.")}</p>

@@ -45,7 +45,7 @@ export default function ReferralsTable() {
                                 <tr key={indexReferral}>
                                     <td><span className='fw-bold'>{referral.referred_username}</span><br /> {referral.referred_email}</td>
                                     <td className="">{referral.referred_phone_number || t("No phone number")}</td>
-                                    <td className="text-dark ">{new Date(referral.date).toLocaleString()}</td>
+                                    <td className="text-dark ">{new Date(referral.date).toLocaleDateString()}</td>
                                     <td className="text-dark fw-semibold ">{referral.status ? t("Active") : t("Inactive")}</td>
 
 

@@ -35,11 +35,20 @@ export default function DeposistsTable() {
                             return (
                                 <tr key={indexPayment}>
                                     <td><span className='fw-bold'>{new Date(history.date).toLocaleString()}</span></td>
-                                    <td><span className=''>${history.amount.toLocaleString()} USD</span></td>
-                                    <td><span className=''>${history.withdrawn_from_deposit.toLocaleString()} USD</span></td>
+                                    <td><span className=''>${history.amount.toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+})} USD</span></td>
+                                    <td><span className=''>${history.withdrawn_from_deposit.toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+})} USD</span></td>
 
                                     <td><span className=''>{history.pay_with_balance ? t("Paid with balance") : t("USDT BEP20")}</span></td>
-                                    <td className='text-end'><span className=''>${history.before_investment_value.toLocaleString()} USD</span></td>
+                                    <td className='text-end'><span className=''>${history.before_investment_value.toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+})} USD</span></td>
                                      <td className='text-end'>
                                         {history.coinpayments_response?.information?.transaction_hash ? (
                                             <a href={"https://bscscan.com/tx/0x"+history.coinpayments_response?.information?.transaction_hash} target='_blank' className='text-primary'>{t("View")}</a>

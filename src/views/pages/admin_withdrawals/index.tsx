@@ -153,9 +153,15 @@ const AdminWithdrawals: React.FC = () => {
                                                 <td>{new Date(withdrawal.date).toLocaleString()}</td>
                                                 <td>{withdrawal.user || 'N/A'}</td> {/* Handle nested user object */}
                                                 <td>{t(withdrawal.verbose_type)}</td>
-                                                <td>${withdrawal.amount.toLocaleString()}</td>
+                                                <td>${withdrawal.amount.toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+})}</td>
 
-                                                {/* <td>{withdrawal.payed_date ? new Date(withdrawal.payed_date).toLocaleString() : t('N/A')}</td> */}
+                                                {/* <td>{withdrawal.payed_date ? new Date(withdrawal.payed_date).toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+}) : t('N/A')}</td> */}
                                                 <td>{t(withdrawal.verbose_status)}</td>
                                                 {/* <td>${parseFloat(withdrawal.fee).toFixed(2)}</td> */}
                                                 <td>{withdrawal.wallet_address.slice(0, 10)}...</td>

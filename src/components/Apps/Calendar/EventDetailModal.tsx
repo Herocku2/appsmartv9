@@ -63,7 +63,10 @@ const EventDetailModal: React.FC<EventDetailModalProps> = ({
                 <div>
                   <h6>Start Time</h6>
                   <p className="fs-12 text-muted" id="preview-event-start">
-                    {selectedEvent?.start ? selectedEvent.start.toLocaleString() : 'No start time'}
+                    {selectedEvent?.start ? selectedEvent.start.toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+}) : 'No start time'}
                   </p>
                 </div>
               </div>
@@ -77,7 +80,10 @@ const EventDetailModal: React.FC<EventDetailModalProps> = ({
                   <div>
                     <h6>End Time</h6>
                     <p className="fs-12 text-muted" id="preview-event-end">
-                      {selectedEvent.end.toLocaleString()}
+                      {selectedEvent.end.toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+})}
                     </p>
                   </div>
                 </div>

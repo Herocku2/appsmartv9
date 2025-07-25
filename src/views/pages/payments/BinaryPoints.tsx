@@ -28,8 +28,14 @@ export default function BinaryPoints() {
                         payments?.results?.map((payment, indexPayment) => {
                             return (
                                 <tr key={indexPayment}>
-                                    <td><span className='fw-bold'>{new Date(payment.date).toLocaleString()}</span></td>
-                                    <td className=''>{parseFloat(payment.points).toLocaleString()}</td>
+                                    <td><span className='fw-bold'>{new Date(payment.date).toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+})}</span></td>
+                                    <td className=''>{parseFloat(payment.points).toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+})}</td>
                                     <td className=''><span className=''>{payment.side}</span></td>
                                     <td className=''><span className='fw-bold'>{payment.level}</span></td>
                                     <td className='text-end'><span className='fw-bold'>{payment.detail}</span></td>

@@ -142,7 +142,10 @@ const CreateDepositModal: React.FC<PurchasePlanModalProps> = ({ handleCloseModal
                                             </Button>
                                         </div>
                                         <div className='mt-2'>
-                                            <span>{t("Please send ")} <span className='fw-bold'><h5>{data.amount}</h5></span>
+                                            <span>{t("Please send ")} <span className='fw-bold'><h5>{data.amount?.toLocaleString('en-US', {
+  minimumFractionDigits: 3,
+  maximumFractionDigits: 3
+})}</h5></span>
                                                 {" "} USDT (BEP20)</span>
                                             <p>{t("and then click on verify payment to confirm transaction.")}</p>
                                         </div>

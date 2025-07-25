@@ -39,9 +39,15 @@ export default function InvestmentHistoryTable() {
                             return (
                                 <tr key={indexPayment}>
                                     <td><span className='fw-bold'>{new Date(history.date).toLocaleString()}</span></td>
-                                    <td><span className=''>${history.amount.toLocaleString()} USD</span></td>
+                                    <td><span className=''>${history.amount.toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+})} USD</span></td>
                                     <td><span className=''>{history.pay_with_balance ? t("Paid with balance") : t("USDT BEP20")}</span></td>
-                                    <td className='text-end'><span className=''>${history.before_investment_value.toLocaleString()} USD</span></td>
+                                    <td className='text-end'><span className=''>${history.before_investment_value.toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+})} USD</span></td>
                                 </tr>
                             )
                         })

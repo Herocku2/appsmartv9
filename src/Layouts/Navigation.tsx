@@ -129,15 +129,24 @@ const Navigation = () => {
           <div className='px-4 mt-4'>
             <div className='d-flex justify-content-between border-bottom pb-2 mb-2'>
               <span>{t("Balance")}</span>
-              <span>${user?.balance?.toLocaleString() || 0} USD</span>
+              <span>${user?.balance?.toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+}) || 0} USD</span>
             </div>
             <div className='d-flex justify-content-between border-bottom pb-2 mb-2'>
               <span>{t("Earnings")}</span>
-              <span>${user?.investment_balance?.toLocaleString() || 0} USD</span>
+              <span>${user?.investment_balance?.toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+}) || 0} USD</span>
             </div>
             <div className='d-flex justify-content-between border-bottom pb-2 mb-2'>
               <span>{t("Investment")}</span>
-              <span>${dashboard?.investment_amount?.toLocaleString() || 0} USD</span>
+              <span>${dashboard?.investment_amount?.toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+}) || 0} USD</span>
             </div>
             <div className='d-flex justify-content-between border-bottom pb-2 mb-2'>
               <span>{t("Cuenta Metatrader5")}</span>

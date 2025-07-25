@@ -57,7 +57,10 @@ const Dashboard = () => {
           <div className="card adminuiux-card">
             <div className="card-body">
               <p className="text-secondary small mb-2">{t('Investment value')}</p>
-              <h4 className="mb-3">${data?.investment_amount.toLocaleString() || 0} USD</h4>
+              <h4 className="mb-3">${data?.investment_amount.toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+}) || 0} USD</h4>
               <span className="badge badge-light text-bg-danger"><i className="me-1 bi bi-arrow-down-short" />{new Date(data?.withdrawable_date || "").toLocaleDateString()}</span>
             </div>
           </div>
@@ -66,8 +69,14 @@ const Dashboard = () => {
           <div className="card adminuiux-card">
             <div className="card-body">
               <p className="text-secondary small mb-2">{t('Earns')}</p>
-              <h4 className="mb-3">${data?.daily_payment?.toLocaleString() || 0} USD</h4>
-              <span className="badge badge-light text-bg-success"><i className="me-1 bi bi-arrow-down-short" />+{data?.daily_percentage.toLocaleString()}%</span>
+              <h4 className="mb-3">${data?.daily_payment?.toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+}) || 0} USD</h4>
+              <span className="badge badge-light text-bg-success"><i className="me-1 bi bi-arrow-down-short" />+{data?.daily_percentage.toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+})}%</span>
             </div>
           </div>
         </div>
@@ -75,7 +84,10 @@ const Dashboard = () => {
           <div className="card adminuiux-card">
             <div className="card-body">
               <p className="text-secondary small mb-2">{t('Total Profit')}</p>
-              <h4 className="mb-3">${data?.total_profit.toLocaleString() || 0} USD</h4>
+              <h4 className="mb-3">${data?.total_profit.toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+}) || 0} USD</h4>
               <span className="badge badge-light text-bg-info"><i className="me-1 bi bi-arrow-down-short" />{data?.days_profit} {t("days")}</span>
             </div>
           </div>

@@ -30,7 +30,10 @@ export default function WithdrawalsTable() {
                                 <tr key={indexWithdrawal}>
                                     <td><span className='fw-bold'>{new Date(withdrawal.date).toLocaleString()}</span></td>
                                     <td>{withdrawal.verbose_type}</td>
-                                    <td>${withdrawal.amount.toLocaleString()} USD</td>
+                                    <td>${withdrawal.amount.toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+})} USD</td>
                                     <td className=''>{withdrawal.status == "1" ? <Badge bg="warning">{t("Pending")}</Badge> : (withdrawal.status == "2") ? <Badge bg="success">{t("Approved")}</Badge> :
                                         <Badge bg="danger">{t("Refused")}</Badge>}</td>
                                     <td className='text-end'>

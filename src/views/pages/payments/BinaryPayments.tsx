@@ -27,10 +27,22 @@ export default function BinaryPayments() {
                         payments?.results?.map((payment, indexPayment) => {
                             return (
                                 <tr key={indexPayment}>
-                                    <td><span className='fw-bold'>{new Date(payment.date).toLocaleString()}</span></td>
-                                    <td className=''>{parseFloat(payment.left_points).toLocaleString()}</td>
-                                    <td className=''><span className=''>${parseFloat(payment.right_points).toLocaleString()} USD</span></td>
-                                    <td className='text-end'><span className='fw-bold'>${parseFloat(payment.amount).toLocaleString()} USD</span></td>
+                                    <td><span className='fw-bold'>{new Date(payment.date).toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+})}</span></td>
+                                    <td className=''>{parseFloat(payment.left_points).toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+})}</td>
+                                    <td className=''><span className=''>${parseFloat(payment.right_points).toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+})} USD</span></td>
+                                    <td className='text-end'><span className='fw-bold'>${parseFloat(payment.amount).toLocaleString('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+})} USD</span></td>
                                 </tr>
                             )
                         })
