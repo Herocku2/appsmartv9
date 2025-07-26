@@ -18,7 +18,7 @@ const metadata = {
     icons: ['https://assets.reown.com/reown-profile-pic.png']
 }
 
-const chains = [bsc, bscTestnet]
+const chains = [bsc] //bscTestnet
 export const config = defaultWagmiConfig({
     chains,
     projectId,

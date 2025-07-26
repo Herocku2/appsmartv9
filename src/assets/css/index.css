@@ -17,3 +17,12 @@ html[data-content-skin=modern][data-bs-theme=dark] .form-control::placeholder {
 }
 
 
+/* Fuerza que las barras de SimpleBar estén siempre visibles */
+.simplebar-scrollbar::before {
+  opacity: 1 !important;
+}
+
+.simplebar-track.simplebar-vertical,
+.simplebar-track.simplebar-horizontal {
+  visibility: visible !important;
+}

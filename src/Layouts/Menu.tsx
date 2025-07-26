@@ -142,25 +142,25 @@ interface AppMenuProps {
   menuItems: MenuItemTypes[]
 }
 
-const AppMenu = ({ menuItems }: AppMenuProps) => {
+const AppMenu = ({ menuItems, setMenuOpen, menuOpen }: AppMenuProps) => {
   const location = useLocation()
   const menuRef = useRef(null)
   const [activeMenuItems, setActiveMenuItems] = useState<Array<string>>([])
 
   const {data: user} = useGetUserQuery()
-
   const toggleMenu = (menuItem: MenuItemTypes, show: boolean) => {
     if (show) {
       setActiveMenuItems([menuItem['key'], ...findAllParent(menuItems, menuItem)])
     }
   }
 
+
   const activeMenu = useCallback(() => {
     const div = document.getElementById('main-menu')
     let matchingMenuItem: HTMLElement | null = null
-
     if (div) {
       const items: any = div.getElementsByClassName('nav-link-ref')
+      
       for (let i = 0; i < items.length; ++i) {
         let trimmedURL = location?.pathname?.replaceAll(process.env.PUBLIC_URL ?? '', '')
         const url = items[i].pathname
@@ -181,6 +181,7 @@ const AppMenu = ({ menuItems }: AppMenuProps) => {
         }
 
         setTimeout(function () {
+          
           const activatedItem = matchingMenuItem!
           if (activatedItem != null) {
             const simplebarContent = document.querySelector(
@@ -191,7 +192,7 @@ const AppMenu = ({ menuItems }: AppMenuProps) => {
               scrollTo(simplebarContent, offset, 600)
             }
           }
-        }, 200)
+        }, 2000)
       }
     }
   }, [location, menuItems])
