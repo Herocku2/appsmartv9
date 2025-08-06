@@ -6,8 +6,8 @@ const VerificationSent = () => {
         <Container className="mt-5">
             <Row className="justify-content-md-center">
                 <Col >
-                    <Card.Body >
-                        <i className="fi fi-br-check" style={{ fontSize: '60px', color: 'green', marginBottom: '1rem' }}></i>                            <Card.Title as="h2">¡Ya casi está listo!</Card.Title>
+                    <Card.Body className='text-center' >
+                        <i className="fi fi-br-check text-primary" style={{ fontSize: '60px', color: 'green', marginBottom: '1rem' }}></i>                            <Card.Title as="h2">¡Ya casi está listo!</Card.Title>
                         <Card.Text className="mt-3">
                             Te hemos enviado un correo electrónico de verificación.
                         </Card.Text>
