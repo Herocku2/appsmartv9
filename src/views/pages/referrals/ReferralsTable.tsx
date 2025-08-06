@@ -26,10 +26,10 @@ export default function ReferralsTable() {
             <Table responsive bordered className='mt-4'>
                 <thead>
                     <tr>
-                        <th>{t("User")}</th>
-                        <th className="">{t("Phone")}</th>
-                        <th className="">{t("Registration date")}</th>
-                        <th className="">{t("Status")}</th>
+                        <th className='text-primary'>{t("User")}</th>
+                        <th className="text-primary">{t("Phone")}</th>
+                        <th className="text-primary">{t("Registration date")}</th>
+                        <th className="text-primary">{t("Status")}</th>
                         {/* {
                             user?.is_fundator && (
                                 <th className="text-end">{t("Actions")}</th>

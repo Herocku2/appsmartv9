@@ -118,6 +118,7 @@ const AdminWithdrawals: React.FC = () => {
                                     {/* <th>{t('Fee')}</th> */}
                                     <th>{t('Wallet Address')}</th>
                                     <th>{t('Hash')}</th>
+                                    <th>{t('Detalle')}</th>
                                 </tr>
 
 
@@ -165,14 +166,17 @@ const AdminWithdrawals: React.FC = () => {
                                                 <td>{t(withdrawal.verbose_status)}</td>
                                                 {/* <td>${parseFloat(withdrawal.fee).toFixed(2)}</td> */}
                                                 <td>{withdrawal.wallet_address.slice(0, 10)}...</td>
-                                                <td>
+                                                <td >
                                                     {withdrawal.payment_link ? (
-                                                        <a href={"https://bscscan.com/tx/" + withdrawal.payment_link} target="_blank" rel="noopener noreferrer">
+                                                        <a className='text-primary' href={"https://bscscan.com/tx/" + withdrawal.payment_link} target="_blank" rel="noopener noreferrer">
                                                             {t('View Transaction')}
                                                         </a>
                                                     ) : (
                                                         t('N/A')
                                                     )}
+                                                </td>
+                                                <td className='text-danger'>
+                                                    {withdrawal?.refuse_message || " - "}
                                                 </td>
                                             </tr>
                                         )

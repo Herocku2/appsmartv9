@@ -1,17 +1,15 @@
 import React from 'react';
-import { Container, Row, Col, Card, ProgressBar, Spinner, Alert } from 'react-bootstrap';
-import { Line } from 'react-chartjs-2';
+import { Container, Row, Col, Card, Spinner, Alert } from 'react-bootstrap';
+import {  Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
   PointElement,
   LineElement,
-  Title,
-  Tooltip,
-  Legend,
   ChartData,
   ChartOptions,
+  BarElement
 } from 'chart.js';
 
 // Asumo que la siguiente importación viene de tu archivo de API generado por RTK Query
@@ -26,9 +24,7 @@ ChartJS.register(
   LinearScale,
   PointElement,
   LineElement,
-  Title,
-  Tooltip,
-  Legend
+  BarElement
 );
 
 // --- Componente ---
@@ -76,28 +72,31 @@ const InvestmentDashboard: React.FC = () => {
 
   const averageInvestment: number = totalInvestors > 0 ? totalInvestments / totalInvestors : 0;
 
-  const chartData: ChartData<'line'> = {
+  const chartData: ChartData<'bar'> = {
     labels: apiChartData.labels.map(label => t(label)), // Traduce los labels si es necesario
     datasets: [
       {
         label: t('Investment Growth ($)'),
         data: apiChartData.data,
-        fill: true,
         backgroundColor: '#e49e3d',
         borderColor: '#e49e3d',
-        tension: 0.4,
       },
     ],
   };
 
-  const chartOptions: ChartOptions<'line'> = {
+  const chartOptions: ChartOptions<'bar'> = {
     responsive: true,
-      maintainAspectRatio: false,
+    maintainAspectRatio: false,
     plugins: {
       legend: { position: 'top' as const },
       title: { display: true, text: t('Investment Evolution Over Time') },
     },
-    
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+
   };
 
   return (
@@ -153,7 +152,7 @@ const InvestmentDashboard: React.FC = () => {
           <Card className="shadow-sm h-100" style={{ minHeight: '600px' }}>
             <Card.Body className="d-flex align-items-center">
               <div style={{ width: '100%', height: '100%' }}>
-                <Line options={chartOptions} data={chartData} />
+                <Bar  options={chartOptions} data={chartData} />
               </div>
             </Card.Body>
           </Card>

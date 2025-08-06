@@ -20,7 +20,8 @@ export default function WithdrawalsTable() {
                         <th className="">{t("Amount")}</th>
 
                         <th className="">{t("Status")}</th>
-                        <th className="text-end">{t("Hash")}</th>
+                        <th className="">{t("Hash")}</th>
+                        <th className="text-end">{t("Detalles")}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,12 +37,15 @@ export default function WithdrawalsTable() {
 })} USD</td>
                                     <td className=''>{withdrawal.status == "1" ? <Badge bg="warning">{t("Pending")}</Badge> : (withdrawal.status == "2") ? <Badge bg="success">{t("Approved")}</Badge> :
                                         <Badge bg="danger">{t("Refused")}</Badge>}</td>
-                                    <td className='text-end'>
+                                    <td >
                                         {withdrawal.payment_link ? (
                                             <a href={"https://bscscan.com/tx/"+withdrawal.payment_link} target='_blank' className='text-primary'>{t("View")}</a>
                                         ) : (
                                             <span>-</span>
                                         )}
+                                    </td>
+                                    <td className='text-end text-danger'>
+                                        {withdrawal?.refuse_message || " - "}
                                     </td>
                                 </tr>
                             )

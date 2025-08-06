@@ -16,11 +16,11 @@ export default function DirectPayments() {
             <Table responsive bordered className='mt-4'>
                 <thead>
                     <tr>
-                        <th>{t("Date")}</th>
-                        <th className="">{t("User")}</th>
-                        <th className="">{t("Investment")}</th>
-                        <th className="">{t("Level")}</th>
-                        <th className="text-end">{t("Amount")}</th>
+                        <th className='text-primary'>{t("Date")}</th>
+                        <th className="text-primary">{t("User")}</th>
+                        <th className="text-primary">{t("Investment")}</th>
+                        <th className="text-primary">{t("Level")}</th>
+                        <th className="text-primary text-end">{t("Amount")}</th>
                     </tr>
                 </thead>
                 <tbody>

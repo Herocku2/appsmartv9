@@ -20,12 +20,12 @@ export default function DeposistsTable() {
             <Table responsive bordered className='mt-4'>
                 <thead>
                     <tr>
-                        <th>{t("Date")}</th>
-                        <th className="">{t("Amount")}</th>
-                        <th className="">{t("Withdrawn")}</th>
-                        <th className="">{t("Payment method")}</th>
-                        <th className="text-end">{t("New investment value")}</th>
-                         <th className="">{t("Hash")}</th>
+                        <th className='text-primary'>{t("Date")}</th>
+                        <th className="text-primary text-primary">{t("Amount")}</th>
+                        <th className="text-primary">{t("Withdrawn")}</th>
+                        <th className="text-primary">{t("Payment method")}</th>
+                        <th className="text-primary text-end">{t("New investment value")}</th>
+                         <th className="text-primary">{t("Hash")}</th>
                     </tr>
                 </thead>
                 <tbody>

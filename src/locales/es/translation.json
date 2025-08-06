@@ -232,5 +232,7 @@
   "Withdrawals are processing 24 hours":"Retiros se procesarán en máximo 24 horas",
   "Withdrawals are only available on Friday and Saturday":"Retiros solo están habilitados los días Viernes y Sábado",
   "Username must not contain spaces":"EL nombre de usuario no debe contener espacios",
-  "Earns":"Rendimientos"
+  "Earns":"Rendimientos",
+  "Create a Username":"Crea un nombre de usuario",
+  "Email is required":"Correo es obligatorio"
 }

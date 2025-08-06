@@ -6,6 +6,7 @@ import { useGetUserQuery } from '../../../store/api/auth/authApiSlice'
 import DirectPayments from './DirectPayments'
 import PasivePayments from './PasivePayments'
 import { copiarTexto } from '../../dashboards'
+import MonthlyPaymentChart from './MonthlyPaymentChart'
 
 export default function PaymentsTable() {
 
@@ -19,6 +20,7 @@ export default function PaymentsTable() {
 
     const tabsData = [{title: t("Direct Payments"), content: <DirectPayments />, eventKey: "direct", disabled: false},
         {title: t("Pasive Payments"), content: <PasivePayments />, eventKey: "pasive", disabled: false},
+         {title: "% Gráfico", content: <MonthlyPaymentChart />, eventKey: "%", disabled: false},
         // {title: t("Binary Payments"), content: <BinaryPayments />, eventKey: "binary", disabled: false},
         // {title: t("Binary Points Records"), content: <BinaryPoints />, eventKey: "binary-points", disabled: false},
     ]

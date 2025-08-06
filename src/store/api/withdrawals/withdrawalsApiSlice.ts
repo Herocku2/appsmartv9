@@ -45,8 +45,16 @@ export const withdrawalsApi = apiSlice.injectEndpoints({
       }),
       invalidatesTags: ['User', 'Withdrawals', "Dashboard", "InvestmentHistory", "Tree"]
     }),
+    refuseWithdrawals: builder.mutation<string, { withdrawalIds: number[]; hash: string }>({
+      query: ({ withdrawalIds,  msg }) => ({
+        url: 'withdrawals/withdrawals/refuse-withdrawals/', // Or whatever your admin endpoint is for paying
+        method: 'POST',
+        body: { withdrawalIds: withdrawalIds, msg }, // Example payload
+      }),
+      invalidatesTags: ['User', 'Withdrawals', "Dashboard", "InvestmentHistory", "Tree"]
+    }),
   }),
 });
 export const { useCreateWithdrawalMutation, useGetWithdrawalsQuery, useCreateSecretCodeMutation,
-  useGetAdminWithdrawalsQuery, usePayWithdrawalsMutation
+  useGetAdminWithdrawalsQuery, usePayWithdrawalsMutation, useRefuseWithdrawalsMutation
  } = withdrawalsApi;

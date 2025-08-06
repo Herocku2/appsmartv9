@@ -3,14 +3,14 @@ import { Route, RouteProps } from 'react-router-dom'
 
 // PrivateRoute
 import PrivateRoute from './PrivateRoute'
-const Dashboard = React.lazy(() => import('./../views/dashboards'))
-const BinaryTree = React.lazy(() => import('../views/pages/BinaryTree'))
-const Referrals = React.lazy(() => import('../views/pages/Referrals'))
-const Payments = React.lazy(() => import('../views/pages/Payments'))
-const Withdrawals = React.lazy(() => import('../views/pages/Withdrawals'))
-const InvestmentHistory = React.lazy(() => import('../views/pages/InvestmentHistory'))
-const Deposits = React.lazy(() => import('../views/pages/Deposits'))
-const InvestmentDashboard = React.lazy(() => import('../views/pages/investment_panel'))
+import Dashboard from './../views/dashboards'
+import BinaryTree from '../views/pages/BinaryTree'
+import Referrals from '../views/pages/Referrals'
+import Payments from '../views/pages/Payments'
+import Withdrawals from '../views/pages/Withdrawals'
+import InvestmentHistory from '../views/pages/InvestmentHistory'
+import Deposits from '../views/pages/Deposits'
+import InvestmentDashboard from '../views/pages/investment_panel'
 const AdminWithdrawals = React.lazy(() => import('../views/pages/admin_withdrawals'))
 
 
@@ -99,13 +99,12 @@ const PrivacyPolicy = React.lazy(() => import('../views/pages/other-pages/Privac
 const TermsServices = React.lazy(() => import('../views/pages/other-pages/TermsServices'))
 
 // Auth {{Minimal}}
-const Login = React.lazy(() => import('../views/auth/minimal/Login'))
-const Register = React.lazy(() => import('../views/auth/minimal/Register'))
-const ResetPassword = React.lazy(() => import('../views/auth/minimal/ResetPassword'))
-const ForgotPassword = React.lazy(() => import('../views/auth/minimal/ForgotPassword'))
-const TwoFactorOTP = React.lazy(() => import('../views/auth/minimal/TwoFactorOTP'))
-
-
+import Login from '../views/auth/minimal/Login'
+import Register from '../views/auth/minimal/Register'
+import ResetPassword from '../views/auth/minimal/ResetPassword'
+import ForgotPassword from '../views/auth/minimal/ForgotPassword'
+import TwoFactorOTP from '../views/auth/minimal/TwoFactorOTP'
+import EmailVerification from '../views/auth/minimal/EmailVerification'
 
 
 // Error
@@ -685,6 +684,12 @@ const authRoutes: RoutesProps[] = [
         path: '/auth/login',
         name: 'Login',
         element: <Login />,
+        route: Route,
+      },
+      {
+        path: '/auth/verify-email/:verificationCode',
+        name: 'Verification Email',
+        element: <EmailVerification />,
         route: Route,
 
       },

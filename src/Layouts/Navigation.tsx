@@ -163,16 +163,20 @@ const Navigation = () => {
                   }) || 0} USD</span>
                 </div>
                 <div className='d-flex justify-content-between border-bottom pb-2 mb-2'>
+                  <span>Broker</span>
+                  <span>Weltrade</span>
+                </div>
+                <div className='d-flex justify-content-between border-bottom pb-2 mb-2'>
                   <span>{t("Cuenta M5")}</span>
-                  <span>*****</span>
+                  <span>12192082</span>
                 </div>
                 <div className='d-flex justify-content-between border-bottom pb-2 mb-2'>
                   <span>{t("Contraseña")}</span>
-                  <span>*****</span>
+                  <span>Smart2025$$</span>
                 </div>
                 <div className='d-flex justify-content-between border-bottom pb-2 mb-2'>
                   <span>{t("Servidor")}</span>
-                  <span>*****</span>
+                  <span>Weltrade Real</span>
                 </div>
               </div>
             )

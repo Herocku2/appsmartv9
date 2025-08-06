@@ -27,6 +27,11 @@ export const treeApi = apiSlice.injectEndpoints({
       }),
       providesTags: ['Payments']
     }),
+     getMonthlyEarnings: builder.query<[], number>({
+      query: (year) => `payments/earnings/${year}/`,
+    }),
   }),
 });
-export const { useGetBinaryPaymentsQuery, useGetDirectPaymentsQuery, useGetPasivePaymentsQuery, useGetBinaryPointsQuery } = treeApi;
+export const { useGetBinaryPaymentsQuery, useGetDirectPaymentsQuery, useGetPasivePaymentsQuery, useGetBinaryPointsQuery,
+  useGetMonthlyEarningsQuery
+ } = treeApi;
