@@ -21,7 +21,7 @@ const EmailVerification = () => {
                 try {
                     setVerified(() => true)
                     // Reemplaza con la URL de tu API de verificación
-                    const apiUrl = `http://localhost:8000/api/auth/verify-email/`;
+                    const apiUrl = `${import.meta.env.VITE_BACKEND_DOMAIN}auth/verify-email/`;
 
                     const response = await axios.post(apiUrl, { code: verificationCode });
 

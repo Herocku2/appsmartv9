@@ -234,5 +234,6 @@
   "Username must not contain spaces":"EL nombre de usuario no debe contener espacios",
   "Earns":"Rendimientos",
   "Create a Username":"Crea un nombre de usuario",
-  "Email is required":"Correo es obligatorio"
+  "Email is required":"Correo es obligatorio",
+  "Try again": "Intentar nuevo código"
 }
