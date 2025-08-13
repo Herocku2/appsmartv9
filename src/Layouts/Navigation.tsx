@@ -150,7 +150,7 @@ const Navigation = () => {
                 </div>
                 <div className='d-flex justify-content-between border-bottom pb-2 mb-2'>
                   <span>{t("Earnings")}</span>
-                  <span>${user?.investment_balance?.toLocaleString('en-US', {
+                  <span>${user?.utility_balance?.toLocaleString('en-US', {
                     minimumFractionDigits: 2,
                     maximumFractionDigits: 2
                   }) || 0} USD</span>

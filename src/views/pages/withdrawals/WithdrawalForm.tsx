@@ -15,8 +15,9 @@ export default function WithdrawalForm() {
 
   // Opciones para los radio buttons de tipo de retiro
   const withdrawalOptions = [
-    { value: "2", label: t("Balance withdrawal") },
-    { value: "1", label: t("Earnings withdrawal or Investment") }
+    { value: "2", label: t("Saldo") },
+    { value: "1", label: t("Utilidades") },
+    { value: "3", label: t("Inversión") }
   ];
 
   const [createCode, { isLoading: isLoadingCode, isSuccess: isSuccessCode, isError: isErrorCode, error: errorCode, data: dataCode }] = useCreateSecretCodeMutation();
@@ -131,9 +132,11 @@ export default function WithdrawalForm() {
         <div className='mt-4'></div>
         {
           (type === "2") ? (
-            <p>{t("Available balance")} <span className='fw-bold'>${user?.balance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} USD</span></p>
+            <p>{t("Saldo")} <span className='fw-bold'>${user?.balance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} USD</span></p>
           ) : (type === "1") ? (
-            <p>{t("Earnings balance")} <span className='fw-bold'>${user?.investment_balance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} USD</span></p>
+            <p>{t("Utilidad")} <span className='fw-bold'>${user?.utility_balance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} USD</span></p>
+          ) : (type === "3") ? (
+            <p>{t("Inversión")} <span className='fw-bold'>${user?.investment_balance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} USD</span></p>
           ) : (
             <p className='mt-4'>{t("Please select a withdrawal type.")}</p>
           )
