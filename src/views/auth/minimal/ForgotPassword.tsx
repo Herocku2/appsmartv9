@@ -46,6 +46,7 @@ const ForgotPassword = () => {
     register,
     formState: { errors },
     handleSubmit,
+    watch
   } = useForm({
     resolver: yupResolver(schema),
     mode: "all",
@@ -63,7 +64,7 @@ const ForgotPassword = () => {
     mode: "all",
   });
 
-  const [password, password2] = useWatch({control, name: ["password", "password2"]})
+  const [password, password2] = useWatch({ control, name: ["password", "password2"] })
 
   function handleOTP(data: { email: string }) {
     sendOTP(data.email)
@@ -74,7 +75,7 @@ const ForgotPassword = () => {
     if (password !== password2) {
       toast.error(t('Passwords do not match'))
       return
-    }   
+    }
     resetPassword(data)
   }
 
@@ -96,7 +97,7 @@ const ForgotPassword = () => {
   }, [isError2, error2]);
 
   useEffect(() => {
-    if(isSuccess2){
+    if (isSuccess2) {
       toast.success(t("Password changed successfully"))
       navigate("/")
     }
@@ -153,7 +154,7 @@ const ForgotPassword = () => {
                       type={showPassword ? 'text' : 'password'}
                       isInvalid={!!errors2?.password}
                     />
-                   
+
                     <Form.Control.Feedback type="invalid">{errors2?.password?.message}</Form.Control.Feedback>
                     <span
                       className="btn btn-icon position-absolute translate-middle top-50"
@@ -179,7 +180,11 @@ const ForgotPassword = () => {
                     </span>
                     <Form.Control.Feedback type="invalid">{errors2?.password2?.message}</Form.Control.Feedback>
                   </Form.Group>
-
+                  <div className='text-end'>
+                    <a className="link-secondary" href='#' onClick={() => handleOTP({email: watch("email")})}>
+                      Enviar codigo de nuevo
+                    </a>
+                  </div>
                 </div>
               )
             }
@@ -202,7 +207,7 @@ const ForgotPassword = () => {
                   </div>
                 ) : (
                   <div>
-                    {t('Send code')}
+                    {!isSuccess ? t('Send code') : "Cambiar contraseña"}
                   </div>
 
                 )}

@@ -15,7 +15,7 @@ export default function WithdrawalForm() {
 
   // Opciones para los radio buttons de tipo de retiro
   const withdrawalOptions = [
-    { value: "2", label: t("Saldo") },
+    { value: "2", label: t("Saldo Ref.") },
     { value: "1", label: t("Utilidades") },
     { value: "3", label: t("Inversión") }
   ];
