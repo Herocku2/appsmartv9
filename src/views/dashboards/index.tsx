@@ -68,7 +68,7 @@ const Dashboard = () => {
         <div className="col-12 col-sm-4 col-lg-3 col-xl-2 mb-4">
           <div className="card adminuiux-card">
             <div className="card-body">
-              <p className="text-secondary small mb-2">{t('Earns')} de ({new Date().toLocaleString('es', { month: 'long' })})</p>
+              <p className="text-secondary small mb-2">{t('Earns')} de {new Date().toLocaleString('es', { month: 'long' })}</p>
               <h4 className="mb-3">${data?.daily_payment?.toLocaleString('en-US', {
   minimumFractionDigits: 2,
   maximumFractionDigits: 2

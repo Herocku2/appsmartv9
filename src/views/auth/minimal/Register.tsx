@@ -24,12 +24,16 @@ import HCaptCha from '../../../components/UiElements/Base/Hcapctcha/Hcaptcha'
 import { useRegisterUserMutation } from '../../../store/api/auth/authApiSlice'
 import { FetchBaseQueryError } from '@reduxjs/toolkit/query'
 import { useDispatch } from 'react-redux'
-import { setIsAuthenticated } from '../../../store/base'
 import VerificationSent from './VerificationSent'
+import TerminosCondicionesModal from './TermsAndConditions'
+import PoliticaPrivacidadModal from './PrivacyPolicyModal'
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false)
   const [termsConditions, setTermsConditions] = useState<boolean>(false)
+
+  const [showTerms, setShowTerms] = useState(false)
+  const [showPolicy, setShowPolicy] = useState(false)
 
   const navigate = useNavigate()
   const { t } = useTranslation()
@@ -184,7 +188,10 @@ const Register = () => {
                       />
                       <Form.Check.Label>
                         {t("I agree to all the")}{' '}
-                        <Link to="/other-pages/terms-services">{t("Terms & Conditions")}</Link> {t("and Fees")}.
+                        <a href='#' onClick={() => setShowTerms(true)}>{t("Terms & Conditions")}</a>  y
+                      </Form.Check.Label>
+                      <Form.Check.Label>
+                        <a href='#' onClick={() => setShowPolicy(true)}>{t("Privacy Policy")}</a>
                       </Form.Check.Label>
                     </Form.Check>
                   </Stack>
@@ -218,11 +225,21 @@ const Register = () => {
                   </div>
                 </Form>
               </>
-            ): (
+            ) : (
               <VerificationSent />
             )
           }
+          {
+            showTerms && (
+              <TerminosCondicionesModal show={showTerms} setShow={() => setShowTerms(false)} />
 
+            )
+          }
+          {
+            (showPolicy) && (
+              <PoliticaPrivacidadModal show={showPolicy} setShow={() => setShowPolicy(false)} />
+            )
+          }
         </AuthMinmal>
       </AuthLayout>
     </div>
