@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import {  Pagination, Table } from 'react-bootstrap'
+import { Pagination, Table } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 import { useGetDirectPaymentsQuery } from '../../../store/api/payments/paymentsApiSlice'
+import ControlledPagination from '../../../components/UiElements/Base/Pagination'
 
 export default function DirectPayments() {
 
@@ -39,13 +40,20 @@ export default function DirectPayments() {
                     }
                 </tbody>
             </Table>
-            <Pagination className="mt-5">
+            {/* <Pagination className="mt-5">
                 <Pagination.Prev  disabled={page == 1} onClick={() => setPage(page -1)} />
                 {[...Array(payments?.total_pages)].map((_, index) => (
                     <Pagination.Item onClick={() => setPage(index + 1)} key={index}>{index + 1}</Pagination.Item>
                 ))}
                 <Pagination.Next  disabled={page == payments?.total_pages} onClick={() => setPage(page + 1)}  />
-            </Pagination>
+            </Pagination> */}
+            <div className="d-flex justify-content-center">
+                <ControlledPagination
+                    currentPage={page}
+                    totalPages={payments?.total_pages || 1}
+                    onPageChange={setPage}
+                />
+            </div>
         </div>
     )
 }

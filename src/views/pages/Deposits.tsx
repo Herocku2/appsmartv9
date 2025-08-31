@@ -3,6 +3,7 @@ import TitleHelmet from '../../components/Common/TitleHelmet'
 import { Card } from 'react-bootstrap'
 import DepositsForm from './deposits/DepositsForm'
 import DeposistsTable from './deposits/DepositsTable'
+import DepositsPage from './deposits/DepositsForm'
 export default function Deposits() {
 
     const { t } = useTranslation()
@@ -20,7 +21,8 @@ export default function Deposits() {
                     </div>
                 </Card.Header>
                 <Card.Body>
-                    <DepositsForm />
+                    {/* <DepositsForm /> */}
+                    <DepositsPage />
                     <DeposistsTable />
                 </Card.Body>
             </Card>

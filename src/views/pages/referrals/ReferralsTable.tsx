@@ -3,8 +3,9 @@ import { useTranslation } from 'react-i18next'
 import { useGetReferralsQuery } from '../../../store/api/tree/treeApiSlice'
 import ButtonWithLink from '../../../components/UiElements/Base/Buttons/ButtonWithLink'
 import { useGetUserQuery } from '../../../store/api/auth/authApiSlice'
-import {  useState } from 'react'
+import { useState } from 'react'
 import { copiarTexto } from '../../dashboards'
+import ControlledPagination from '../../../components/UiElements/Base/Pagination'
 export default function ReferralsTable() {
 
     const { t } = useTranslation()
@@ -83,13 +84,21 @@ export default function ReferralsTable() {
                     }
                 </tbody>
             </Table>
-            <Pagination className="mt-5">
+            {/* <Pagination className="mt-5">
                 <Pagination.Prev disabled={page == 1} onClick={() => setPage(page - 1)} />
                 {[...Array(referrals?.total_pages)].map((_, index) => (
                     <Pagination.Item onClick={() => setPage(index + 1)} key={index}>{index + 1}</Pagination.Item>
                 ))}
                 <Pagination.Next disabled={page == referrals?.total_pages} onClick={() => setPage(page + 1)} />
-            </Pagination>
+            </Pagination> */}
+
+            <div className="d-flex justify-content-center">
+                <ControlledPagination
+                    currentPage={page}
+                    totalPages={referrals?.total_pages || 1}
+                    onPageChange={setPage}
+                />
+            </div>
         </div>
     )
 }

@@ -9,7 +9,7 @@ import { FetchBaseQueryError } from '@reduxjs/toolkit/query'
 
 const AccountAvatarCover = () => {
 
-  const {data: user} = useGetUserQuery()
+  const { data: user } = useGetUserQuery()
 
   const [avatarFile, setAvatarFile] = useState<File | null>(null)
 
@@ -36,16 +36,16 @@ const AccountAvatarCover = () => {
     }
   }
 
-  const [updateProfile, {isSuccess, isError, error}] = useUpdateProfileMutation()
+  const [updateProfile, { isSuccess, isError, error }] = useUpdateProfileMutation()
 
-  useEffect(() =>{
-    if(avatarFile){
-      updateProfile({avatar: avatarFile})
+  useEffect(() => {
+    if (avatarFile) {
+      updateProfile({ avatar: avatarFile })
     }
   }, [avatarFile])
 
-  useEffect(() =>{
-    if(isSuccess){
+  useEffect(() => {
+    if (isSuccess) {
       toast.success(t("Avatar updated successfully"))
     }
   }, [isSuccess])
@@ -68,7 +68,7 @@ const AccountAvatarCover = () => {
   ) => {
     setImageFile(null)
 
-    const defaultImageSrc = user?.avatar  || 'https://via.placeholder.com/150' // Placeholder image URL
+    const defaultImageSrc = user?.avatar || 'https://via.placeholder.com/150' // Placeholder image URL
     const currentImage = imageRef.current
     if (currentImage) {
       currentImage.src = defaultImageSrc
@@ -78,63 +78,62 @@ const AccountAvatarCover = () => {
       imageUploader.current.value = ''
     }
   }
-  const {t} = useTranslation()
+  const { t } = useTranslation()
 
 
   return (
     <div>
-      <div className="mb-6 mb-md-16">
-        <h5 className="fw-semibold">{t("Profile photo")} </h5>
-        <p>{t("Change avatar")}</p>
-      </div>
-      <Row className="g-md-4 mb-4">
-        <Col md={3}>
-          <Form.Label className="fw-medium">Avatar</Form.Label>
-        </Col>
-        <Col md={9} xl={8} xxl={6}>
+      {/* The refactored and more compact component */}
+      <Row className="g-0 align-items-center">
+        {/* Image uploader section */}
+        <Col xs="auto">
           <input
             type="file"
             accept="image/*"
             onChange={(e) =>
               handleImageUpload(e, setAvatarFile, avatarImageRef)
             }
-            ref={(input) => (avatarImageUploader.current = input)}
-            style={{
-              display: 'none',
-            }}
+            ref={avatarImageUploader}
+            style={{ display: 'none' }}
           />
           <div
             style={{
-              height: '6rem',
-              width: '6rem',
+              height: '5rem', // Made smaller
+              width: '5rem',  // Made smaller
               cursor: 'pointer',
             }}
-            className="d-flex align-items-center justify-content-center fs-24 border border-3 rounded overflow-hidden bg-secondary-subtle"
-            onClick={() => avatarImageUploader.current?.click()}>
+            className="d-flex align-items-center justify-content-center border border-3 rounded-circle overflow-hidden bg-secondary-subtle" // Changed to rounded-circle
+            onClick={() => avatarImageUploader.current?.click()}
+          >
             {avatarFile ? (
               <img
                 src={URL.createObjectURL(avatarFile)}
                 ref={avatarImageRef}
-                className="rounded"
+                alt="Avatar Preview"
                 style={{
                   width: '100%',
                   height: '100%',
-                  position: 'relative',
+                  objectFit: 'cover', // Ensures the image covers the circle
                 }}
               />
             ) : (
               <FiPlus />
             )}
           </div>
-          <p className="text-muted mt-2">
-            {t("Click to change avatar image")}{' - '}
-            <Link
-              to="#!"
-              className="text-danger"
-              onClick={() => handleReset(setAvatarFile, avatarImageRef, avatarImageUploader)}>
-              {t("Reset")}
-            </Link>
+        </Col>
+
+        {/* Text and actions section */}
+        <Col className="ms-3">
+          <h6 className="fw-semibold mb-1">{t("Profile photo")}</h6>
+          <p className="text-muted small mb-1">
+            {t("Click the image to upload a new one.")}
           </p>
+          <Link
+            to="#!"
+            className="text-danger small fw-medium"
+            onClick={() => handleReset(setAvatarFile, avatarImageRef, avatarImageUploader)}>
+            {t("Reset")}
+          </Link>
         </Col>
       </Row>
     </div>

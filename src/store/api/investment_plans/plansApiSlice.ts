@@ -30,9 +30,17 @@ export const plansApi = apiSlice.injectEndpoints({
             }),
             providesTags: ['InvestmentHistory']
         }),
+        createReinvestment: builder.mutation<TransactionResponse, { amount: number, payPasive?: boolean }>({
+            query: (body) => ({
+                url: `plans/reinvest/`,
+                method: "POST",
+                body: body
+            }),
+            invalidatesTags: ['User', 'Dashboard', 'Tree', 'InvestmentHistory']
+        }),
     })
 })
 
 export const { useCreatePaymentMutation, useVerifyPaymentMutation, useGetInvestmentHistoryQuery,
-    useGetInvestmentPanelQuery
+    useGetInvestmentPanelQuery, useCreateReinvestmentMutation
  } = plansApi

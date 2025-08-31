@@ -2,6 +2,7 @@ import { Pagination, Table } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
 import { useGetInvestmentHistoryQuery } from '../../../store/api/investment_plans/plansApiSlice'
+import ControlledPagination from '../../../components/UiElements/Base/Pagination'
 
 export default function DeposistsTable() {
 
@@ -62,13 +63,21 @@ export default function DeposistsTable() {
                     }
                 </tbody>
             </Table>
-            <Pagination className="mb-0">
+            {/* <Pagination className="mb-0">
                 <Pagination.Prev disabled={page == 1} onClick={() => setPage(page - 1)} />
                 {[...Array(history?.total_pages)].map((_, index) => (
                     <Pagination.Item onClick={() => setPage(index + 1)} key={index}>{index + 1}</Pagination.Item>
                 ))}
                 <Pagination.Next disabled={page == history?.total_pages} onClick={() => setPage(page + 1)} />
-            </Pagination>
+            </Pagination> */}
+
+             <div className="d-flex justify-content-center">
+                <ControlledPagination
+                    currentPage={page}
+                    totalPages={history?.total_pages || 1}
+                    onPageChange={setPage}
+                />
+            </div>
         </div>
     )
 }

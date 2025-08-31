@@ -5,6 +5,7 @@ import { useGetAdminWithdrawalsQuery } from '../../../store/api/withdrawals/with
 import PayWithdrawalsModal from './PayWithdrawalsModal';
 import Web3Context from './Web3Context';
 import WithdrawalProcessor from './PayWithdrawalsModal';
+import ControlledPagination from '../../../components/UiElements/Base/Pagination';
 
 
 const ADMIN_WITHDRAWAL_PAGE_SIZE = 10; // Define page size constant
@@ -155,9 +156,9 @@ const AdminWithdrawals: React.FC = () => {
                                                 <td>{withdrawal.user || 'N/A'}</td> {/* Handle nested user object */}
                                                 <td>{t(withdrawal.verbose_type)}</td>
                                                 <td>${withdrawal.amount.toLocaleString('en-US', {
-  minimumFractionDigits: 2,
-  maximumFractionDigits: 2
-})}</td>
+                                                    minimumFractionDigits: 2,
+                                                    maximumFractionDigits: 2
+                                                })}</td>
 
                                                 {/* <td>{withdrawal.payed_date ? new Date(withdrawal.payed_date).toLocaleString('en-US', {
   minimumFractionDigits: 2,
@@ -186,14 +187,11 @@ const AdminWithdrawals: React.FC = () => {
                         </Table>
 
                         <div className="d-flex justify-content-center">
-                            <Pagination className="mb-0">
-                                <Pagination.Prev disabled={currentPage == 1} onClick={() => handlePageChange(currentPage - 1)} />
-                                {[...Array(withdrawalsData?.total_pages)].map((_, index) => (
-                                    <Pagination.Item onClick={() => handlePageChange(index + 1)} key={index}>{index + 1}</Pagination.Item>
-                                ))}
-                                <Pagination.Next disabled={currentPage == withdrawalsData?.total_pages}
-                                    onClick={() => handlePageChange(currentPage + 1)} />
-                            </Pagination>
+                            <ControlledPagination
+                                currentPage={currentPage}
+                                totalPages={withdrawalsData?.total_pages || 1}
+                                onPageChange={handlePageChange}
+                            />
                         </div>
                     </Container>
                 </Card.Body>
