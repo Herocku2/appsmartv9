@@ -60,8 +60,8 @@ export default function WithdrawalForm() {
     if (user?.usdt_wallet) {
       setValue("wallet_address", user.usdt_wallet, { shouldValidate: true });
     } else {
-        // Opcional: limpiar el campo si el usuario no tiene wallet
-        setValue("wallet_address", "", { shouldValidate: true });
+      // Opcional: limpiar el campo si el usuario no tiene wallet
+      setValue("wallet_address", "", { shouldValidate: true });
     }
   }, [user, setValue]);
 
@@ -81,7 +81,7 @@ export default function WithdrawalForm() {
       }
     }
   }, [isErrorCode, errorCode]);
-  
+
   useEffect(() => {
     if (isError) {
       if ('data' in (error as FetchBaseQueryError)) {
@@ -107,9 +107,22 @@ export default function WithdrawalForm() {
   return (
     <div className='row'>
       <Form className='col-xl-6 col-md-6 mx-auto border p-4 rounded-2' onSubmit={handleSubmit(handleSubmitWithdrawal)}>
-        <p>{t("Withdrawals are processing 24 hours")}</p>
+        <p>
+          {
+            (type == "3") ? (
+              <>
+                {t("Investment Withdrawals are processing 72 hours")}
+
+              </>
+            ) : (
+              <>
+                {t("Withdrawals are processing 24 hours")}
+              </>
+            )
+          }
+        </p>
         <p>{t("Withdrawals are only available on Friday and Saturday")}</p>
-        
+
         {/* === CAMBIO: Select a Radio Button === */}
         <Form.Group controlId="withdrawalType" className='mt-4'>
           <Form.Label>{t("Withdrawal Type")}</Form.Label>
@@ -128,7 +141,7 @@ export default function WithdrawalForm() {
           </div>
           {errors.type && <span className='text-danger d-block mt-1'>{errors.type.message}</span>}
         </Form.Group>
-        
+
         <div className='mt-4'></div>
         {
           (type === "2") ? (
@@ -183,7 +196,7 @@ export default function WithdrawalForm() {
             )
           }
         </div>
-        
+
         <Form.Group controlId="secretCode" className='mt-4'>
           <Form.Label>{t("Secret code")}</Form.Label>
           <Form.Control
@@ -193,7 +206,7 @@ export default function WithdrawalForm() {
           />
           <Form.Control.Feedback type="invalid">{errors?.used_code?.message}</Form.Control.Feedback>
         </Form.Group>
-        
+
         <Button className='col-12 mt-4' type='submit' disabled={isLoading}>
           {isLoading ? (
             <div>

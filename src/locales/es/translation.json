@@ -107,7 +107,6 @@
   "Pending": "Pendiente",
   "Personal Information": "Información personal",
   "Phone": "Teléfono",
-  "Phone number is required": "El número de teléfono es obligatorio",
   "Phone number must be numeric": "El número de teléfono debe ser numérico",
   "Please send ": "Por favor envía ",
   "Points": "Puntos",
@@ -253,5 +252,9 @@
   "Processing...": "Procesando...",
   "Normal Deposit": "Depósito Normal",
   "Create a new deposit": "Crear un nuevo depósito",
-  "Re-Investment panel":"Panel de reinversión"
+  "Re-Investment panel": "Panel de reinversión",
+  "Investment Withdrawals are processing 72 hours": "Retiros de Inversion se procesarán en máximo 72 horas",
+  "Enter phone number": "Ingresa el número de teléfono",
+  "Phone number is required": "El número de teléfono es requerido",
+  "Phone number is not valid": "El número de teléfono no es válido"
 }

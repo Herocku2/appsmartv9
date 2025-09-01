@@ -2,12 +2,15 @@ import { Form, Row, Col, Button } from 'react-bootstrap'
 import 'flatpickr/dist/themes/airbnb.css'
 import { useTranslation } from 'react-i18next'
 import { useGetUserQuery, useUpdateProfileMutation } from '../../../../../store/api/auth/authApiSlice'
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useEffect } from 'react';
 import toast from 'react-hot-toast';
 import { FetchBaseQueryError } from '@reduxjs/toolkit/query';
+
+import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
+import 'react-phone-number-input/style.css';
 
 const AccountInformation = () => {
 
@@ -19,15 +22,19 @@ const AccountInformation = () => {
     email: yup.string().email(t('Email must be a valid email')).required(t('Email is required')),
     first_name: yup.string().required(t('First name is required')),
     last_name: yup.string().required(t('Last name is required')),
-    phone_number: yup.string().matches(/^\d+$/, t('Phone number must be numeric')).required(t('Phone number is required')),
-    usdt_wallet: yup.string().required(t('USDT wallet is required')),
+    phone_number: yup
+      .string()
+      .required(t('Phone number is required'))
+      .test('is-valid-phone', t('Phone number is not valid'), (value) =>
+        isValidPhoneNumber(value || '')
+      ), usdt_wallet: yup.string().required(t('USDT wallet is required')),
     secret_code: yup.string().required(t('Secret code is required')),
   }).required();
 
   // Infer the form type from the yup schema
   type UserForm = yup.InferType<typeof schema>;
 
-  const { register, handleSubmit, formState: { errors }, setValue } = useForm<UserForm>({
+  const { register, handleSubmit, formState: { errors }, setValue, control } = useForm<UserForm>({
     resolver: yupResolver(schema),
     mode: "all",
   });
@@ -62,7 +69,7 @@ const AccountInformation = () => {
   useEffect(() => {
     if (isSuccess) {
       if (data) {
-        toast.success(data.toString(), {duration: 5000})
+        toast.success(data.toString(), { duration: 5000 })
       }
 
     }
@@ -124,11 +131,24 @@ const AccountInformation = () => {
           </Col>
           <Col md={9} xl={8} xxl={6}>
             <Form.Group>
-              <Form.Control
-                {...register('phone_number')}
-                isInvalid={!!errors?.phone_number}
-                type="tel" placeholder="Phone number" />
-              <Form.Control.Feedback type="invalid">{errors?.phone_number?.message}</Form.Control.Feedback>
+              {/* NUEVO: Reemplazamos el Form.Control por el Controller con PhoneInput */}
+              <Controller
+                name="phone_number" // Usamos el nombre de campo que necesitas
+                control={control}
+                render={({ field }) => (
+                  <PhoneInput
+                    {...field}
+                    placeholder={t("Enter phone number")}
+                    defaultCountry="CO" // Puedes cambiar el país por defecto
+                    international
+                    withCountryCallingCode
+                    className={errors.phone_number ? 'PhoneInput--invalid' : ''}
+                  />
+                )}
+              />
+              <Form.Control.Feedback type="invalid" className="d-block">
+                {errors?.phone_number?.message}
+              </Form.Control.Feedback>
             </Form.Group>
           </Col>
         </Row>
