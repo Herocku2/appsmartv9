@@ -105,6 +105,7 @@ import ResetPassword from '../views/auth/minimal/ResetPassword'
 import ForgotPassword from '../views/auth/minimal/ForgotPassword'
 import TwoFactorOTP from '../views/auth/minimal/TwoFactorOTP'
 import EmailVerification from '../views/auth/minimal/EmailVerification'
+import P2P from '../views/p2p'
 
 
 // Error
@@ -194,6 +195,12 @@ const appsRoutes: RoutesProps = {
       path: '/referrals',
       name: 'Referrals',
       element: <Referrals />,
+      route: PrivateRoute,
+    },
+    {
+      path: '/p2p',
+      name: 'p2p',
+      element: <P2P />,
       route: PrivateRoute,
     },
     {

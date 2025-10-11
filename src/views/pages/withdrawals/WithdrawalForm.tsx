@@ -111,13 +111,20 @@ export default function WithdrawalForm() {
   return (
     <div className='row'>
       <Form className='col-xl-6 col-md-6 mx-auto border p-4 rounded-2' onSubmit={handleSubmit(handleSubmitWithdrawal)}>
-        <p>
+        <p className='text-warning'>
           {
-            (type == "3") ? (
+            (type == "3" && method != "fiat") ? (
               <>
-                {t("Investment Withdrawals are processing 72 hours")}
-
+                <>
+                  {t("Investment Withdrawals are processing 72 hours")}
+                </>
               </>
+            ) : (method == "fiat") ? (
+
+              <>
+                {t("Withdrawals are processing 72 hours")}
+              </>
+
             ) : (
               <>
                 {t("Withdrawals are processing 24 hours")}
@@ -146,15 +153,6 @@ export default function WithdrawalForm() {
           {errors.type && <span className='text-danger d-block mt-1'>{errors.type.message}</span>}
         </Form.Group>
 
-        {/* NUEVO: MÉTODO DE RETIRO (CRYPTO O FIAT) */}
-        <Form.Group controlId="withdrawalMethod" className='mt-4'>
-          <Form.Label>{t("Withdrawal Method")}</Form.Label>
-          <div className='d-flex flex-wrap gap-3'>
-            <Form.Check type="radio" id="method-crypto" label="Crypto" value="crypto" {...register("method")} />
-            <Form.Check type="radio" id="method-fiat" label="FIAT" value="fiat" {...register("method")} />
-          </div>
-        </Form.Group>
-
         <div className='mt-4'></div>
         {
           (type === "2") ? (
@@ -167,6 +165,17 @@ export default function WithdrawalForm() {
             <p className='mt-4'>{t("Please select a withdrawal type.")}</p>
           )
         }
+
+        {/* NUEVO: MÉTODO DE RETIRO (CRYPTO O FIAT) */}
+        <Form.Group controlId="withdrawalMethod" className='mt-4'>
+          <Form.Label>{t("Withdrawal Method")}</Form.Label>
+          <div className='d-flex flex-wrap gap-3'>
+            <Form.Check type="radio" id="method-crypto" label="Crypto" value="crypto" {...register("method")} />
+            <Form.Check type="radio" id="method-fiat" label="FIAT" value="fiat" {...register("method")} />
+          </div>
+        </Form.Group>
+
+
 
         <Form.Group className='mt-4'>
           <Form.Label>{t("Amount")}</Form.Label>
@@ -244,6 +253,6 @@ export default function WithdrawalForm() {
           )}
         </Button>
       </Form>
-    </div>
+    </div >
   );
 }

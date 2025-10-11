@@ -299,5 +299,6 @@
   "Ready to process": "Listo para procesar",
   "Crypto withdrawals": "retiros Crypto",
   "Bank/Wallet Details": "Detalles de Banco/Wallet",
-  "Swift Code":"Código Swift"
+  "Swift Code":"Código Swift",
+  "Withdrawals are processing 72 hours":"Retiros en Fiat se procesarán en 72 horas"
 }
