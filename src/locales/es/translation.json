@@ -298,5 +298,6 @@
   "Process FIAT Payment": "Procesar Pago FIAT",
   "Ready to process": "Listo para procesar",
   "Crypto withdrawals": "retiros Crypto",
-  "Bank/Wallet Details": "Detalles de Banco/Wallet"
+  "Bank/Wallet Details": "Detalles de Banco/Wallet",
+  "Swift Code":"Código Swift"
 }

@@ -197,7 +197,7 @@ const AccountInformation = () => {
           </Col>
           <Col md={9} xl={8} xxl={6}>
             <Form.Group>
-              <Form.Control {...register('bank_name')} isInvalid={!!errors.bank_name} type="text" placeholder={t("e.g., Bancolombia, BBVA, etc.")} />
+              <Form.Control {...register('bank_name')} isInvalid={!!errors.bank_name} type="text" placeholder={t("e.g., Bank of America, BBVA, etc.")} />
               <Form.Control.Feedback type="invalid">{errors.bank_name?.message}</Form.Control.Feedback>
             </Form.Group>
           </Col>
@@ -229,7 +229,7 @@ const AccountInformation = () => {
               >
                 <option value="">{t("Select a country...")}</option>
                 {countryOptions.map(country => (
-                  <option key={country.value} value={country.value}>
+                  <option key={country.label} value={country.label}>
                     {country.label}
                   </option>
                 ))}

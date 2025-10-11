@@ -60,7 +60,6 @@ const FiatPaymentModal: React.FC<FiatPaymentModalProps> = ({ show, onHide, withd
 
     if (!withdrawal) return null;
 
-    console.log(withdrawal);
 
     return (
         <Modal show={show} onHide={onHide} centered>
@@ -69,9 +68,11 @@ const FiatPaymentModal: React.FC<FiatPaymentModalProps> = ({ show, onHide, withd
             </Modal.Header>
             <Modal.Body>
                 <p><strong>{t('User')}:</strong> {withdrawal.user}</p>
+                <p><strong>{t('Country')}:</strong> {withdrawal.bank_country}</p>
                 <p><strong>{t('Amount')}:</strong> ${withdrawal.amount.toLocaleString()}</p>
                 <p><strong>{t('Bank Name')}:</strong> {withdrawal.bank_bank_name}</p>
                 <p><strong>{t('Account Number')}:</strong> {withdrawal.bank_account_number}</p>
+                 <p><strong>{t('Swift Code')}:</strong> {withdrawal.bank_swift_code}</p>
                 <hr />
                 <p>{t('Are you sure you want to confirm this payment? Please upload the payment proof.')}</p>
                 
