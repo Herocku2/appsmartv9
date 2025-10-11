@@ -12,6 +12,11 @@ type Withdrawal = {
     verbose_type: string
     verbose_status: string
     wallet_address: string
+    bank_account_number: string
+    bank_name: string
+    bank_country: string
+    method: string
+    payment_invoice: string
 }
 
 type WithdrawalsResponse = {

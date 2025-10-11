@@ -5,12 +5,14 @@ import { useGetUserQuery, useUpdateProfileMutation } from '../../../../../store/
 import { Controller, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import toast from 'react-hot-toast';
 import { FetchBaseQueryError } from '@reduxjs/toolkit/query';
-
+import { getData } from 'country-list'; // Para obtener la lista de países
 import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
+import Select from "react-select"
+
 
 const AccountInformation = () => {
 
@@ -28,6 +30,11 @@ const AccountInformation = () => {
       .test('is-valid-phone', t('Phone number is not valid'), (value) =>
         isValidPhoneNumber(value || '')
       ), usdt_wallet: yup.string().required(t('USDT wallet is required')),
+    bank_full_name: yup.string().optional(),
+    bank_account_number: yup.string().optional(),
+    bank_name: yup.string().optional(),
+    bank_country: yup.string().optional(),
+    bank_swift_code: yup.string().optional(),
     secret_code: yup.string().required(t('Secret code is required')),
   }).required();
 
@@ -39,6 +46,7 @@ const AccountInformation = () => {
     mode: "all",
   });
 
+
   useEffect(() => {
     if (user) {
       setValue("email", user.email)
@@ -46,6 +54,12 @@ const AccountInformation = () => {
       setValue("last_name", user.last_name)
       setValue("phone_number", user.phone_number)
       setValue("usdt_wallet", user.usdt_wallet)
+      // --- RELLENAR NUEVOS CAMPOS ---
+      setValue("bank_account_number", user.bank_account_number || "")
+      setValue("bank_name", user.bank_name || "")
+      setValue("bank_country", user.bank_country || "")
+      setValue("bank_swift_code", user.bank_swift_code || "")
+      // --- FIN ---
     }
   }, [user])
 
@@ -74,6 +88,12 @@ const AccountInformation = () => {
 
     }
   }, [isSuccess])
+
+  const countryOptions = useMemo(() => getData().map(country => ({
+    value: country.code,
+    label: country.name
+  })), []);
+
 
 
   return (
@@ -163,6 +183,72 @@ const AccountInformation = () => {
                 isInvalid={!!errors?.usdt_wallet}
                 type="tel" placeholder="USDT wallet" />
               <Form.Control.Feedback type="invalid">{errors?.usdt_wallet?.message}</Form.Control.Feedback>
+            </Form.Group>
+          </Col>
+        </Row>
+        <div className="mb-6 mt-8">
+          <h5 className="fw-semibold">{t("Bank Information (bank)")}</h5>
+          <p>{t("Information for bank withdrawals. This information is confidential.")}</p>
+        </div>
+
+        <Row className="g-md-4 mb-4">
+          <Col md={3}>
+            <Form.Label className="fw-medium">{t("Bank Name")}</Form.Label>
+          </Col>
+          <Col md={9} xl={8} xxl={6}>
+            <Form.Group>
+              <Form.Control {...register('bank_name')} isInvalid={!!errors.bank_name} type="text" placeholder={t("e.g., Bancolombia, BBVA, etc.")} />
+              <Form.Control.Feedback type="invalid">{errors.bank_name?.message}</Form.Control.Feedback>
+            </Form.Group>
+          </Col>
+        </Row>
+
+        <Row className="g-md-4 mb-4">
+          <Col md={3}>
+            <Form.Label className="fw-medium">{t("Account Number")}</Form.Label>
+          </Col>
+          <Col md={9} xl={8} xxl={6}>
+            <Form.Group>
+              <Form.Control {...register('bank_account_number')} isInvalid={!!errors.bank_account_number} type="text" placeholder={t("Your account number")} />
+              <Form.Control.Feedback type="invalid">{errors.bank_account_number?.message}</Form.Control.Feedback>
+            </Form.Group>
+          </Col>
+        </Row>
+
+        <Row className="g-md-4 mb-4">
+          <Col md={3}>
+            <Form.Label className="fw-medium">{t("Country")}</Form.Label>
+          </Col>
+          <Col md={9} xl={8} xxl={6}>
+            <Form.Group>
+              <Form.Select
+                {...register('bank_country')}
+                isInvalid={!!errors.bank_country}
+                aria-label="Country select"
+                style={{backgroundColor: "#4b4b4b"}}
+              >
+                <option value="">{t("Select a country...")}</option>
+                {countryOptions.map(country => (
+                  <option key={country.value} value={country.value}>
+                    {country.label}
+                  </option>
+                ))}
+              </Form.Select>
+              <Form.Control.Feedback type="invalid">
+                {errors.bank_country?.message}
+              </Form.Control.Feedback>
+            </Form.Group>
+          </Col>
+        </Row>
+
+        <Row className="g-md-4 mb-4">
+          <Col md={3}>
+            <Form.Label className="fw-medium">{t("SWIFT/BIC Code")}</Form.Label>
+          </Col>
+          <Col md={9} xl={8} xxl={6}>
+            <Form.Group>
+              <Form.Control {...register('bank_swift_code')} isInvalid={!!errors.bank_swift_code} type="text" placeholder="SWIFT / BIC" />
+              <Form.Control.Feedback type="invalid">{errors.bank_swift_code?.message}</Form.Control.Feedback>
             </Form.Group>
           </Col>
         </Row>

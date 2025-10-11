@@ -3871,6 +3871,11 @@ country-flag-icons@^1.5.17:
   resolved "https://registry.yarnpkg.com/country-flag-icons/-/country-flag-icons-1.5.19.tgz#ecfc0ad0f92a5b484310ac59578cb61b6b35fa66"
   integrity sha512-D/ZkRyj+ywJC6b2IrAN3/tpbReMUqmuRLlcKFoY/o0+EPQN9Ev/e8tV+D3+9scvu/tarxwLErNwS73C3yzxs/g==
 
+country-list@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/country-list/-/country-list-2.4.1.tgz#468b60a91004533133352a629de07a3a9d459899"
+  integrity sha512-KhVV/UfUV3dSNpsWIqHTQxLpYDKPKz1UwkRjadt+YbX2PRhyCEihEoS5XgB7J7AMXpkicvl+tRHvkNI5wbji/g==
+
 crc-32@^1.2.0:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/crc-32/-/crc-32-1.2.2.tgz#3cad35a934b8bf71f25ca524b6da51fb7eace2ff"

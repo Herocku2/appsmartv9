@@ -1,4 +1,4 @@
-import { Button, Form } from 'react-bootstrap';
+import { Alert, Button, Card, Form } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import * as yup from "yup";
 import { useCreateSecretCodeMutation, useCreateWithdrawalMutation } from '../../../store/api/withdrawals/withdrawalsApiSlice';
@@ -32,6 +32,7 @@ export default function WithdrawalForm() {
         .required(t("Amount is required"))
         .typeError(t("Amount is invalid"))
         .positive(t("Amount must be positive")),
+      method: yup.string().oneOf(['crypto', 'fiat']).required(), // NUEVO: Campo para el método
       wallet_address: yup.string().required(t("Wallet address USDT BEP20 is required.")),
       used_code: yup.string().required(t("Secret code is required.")),
       type: yup.string().required(t("Withdrawal type is required.")).typeError("Debes de seleccionar un tipo de retiro")
@@ -50,10 +51,13 @@ export default function WithdrawalForm() {
   } = useForm<WithdrawalForm>({
     resolver: yupResolver(schema),
     mode: "all",
+    defaultValues: {
+      method: 'crypto',
+    }
   });
 
   // Observa el valor del campo 'type' para mostrar el balance correspondiente
-  const type = useWatch({ control, name: "type" });
+  const [type, method] = useWatch({ control, name: ["type", "method"] });
 
   // Efecto para establecer la wallet del usuario cuando se carga
   useEffect(() => {
@@ -142,6 +146,15 @@ export default function WithdrawalForm() {
           {errors.type && <span className='text-danger d-block mt-1'>{errors.type.message}</span>}
         </Form.Group>
 
+        {/* NUEVO: MÉTODO DE RETIRO (CRYPTO O FIAT) */}
+        <Form.Group controlId="withdrawalMethod" className='mt-4'>
+          <Form.Label>{t("Withdrawal Method")}</Form.Label>
+          <div className='d-flex flex-wrap gap-3'>
+            <Form.Check type="radio" id="method-crypto" label="Crypto" value="crypto" {...register("method")} />
+            <Form.Check type="radio" id="method-fiat" label="FIAT" value="fiat" {...register("method")} />
+          </div>
+        </Form.Group>
+
         <div className='mt-4'></div>
         {
           (type === "2") ? (
@@ -166,17 +179,30 @@ export default function WithdrawalForm() {
         </Form.Group>
 
         {/* === CAMBIO: Select a Input de solo lectura === */}
-        <Form.Group controlId="walletAddress" className='mt-4'>
-          <Form.Label>{t("Wallet")}</Form.Label>
-          <Form.Control
-            type="text"
-            readOnly
-            {...register("wallet_address")}
-            isInvalid={!!errors.wallet_address}
-            placeholder={t("Your wallet address will appear here")}
-          />
-          <Form.Control.Feedback type="invalid">{errors?.wallet_address?.message}</Form.Control.Feedback>
-        </Form.Group>
+        {method === 'crypto' && (
+          <Form.Group controlId="walletAddress" className='mt-4'>
+            <Form.Label>{t("Wallet")}</Form.Label>
+            <Form.Control type="text" readOnly {...register("wallet_address")} isInvalid={!!errors.wallet_address} placeholder={t("Your wallet address will appear here")} />
+            <Form.Control.Feedback type="invalid">{errors.wallet_address?.message}</Form.Control.Feedback>
+          </Form.Group>
+        )}
+
+        {method === 'fiat' && (
+          <div className='mt-4'>
+            <Form.Label>{t("Bank Destination")}</Form.Label>
+            {user && (user.bank_name || user.bank_account_number) ? (
+              <Card body className="bg-light">
+                <p className="mb-1"><strong>{t("Bank Name")}:</strong> {user.bank_name}</p>
+                <p className="mb-1"><strong>{t("Account Number")}:</strong> {user.bank_account_number}</p>
+                <p className="mb-0"><strong>{t("Country")}:</strong> {user.bank_country}</p>
+              </Card>
+            ) : (
+              <Alert variant="warning">
+                {t("Please complete your bank information in your profile before requesting a FIAT withdrawal.")}
+              </Alert>
+            )}
+          </div>
+        )}
 
         <div className=' mt-4 d-flex justify-content-center'>
           {

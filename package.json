@@ -61,6 +61,7 @@
     "chart.js": "^4.4.1",
     "chroma-js": "^2.4.2",
     "chrono-node": "^2.7.3",
+    "country-list": "^2.4.1",
     "d3-array": "^3.2.4",
     "d3-org-chart": "^3.1.1",
     "emoji-picker-react": "^4.6.11",

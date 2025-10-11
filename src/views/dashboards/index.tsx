@@ -30,7 +30,7 @@ const Dashboard = () => {
   const navigate = useNavigate()
 
   function copyLink() {
-    copiarTexto(`https://app.smartsolution.name/auth/register/${user?.ref_code}`, t("Link copied"))
+    copiarTexto(`https://app.smartsolution.fund/auth/register/${user?.ref_code}`, t("Link copied"))
   }
 
   return (
@@ -95,7 +95,7 @@ const Dashboard = () => {
 
 
       </div>
-      <ButtonWithLink label={t("Copy link")} link={`https://app.smartsolution.name/auth/register/${user?.ref_code}`}
+      <ButtonWithLink label={t("Copy link")} link={`https://app.smartsolution.fund/auth/register/${user?.ref_code}`}
         onClick={() => copyLink()} />
       <div className='row align-items-center ' style={{ maxWidth: "500px" }}>
 

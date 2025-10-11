@@ -18,8 +18,8 @@ export default function WithdrawalsTable() {
                     <tr>
                         <th>{t("Date")}</th>
                         <th className="">{t("Type")}</th>
+                        <th className="">{t("Method")}</th>
                         <th className="">{t("Amount")}</th>
-
                         <th className="">{t("Status")}</th>
                         <th className="">{t("Hash")}</th>
                         <th className="text-end">{t("Detalles")}</th>
@@ -32,6 +32,7 @@ export default function WithdrawalsTable() {
                                 <tr key={indexWithdrawal}>
                                     <td><span className='fw-bold'>{new Date(withdrawal.date).toLocaleString()}</span></td>
                                     <td>{withdrawal.verbose_type}</td>
+                                    <td>{withdrawal.verbose_method}</td>
                                     <td>${withdrawal.amount.toLocaleString('en-US', {
                                         minimumFractionDigits: 2,
                                         maximumFractionDigits: 2
@@ -40,9 +41,15 @@ export default function WithdrawalsTable() {
                                         <Badge bg="danger">{t("Refused")}</Badge>}</td>
                                     <td >
                                         {withdrawal.payment_link ? (
-                                            <a href={"https://bscscan.com/tx/" + withdrawal.payment_link} target='_blank' className='text-primary'>{t("View")}</a>
+                                            <a className='text-primary' href={"https://bscscan.com/tx/" + withdrawal.payment_link} target="_blank" rel="noopener noreferrer">
+                                                {t('View Transaction')}
+                                            </a>
+                                        ) : (withdrawal.payment_invoice) ? (
+                                            <a className='text-primary' href={withdrawal.payment_invoice} target="_blank" rel="noopener noreferrer">
+                                                {t('View Transaction')}
+                                            </a>
                                         ) : (
-                                            <span>-</span>
+                                            t('N/A')
                                         )}
                                     </td>
                                     <td className='text-end text-danger'>

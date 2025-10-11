@@ -16,4 +16,9 @@ type UserDataResponse  = {
     is_fundator: boolean
     investment_balance: number
     is_superuser: boolean
+    bank_full_name: string
+    bank_account_number: string
+    bank_name: string
+    bank_country: string
+    bank_swift_code: string
 }
