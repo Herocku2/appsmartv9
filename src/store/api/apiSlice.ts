@@ -5,7 +5,8 @@ const refreshURL = 'auth/token/refresh/'
 
 export const apiSlice = createApi({
   reducerPath: "api",
-  tagTypes: ["User", "Tree", "Payments", "Withdrawals", 'Dashboard', 'InvestmentHistory'],
+  tagTypes: ["User", "Tree", "Payments", "Withdrawals",
+     'Dashboard', 'InvestmentHistory', 'UserTransfers'],
   baseQuery: fetchBaseQuery({
     baseUrl: baseURL,
     prepareHeaders: async (headers) => {

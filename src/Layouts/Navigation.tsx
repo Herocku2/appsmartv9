@@ -51,13 +51,13 @@ const SideBarContent = ({ setMenuOpen, menuOpen }) => {
       icon: 'fi fi-rr-sack-dollar',
       url: "/deposits"
     },
-    // {
-    //   key: 'p2p',
-    //   label: t('P2P'),
-    //   isTitle: false,
-    //   icon: 'fi fi-rr-arrow-upward-growth-crypto',
-    //   url: "/p2p"
-    // },
+    {
+      key: 'p2p',
+      label: t('P2P'),
+      isTitle: false,
+      icon: 'fi fi-rr-arrow-upward-growth-crypto',
+      url: "/p2p"
+    },
     {
       key: 'withdrawals',
       label: t('Withdrawals'),
