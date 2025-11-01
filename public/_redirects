@@ -1,0 +1,4 @@
+# Netlify Redirects para evitar CORS
+# Redirige todas las peticiones a /api/* al backend
+
+/api/*  https://backend.smartsolution.fund/api/:splat  200

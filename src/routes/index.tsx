@@ -707,6 +707,12 @@ const authRoutes: RoutesProps[] = [
         route: Route,
       },
       {
+        path: '/auth/register',
+        name: 'Register',
+        element: <Register />,
+        route: Route,
+      },
+      {
         path: '/auth/reset-password',
         name: 'Reset Password',
         element: <ResetPassword />,

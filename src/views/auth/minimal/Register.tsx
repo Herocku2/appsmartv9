@@ -36,10 +36,35 @@ const Register = () => {
   const [termsConditions, setTermsConditions] = useState<boolean>(false)
   const [showTerms, setShowTerms] = useState(false)
   const [showPolicy, setShowPolicy] = useState(false)
+  const [referralCode, setReferralCode] = useState<string>('')
+  const [referralLink, setReferralLink] = useState<string>('')
   const navigate = useNavigate()
   const { t } = useTranslation()
   const { ref_code } = useParams()
   const dispatch = useDispatch()
+
+  // Establecer el código de referencia desde la URL o permitir que el usuario lo ingrese
+  useEffect(() => {
+    if (ref_code) {
+      setReferralCode(ref_code)
+      setReferralLink(`https://backend.smartsolution.fund/api/auth/register/${ref_code}/`)
+    }
+  }, [ref_code])
+
+  // Función para extraer el código del link
+  const handleReferralLinkChange = (value: string) => {
+    setReferralLink(value)
+    
+    // Intentar extraer el código del link
+    // Patrón: https://backend.smartsolution.fund/api/auth/register/345346/
+    const match = value.match(/\/register\/(\w+)\/?$/)
+    if (match && match[1]) {
+      setReferralCode(match[1])
+    } else if (value && !value.includes('/')) {
+      // Si solo ingresó el código sin link completo
+      setReferralCode(value)
+    }
+  }
 
   // NUEVO: Añadimos 'phone' al esquema de validación
   const schema = yup
@@ -89,7 +114,11 @@ const Register = () => {
       toast.error(t('Passwords do not match'))
       return
     }
-    registerUser({ data: data, ref_code: ref_code })
+    if (!referralCode) {
+      toast.error(t('Referral code is required'))
+      return
+    }
+    registerUser({ data: data, ref_code: referralCode })
   }
 
   useEffect(() => {
@@ -138,6 +167,30 @@ const Register = () => {
                     isInvalid={!!errors?.email}
                   />
                   <Form.Control.Feedback type="invalid">{errors?.email?.message}</Form.Control.Feedback>
+                </Form.Group>
+                {/* Campo de Link de Referencia */}
+                <Form.Group className="mb-3">
+                  <Form.Label className="text-muted small">
+                    {t("Sponsor Referral Link")}
+                  </Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="https://backend.smartsolution.fund/api/auth/register/345346/"
+                    value={referralLink}
+                    onChange={(e) => handleReferralLinkChange(e.target.value)}
+                    required
+                  />
+                  <Form.Text className="text-muted">
+                    {t("Paste the complete referral link from your sponsor")}
+                  </Form.Text>
+                  {referralCode && (
+                    <div className="mt-2">
+                      <small className="text-success">
+                        <i className="fi fi-rr-check-circle me-1"></i>
+                        {t("Code detected")}: <strong>{referralCode}</strong>
+                      </small>
+                    </div>
+                  )}
                 </Form.Group>
                 {/* NUEVO: Campo de Teléfono con Controller */}
                 <Form.Group className="mb-3">

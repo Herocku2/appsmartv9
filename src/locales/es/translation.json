@@ -114,6 +114,12 @@
   "Profile photo": "Foto de perfil",
   "Profile updated successfully!": "¡Perfil actualizado con éxito!",
   "Referrals": "Referidos",
+  "Referral Code (Required)": "Código de Referencia (Requerido)",
+  "Enter the referral code from the person who invited you": "Ingresa el código de referencia de quien te invitó",
+  "Referral code is required": "El código de referencia es obligatorio",
+  "Sponsor Referral Link": "Link de Referencia del Sponsor",
+  "Paste the complete referral link from your sponsor": "Pega el link completo de referencia de tu sponsor",
+  "Code detected": "Código detectado",
   "Refused": "Rechazado",
   "Register": "Registrarse",
   "Registration date": "Fecha de registro",
@@ -332,5 +338,7 @@
   "Please find and select a valid receiver.": "Por favor, busca y selecciona un receptor válido.",
   "Transfer successful!": "¡Transferencia exitosa!",
   "An error occurred": "Ocurrió un error",
-  "An error occurred while sending the code": "Ocurrió un error al enviar el código"
+  "An error occurred while sending the code": "Ocurrió un error al enviar el código",
+  "Enter email to search then click on search":"Ingresa correo para buscar y luego click en buscar",
+  "Search":"Buscar"
 }

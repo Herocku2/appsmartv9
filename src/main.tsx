@@ -12,6 +12,8 @@ import es from "./locales/es/translation.json"
 
 import { ErrorBoundary } from "react-error-boundary";
 
+// El Service Worker es manejado automáticamente por vite-plugin-pwa
+// No es necesario registrarlo manualmente
 
 function fallbackRender({ error, resetErrorBoundary }) {
   // Call resetErrorBoundary() to reset the error boundary and retry the render.

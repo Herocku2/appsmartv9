@@ -9,9 +9,17 @@ export const apiSlice = createApi({
      'Dashboard', 'InvestmentHistory', 'UserTransfers'],
   baseQuery: fetchBaseQuery({
     baseUrl: baseURL,
+    // Configuración para evitar problemas de CORS
+    mode: 'cors',
+    credentials: 'omit', // No enviar cookies en desarrollo
     prepareHeaders: async (headers) => {
       let token = localStorage.getItem('access');
       const refresh = localStorage.getItem('refresh');
+      
+      // Headers básicos necesarios
+      headers.set('Content-Type', 'application/json');
+      headers.set('Accept', 'application/json');
+      
       if (token) {
         const timestamp = localStorage.getItem('timestamp');
         const now = new Date().getTime();
@@ -24,7 +32,10 @@ export const apiSlice = createApi({
                 body: JSON.stringify({
                   refresh: refresh,
                 }),
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+                },
               });
               if (!response.ok) throw new Error('Network response was not ok');
               const data = await response.json();
@@ -42,7 +53,9 @@ export const apiSlice = createApi({
           }
         }
       }
-      headers.set('Authorization', `Bearer ${token}`);
+      if (token) {
+        headers.set('Authorization', `Bearer ${token}`);
+      }
       return headers;
     },
   }),

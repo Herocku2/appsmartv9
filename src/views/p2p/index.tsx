@@ -128,6 +128,14 @@ const UserTransferForm: React.FC = () => {
     }
   }, [isError, error]);
 
+  const handleSearch = () => {
+    if (searchTerm.length > 5 && searchTerm.includes('@')) {
+      findUser({ email: searchTerm });
+    } else {
+      toast.error(t("Please enter a valid email address."));
+    }
+  };
+
   return (
     <Row className="justify-content-center">
       <Col lg={8} xl={7}>
@@ -150,16 +158,20 @@ const UserTransferForm: React.FC = () => {
                 <Form.Label>{t("Receiver's Email")}</Form.Label>
                 {!selectedReceiver ? (
                   <>
-                    <Form.Control
-                      value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
-                      onKeyDown={handleSearchKeyDown}
-                      isInvalid={!!errors.receiver_username || !!findError}
-                      placeholder={t("Enter email and press Enter to search")}
-                      type="email"
-                    />
-                    {isFindingUser && <Spinner animation="border" size="sm" className="mt-2" />}
-                    <Form.Control.Feedback type="invalid">
+                    <InputGroup>
+                      <Form.Control
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        onKeyDown={handleSearchKeyDown}
+                        isInvalid={!!errors.receiver_username || !!findError}
+                        placeholder={t("Enter email to search then click on search")}
+                        type="email"
+                      />
+                      <Button variant="primary" onClick={handleSearch} disabled={isFindingUser}>
+                        {isFindingUser ? <Spinner as="span" animation="border" size="sm" /> : t("Search")}
+                      </Button>
+                    </InputGroup>
+                    <Form.Control.Feedback type="invalid" className="d-block">
                       {errors.receiver_username?.message || (findError ? t("User not found.") : null)}
                     </Form.Control.Feedback>
                   </>
@@ -218,7 +230,7 @@ const UserTransferForm: React.FC = () => {
         </Card>
       </Col>
       <div className='mt-4'></div>
-      <TransferHistoryTable/>
+      <TransferHistoryTable />
     </Row>
   );
 };

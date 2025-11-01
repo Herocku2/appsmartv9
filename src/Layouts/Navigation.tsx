@@ -175,7 +175,7 @@ const Navigation = () => {
                 </div>
                 <div className='d-flex justify-content-between border-bottom pb-2 mb-2'>
                   <span>{t("Cuenta MT5")}</span>
-                  <span>12209301</span>
+                  <span>12236366</span>
                 </div>
                 <div className='d-flex justify-content-between border-bottom pb-2 mb-2'>
                   <span>{t("Contraseña")}</span>
