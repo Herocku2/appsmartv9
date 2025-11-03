@@ -14,7 +14,7 @@ export default defineConfig({
 				"favicon.ico",
 				"robots.txt",
 				"apple-touch-icon.png",
-				"smartsolutionlogo.png",
+				"Asset1.png",
 				"pwa-192x192.png",
 				"pwa-512x512.png"
 			],
@@ -22,7 +22,7 @@ export default defineConfig({
 				name: "Smart Solution Fund",
 				short_name: "SmartApp",
 				description: "Aplicación React conectada al backend Smart Solution Fund.",
-				theme_color: "#0d9488",
+				theme_color: "#f59e0b",
 				background_color: "#ffffff",
 				display: "standalone",
 				start_url: "/",
@@ -30,17 +30,17 @@ export default defineConfig({
 				orientation: "portrait",
 				icons: [
 					{
-						src: "/smartsolutionlogo.png",
+						src: "/Asset1.png",
 						sizes: "192x192",
 						type: "image/png"
 					},
 					{
-						src: "/smartsolutionlogo.png",
+						src: "/Asset1.png",
 						sizes: "512x512",
 						type: "image/png"
 					},
 					{
-						src: "/smartsolutionlogo.png",
+						src: "/Asset1.png",
 						sizes: "512x512",
 						type: "image/png",
 						purpose: "maskable"
