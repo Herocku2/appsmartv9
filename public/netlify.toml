@@ -4,8 +4,9 @@
   to = "https://backend.smartsolution.fund/api/:splat"
   status = 200
   force = true
+  headers = {X-From = "Netlify"}
 
-# SPA fallback
+# SPA fallback - DEBE ir después del proxy API
 [[redirects]]
   from = "/*"
   to = "/index.html"
