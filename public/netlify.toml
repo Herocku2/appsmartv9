@@ -1,3 +1,15 @@
+# Configuración de Build
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+  VITE_API_BASE_URL = "/api"
+  VITE_AUTH_TOKEN_ENDPOINT = "/auth/token/"
+  VITE_REGISTER_REF_BASE = "/auth/register/"
+  VITE_BACKEND_DOMAIN = "/api/"
+
 # Proxy para evitar CORS - Redirige /api/* al backend
 [[redirects]]
   from = "/api/*"

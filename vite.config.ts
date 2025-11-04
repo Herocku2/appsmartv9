@@ -22,12 +22,13 @@ export default defineConfig({
 				name: "Smart Solution Fund",
 				short_name: "SmartApp",
 				description: "Aplicación React conectada al backend Smart Solution Fund.",
-				theme_color: "#f59e0b",
+				theme_color: "#0d9488",
 				background_color: "#ffffff",
 				display: "standalone",
 				start_url: "/",
 				scope: "/",
 				orientation: "portrait",
+				display_override: ["standalone", "fullscreen"],
 				icons: [
 					{
 						src: "/pwa-192x192.png",

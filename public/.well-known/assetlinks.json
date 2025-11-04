@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "fund.smartsolution.app",
+      "sha256_cert_fingerprints": [
+        "F2:06:C8:FB:63:06:B4:70:39:3E:A9:51:11:47:59:66:64:37:BA:61:B9:A1:66:7A:BD:D0:1A:FE:67:ED:E0:71"
+      ]
+    }
+  }
+]

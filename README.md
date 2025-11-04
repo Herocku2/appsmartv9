@@ -1,3 +1,73 @@
+# Smart Solution Fund - APK v9
+
+PWA Application with Trusted Web Activity (TWA) support for Android.
+
+## 🚀 Features
+
+- ✅ Progressive Web App (PWA)
+- ✅ Trusted Web Activity (TWA) - No browser bar
+- ✅ Direct backend connection (no CORS issues)
+- ✅ Standalone mode
+- ✅ Optimized for mobile
+
+## 🌐 Live Demo
+
+- **Production**: https://smartappv5.netlify.app
+- **Backend**: https://backend.smartsolution.fund/api/
+
+## 📱 Installation
+
+### For Development
+
+```bash
+npm install
+npm run dev
+```
+
+### For Production Build
+
+```bash
+npm run build
+```
+
+### Deploy to Netlify
+
+```bash
+netlify deploy --prod --dir=dist
+```
+
+## 🔧 Configuration
+
+### Environment Variables
+
+- `.env` - Development (uses proxy)
+- `.env.production` - Production for APK (direct backend)
+- `.env.netlify` - Production for Netlify (uses proxy)
+
+### Netlify Deployment
+
+The app uses Netlify redirects to proxy API requests and avoid CORS issues on web.
+
+See `public/netlify.toml` for configuration.
+
+## 📦 Generate APK
+
+See `/android` folder for APK generation instructions using Bubblewrap.
+
+## 🔐 Security
+
+- Keystore: `android.keystore`
+- Package ID: `fund.smartsolution.app`
+- TWA verified with Digital Asset Links
+
+## 📄 License
+
+Private - Smart Solution Fund
+
+## 👥 Author
+
+Smart Solution Fund Team
+
 # Smart Solution - Progressive Web App (PWA)
 
 Plataforma innovadora de gestión de fondos mutuos que brinda transparencia, seguridad y control total a los inversores.
